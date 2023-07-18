@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>IST 230, CMPSC 360</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link rel=stylesheet type="text/css" href="course-style.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif"></p>
+        <h3 align="center">IST 230, CMPSC 360: Section 1.6</h3>
+    </p>
+    <ul>
+        <li>6.
+            <p>
+            SHOW: n is odd <font face="symbol">&#8743;</font> m is odd <font face="symbol">&#8594;</font> nm is odd.<br>
+            ASSUME: 1) n is odd, and 2) m is odd.<br>
+            SHOW: mn is odd.<br>
+            3) By 1) n = 2k + 1, for some k.<br>
+            4) By 2) n = 2j + 1, for some j.<br>
+            5) nm = (2k + 1)(2j + 1) = 4kj + 2j + 2k + 1, using 3) and 4).<br>
+            6) = 2(2kj + j + k) + 1, from 5).<br>
+            7) <font face="symbol">&#8756;</font> mn is odd.
+            </p>
+        </li>
+    </ul>
+    <ul>
+        <li>18. Prove 3n + 2 is even <font face="symbol">&#8594;</font> n is even.
+            <p>a) By contraposition.<br>
+            ASSUME: 1) n is odd.<br>
+            SHOW: 3n + 2 is odd.<br>
+            2) n = 2k + 1 for some k, from 1).<br>
+            3) 3n + 2 = 3(2k + 1) + 2 = 6k + 3 + 2 = 6k + 4 + 1 = 2(3k + 2) + 1, from 2).<br>
+            4) <font face="symbol">&#8756;</font> 3n + 2 is odd.
+            </p>
+            <p>b) By contradiction.<br>
+            ASSUME: 1) 3n + 2 is even and 2) n is odd.<br>
+            3) 3n + 2 is odd, from 2) and steps 2)-4) in part a).<br>
+            As 1) contradicts 3), we have a contradiction.
+            </p>
+        </li>
+    </ul>
+    <ul>
+        <li>30.
+            <ul>
+                <li>i. a < b</li>
+                <li>ii. (a + b)/2 > a</li>
+                <li>iii. (a + b)/2 < b</li>
+            </ul>
+            <p>
+            In order to show all three are equivalent, we show 1) i implies ii, 2) ii implies iii, and 3) iii implies i.<br><br>
+            1) ASSUME: a < b, then<br>
+            b > a, and adding a to both sides<br>
+            a + b > a + a, and<br>
+            a + b > 2a, and dividing both sides by 2<br>
+            (a + b)/2 > a.<br><br>
+            2) ASSUME: (a + b)/2 > a, then multiplying both sides by 2<br>
+            a + b > 2a, and subtracting a from both sides<br>
+            b > a, and adding b to both sides<br>
+            b + b > a + b, and<br>
+            2b > a + b, and dividing both sides by 2<br>
+            b > (a + b)/2, and<br>
+            (a + b)/2 < b.<br><br>
+            3) ASSUME: (a + b)/2 < b, then multiplying both sides by 2<br>
+            a + b < 2b, and subtracting b from both sides<br>
+            a < b.
+            <p>
+        </li>
+    </ul>
+</body>
+</html>

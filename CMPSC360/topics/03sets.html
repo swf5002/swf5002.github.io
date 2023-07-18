@@ -1,0 +1,1324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>PSLV Discrete Mathematics: Sets</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel=stylesheet type="text/css" href="../../course-style.css">
+        <style>dt {font-weight: bold}</style>
+  </head>
+
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif" alt="PSU Logo"></p>
+    <h3 align="center">SETS</h3>
+    <h5 align="center">
+      Please note that the material on this website is not intended to be exhaustive.
+      <br>This is intended as a summary and supplementary material.
+    </h5>
+    <h4>SETS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <legend><font color="maroon"></font></legend>
+          <dl>
+            <dt><a name="set"><font color="blue">Set</font></a></dt>
+                <dd>
+                  is an unordered collection of distinct objects called 
+                  <a name="element"><font color="blue"><b>elements</b></font></a>. &#160; 
+                </dd>
+          </dl>
+          <p>
+               Sets are traditionally denoted by uppercase letters <b>A, B, C, . . . , Z</b> while elements of sets are
+                traditionally denoted by lowercase letters <b>a, b, c, . . . , z</b>. &#160; 
+               The notation <b>a <font >&#8712;</font> A</b> means that the element <b>a</b> is a member of the set 
+                <b>A</b> while <b>a <font >&#8713;</font> A</b> means that the element <b>a</b> is not a member of
+                the set <b>A</b>.
+          </p>
+      <dl>
+                <dt><a name="set-representation"><font color="blue"><b>Set Representation</b></font></a></dt>
+                <dd>
+                 A set may be represented by 
+                  <a name="enumeration"><font color="blue"><b>enumeration</b></font></a> or by the 
+                  <a name="set-builder"><font color="blue"><b>set builder notation</b></font></a> or by 
+                  <a name="venn-diagram"><font color="blue"><b>Venn diagram</b></font></a>.
+                </dd>
+           </dl>        
+      <table cellpadding="5">
+        <tr valign="top">
+          <th rowspan="4"><font color="red">EXAMPLE01:</font></th>
+          <td align="right"><font color="red">Enumeration:</font></td>
+          <td colspan="2">
+            <font color="red">
+                          The notation <b>S = { 1, 2, 4, 8, 16 }</b> indicates that the elements 
+                          <b>1</b>, <b>2</b>, <b>4</b>, <b>8</b>, <b>16</b> belong to the set <b>S</b>. 
+                    </font>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="right" valign="top"><font color="red">Set builder<br>notation:</font></td>
+          <td colspan="2">
+            <font color="red">
+                      <b>A = { x | P ( x ) }</b> where <b>P ( x )</b> is the condition that the set of elements <b>x</b> must 
+                          satisfy.
+            </font> 
+          </td>
+        </tr>
+        <tr>
+          <td align="right" rowspan="2" valign="top"><font color="red">Venn<br>diagram:</font></td>
+          <td colspan="2"><img src="images/100set.gif" alt="Venn Diagram 1"></td>
+        </tr>
+        <tr valign="top">
+          <td align="right"><font color="red">where</font></td>
+          <td>
+            <font color="red">
+                          <b><i>U</i></b> is the universal set or domain of discourse and
+                          <br><b>S</b> is the set under discussion
+                        </font>
+          </td>
+        </tr>
+      </table>
+          <p><font color="green"><b>NOTATION: (for now the <b>+</b> symbol represents set theoretic union)</b></font></p>
+          <table align="center" cellpadding="5">
+            <tr>
+              <th align="left">Z<sup>&#150;</sup> = { &#150;1, &#150;2, &#150;3, . . . }</th>
+                  <td><font color="blue">Set of Negative Integers</font></td>
+            </tr>
+            <tr>
+              <th align="left">Z<sup>+</sup> = { 1, 2, 3, . . . }</th>
+                  <td><font color="blue">Set of Positive Integers</font></td>
+            </tr>
+            <tr>
+              <th align="left">
+                    Z = Z<sup>&#150;</sup> <b>+</b> Z<sup>+</sup> 
+                <b>+</b> { 0 }
+                  </th>
+                  <td><a name="set-of-integers"><font color="blue">Set of Integers</font></a></td>
+            </tr>
+            <tr>
+              <th align="left">N = { 1, 2, 3, . . . }</th>
+                  <td><a name="set-of-natural-numbers"><font color="blue">Set of Natural Numbers</font></a></td>
+            </tr>
+            <tr>
+              <th align="left">Q<sup>&#150;</sup> = { p / q | [ ( p < 0 ) <font >&#8743;</font> ( q > 0 ) ] <font >&#8744;</font> [ ( p > 0 ) <font >&#8743;</font> ( q < 0 ) ] }</th>
+                  <td><font color="blue">Set of Negative Rational Numbers</font></td>
+            </tr>
+            <tr>
+              <th align="left">Q<sup>+</sup> = { p / q | [ ( p > 0 ) <font >&#8743;</font> ( q > 0 ) ] <font >&#8744;</font> [ ( p < 0 ) <font >&#8743;</font> ( q < 0 ) ] }</th>
+                  <td><font color="blue">Set of Positive Rational Numbers</font></td>
+            </tr>
+            <tr>
+              <th align="left">Q = Q<sup>&#150;</sup> <font >&#43;</font> Q<sup>+</sup></th>
+                  <td><a name="set-of-rational-numbers"><font color="blue">Set of Rational Numbers</font></a></td>
+            </tr>
+            <tr>
+              <th align="left">R<sup>&#150;</sup> = { x | x < 0 }</th>
+                  <td><font color="blue">Set of Negative Real Numbers</font></td>
+            </tr>
+            <tr>
+              <th align="left">R<sup>+</sup> = { x | x > 0 }</th>
+                  <td><font color="blue">Set of Positive Real Numbers</font></td>
+            </tr>
+            <tr>
+              <th align="left">
+                    R = R<sup>&#150;</sup> <font >&#43;</font> R<sup>+</sup>
+                        <font >&#43;</font> { 0 }
+                  </th>
+                  <td><a name="set-of-real-numbers"><font color="blue">Set of Real Numbers</font></a></td>
+            </tr>
+            <tr>
+              <th align="left"><i>U</i></th>
+                  <td><a name="universe"><font color="blue">Universal Set</font></a></td>
+            </tr>
+          </table>
+      <dl>
+                <dt><a name="equal-sets"><font color="blue"><b>Equal Sets</b></font></a></dt>
+                <dd>
+                 <b>A</b> and <b>B</b>, denoted by <b><font color="blue">A = B</font></b>, iff they have the same elements, i.e 
+                  <br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                          A = B <font >&#8801;</font> <font >&#8704;</font>x ( x <font >&#8712;</font> A <font >&#8596;</font> 
+                                  x <font >&#8712;</font> B )
+                                </font>
+                      </th>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE02:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { @, #, $, %}
+                          <br>S<sub>2</sub> = { @, #, $, %}
+                        </font>
+                  </th>
+                </tr>
+                <tr><th align="left"><font color="red">S<sub>1</sub> = S<sub>2</sub></font></th></tr>
+          </table>
+          <dl>
+        <dt><a name="universal-set"><font color="blue"><b>Universal Set</b></font></a></dt>
+                <dd> 
+               denoted by <b><font color="blue"><i>U</i></font></b>, is the set which consists of all the elements under 
+                  discussion.
+                </dd>
+          </dl>
+          <dl>
+                <dt>
+                  <a name="empty-set"><font color="blue"><b>Empty Set</b></font></a> or
+                  <a name="null-set"><font color="blue"><b>Null Set</b></font></a>
+                </dt>
+                <dd>
+                  denoted by <b><font color="blue" >&#8709;</font></b>, is a special set which has no elements, i.e. 
+                  <b><font >&#8709;</font> = { }</b>.
+                </dd>
+          </dl>
+          <dl>
+        <dt><a name="singleton-set"><font color="blue"><b>Unit or Singleton Set</b></font></a></dt>
+                <dd>is the set which consists of only one element.</dd>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th><font color="red">EXAMPLE03:</font></th>
+                  <th align="left"><font color="red">S = { 8 }</font></th>
+                </tr>
+          </table>
+          <dl>
+                <dt><a name="subset"><font color="blue"><b>Subset</b></font></a></dt>
+                <dd>
+                 <b>A</b> of <b>B</b>, denoted by <b><font color="blue">A <font >&#8838;</font> B</font></b>, 
+                  if each element of <b>A</b> is an element of <b>B</b>, i.e.<br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                          A <font >&#8838;</font> B <font >&#8801;</font> <font >&#8704;</font>x ( x <font >&#8712;</font> A
+                          <font >&#8594;</font> x <font >&#8712;</font> B )
+                          </th>
+                        </tr>
+                  </table>
+                </dd>
+                <p align="center"><img src="images/100subset.gif" alt="A is a subset of B"></p>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE04:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>0</sub> = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+                          <br>S<sub>1</sub> = { 1, 3, 5, 7, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          S<sub>0</sub> <font >&#8838;</font> S<sub>0</sub>
+                          <br>S<sub>1</sub> <font >&#8838;</font> S<sub>0</sub>
+                          <br>S<sub>2</sub> <font >&#8838;</font> S<sub>0</sub>
+                        </font>
+                  </th>
+                </tr>
+          </table><br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM01:</font></th>
+                  <td>
+                    For every set <b>S</b>
+                        <ul>
+                          <li><b><font >&#8709;</font> <font >&#8838;</font> S</b></li>
+                          <li><b>S <font >&#8838;</font> S</b></li>
+                        </ul>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="right" rowspan="4">Proof :</td>
+                  <td>Let <b>S</b> be a set.</td>
+                </tr>
+                <tr>
+                  <td>
+                    To show that <b><font >&#8709;</font> <font >&#8838;</font> S</b>, we need to show that
+                        <b><font >&#8704;</font>x ( x <font >&#8712;</font> <font >&#8709;</font>
+                    <font >&#8594;</font> x <font >&#8712;</font> S )</b> is <b>T</b>.
+                        <br>Since <b><font >&#8709;</font></b> has no elements, then 
+                        <b>x <font >&#8712;</font> <font >&#8709;</font></b> is <b>F</b>.
+                        <br>Since the hypothesis <b>x <font >&#8712;</font> <font >&#8709;</font></b> is always
+                        <b>F</b>, then the conditional statement 
+                        <b>x <font >&#8712;</font> <font >&#8709;</font> <font >&#8594;</font> x 
+                        <font >&#8712;</font> S</b> is <b>T</b>.
+                        <br>Hence, <b><font >&#8704;</font>x ( x <font >&#8712;</font> 
+                        <font >&#8709;</font> <font >&#8594;</font> x <font >&#8712;</font> S )</b>
+                        is <b>T</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    To show that <b>S <font >&#8838;</font> S</b> is <b>T</b>, we need to show that
+                        <b><font >&#8704;</font>x ( x <font >&#8712;</font> S <font >&#8594;</font> 
+                        x <font >&#8712;</font> S )</b> is <b>T</b>.
+                        <br>Since the hypothesis <b>x <font >&#8712;</font> S</b> is <b>T</b> and the conclusion
+                        <b>x <font >&#8712;</font> S</b> is <b>T</b>,
+                        <br>then the conditional statement <b>x <font >&#8712;</font> S <font >&#8594;</font> x
+                        <font >&#8712;</font> S</b> is <b>T</b>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font >&#92;</font> the theorem is <b>T</b>.
+                  </td>
+                </tr>
+          </table>
+          <dl>
+                <dt><a name="proper-subset"><font color="blue"><b>Proper Subset</b></font></a></dt>
+                <dd>
+          <b>A</b> of set <b>B</b>, denoted by <b><font color="blue">A <font >&#8834;</font> B</font></b>, if 
+                  <b>A <font >&#8838;</font> B</b> and <b>B</b> has at least one element that is not also an element of
+                  <b>A</b>, i.e.<br><br>                                
+              <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                          A <font >&#8834;</font> B <font >&#8801;</font> <font >&#8704;</font>x ( ( x <font >&#8712;</font> A 
+                                  <font >&#8594;</font> x <font >&#8712;</font> B ) <font >&#8743;</font> 
+                              <font >&#8707;</font>y ( y <font >&#8712;</font> B <font >&#8743;</font> y 
+                                  <font >&#8713;</font> A ) )
+                          </th>
+                        </tr>
+               </table>
+                </dd>
+            <p align="center"><img src="images/100subset.gif" alt="A is a proper subset of B"></p>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE05:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>0</sub> = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+                          <br>S<sub>1</sub> = { 1, 3, 5, 7, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          S<sub>1</sub> <font >&#8834;</font> S<sub>0</sub>
+                          <br>S<sub>2</sub> <font >&#8834;</font> S<sub>0</sub>
+                        </font>
+                  </th>
+                </tr>
+          </table>
+          <dl>
+                <dt><a name="proper-superset"><font color="blue"><b>Supersets</b></font></a></dt>
+                <dd>
+                  <b>A</b> is a <b>superset</b> of <b>B</b> (denoted by <b><font color="blue">A <font >&#8839;</font> B</font></b>) is defined analogously. Similarly, <b>A</b> is a <b>proper superset</b> of <b>B</b> (denoted by <b><font color="blue">A <font >&#8835;</font> B</font></b>) is defined analogously.
+                </dd>
+      </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE06:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>0</sub> = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+                          <br>S<sub>1</sub> = { 1, 3, 5, 7, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          S<sub>0</sub> <font >&#8839;</font> S<sub>1</sub>
+                          <br>S<sub>0</sub> <font >&#8839;</font> S<sub>2</sub>
+                        </font>
+                  </th>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="cardinality"><font color="blue">Cardinality</font></a></dt>
+                <dd>
+                  of a set <b>S</b> is the number of distinct elements in the set <b>S</b>, denoted by 
+                  <b><font color="blue">| S |</font> = n</b>, where <b>n</b> is the number of distinct elements.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE07:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>0</sub> = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+                          <br>S<sub>1</sub> = { 1, 3, 5, 7, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          |S<sub>0</sub>| = 10
+                          <br>|S<sub>1</sub>| = 5
+                          <br>|S<sub>2</sub>| = 4
+                        </font>
+                  </th>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="finite-set"><font color="blue">Finite Set</font></a></dt>
+                <dd>
+                  <b>S</b> has <a href="#cardinality">cardinality</a> <b>| S | = n</b>, where <b>0 < n 
+                  <font >&lt;</font> <font >&#8734;</font></b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="infinite-set"><font color="blue">Infinite Set</font></a></dt>
+                <dd>
+                  <b>S</b> has <a href="#cardinality">cardinality</a> <b>| S | = <font >&#8734;</font></b>. Note: the infinity symbol is NOT a number; it is a notational convenience meant to indicate that once you start counting an infinite set, you never stop.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr>
+                  <th><font color="red">EXAMPLE08:</font></th>
+                  <td><font color="red">The set of natural numbers <b>R</b> is an infinite set.</font></td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">The Power Set</font></legend>
+          <dl>
+                <dt><a name="power-set"><font color="blue"><b>Power Set</b></font></a></dt>
+                <dd>
+          is the set of all subsets of a set <b>S</b>, denoted by 
+                  <font color="blue"><b><font >&#222;</font> ( S )</b></font>, and where
+                  <b>| <font >&#222;</font> ( S ) | = 2<sup>| S |</sup></b>. The powerset of a set is a set of sets.
+                  <br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                          <font >&#222;</font> ( S ) = { A | A <font >&#8838;</font> S }
+                          </th>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE09:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S = { 3, 6, 9 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          | S | = 3
+                          <br>| <font >&#222;</font> ( S ) | = 2<sup>3</sup> = 8
+                          <br><font >&#222;</font> ( S ) = {
+                          <font >&#8709;</font>, {3}, {6}, {9}, {3,6}, {3,9}, {6,9}, S }
+                        </font>
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Cartesian Products</font></legend>
+          <dl>
+            <dt><a name="ordered-pairs"><font color="blue">Ordered Pairs</font></a></dt>
+                <dd>are <b>2-tuples</b>. The definition of an ordered pair in set theory is not pretty but it does the job.</dd>
+                  <br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                          (a,b) = { {a}, {a,b} }
+                          </th>
+                        </tr>
+                  </table>
+          </dl>
+          <dl>
+            <dt><a name="ordered-n-tuple"><font color="blue">Ordered n-tuple</font></a></dt>
+                <dd>
+                  <font color="blue"><b>( a<sub>1</sub>, a<sub>2</sub>, . . ., a<sub>n</sub> )</b></font> is the ordered collection 
+                  that has <b>a<sub>1</sub></b> as its first element, <b>a<sub>2</sub></b> as its second element, and ... 
+                  <b>a<sub>n</sub></b> as its <b>n<sup>th</sup></b> element.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="cartesian-product"><font color="blue">Cartesian Product</font></a></dt>
+                <dd>
+                  of sets <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, . . ., <b>A<sub>n</sub></b>, denoted by 
+                  <font color="blue"><b>A<sub>1</sub> x A<sub>2</sub> x . . . x A<sub>n</sub></b></font>, is the set of ordered
+                  n-tuples <b>( a<sub>1</sub>, a<sub>2</sub>, . . ., a<sub>n</sub> )</b> where 
+                  <b>a<sub>i</sub> <font >&#8712;</font> A<sub>i</sub></b>, for <b>i = 1, 2, . . ., n</b>. A Cartesian product of 2 sets is the set of all distinct ordered pairs formed by taking the first element of the ordered pair from the first set and taking the second element of each ordered pair from the second set.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE10:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { 2, 4, 6, 8 }
+                          <br>S<sub>2</sub> = { 3, 6, 9 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          S<sub>1</sub> x S<sub>2</sub> = {
+                          (2,3), (2,6), (2,9), (4,3), (4,6), (4,9), (6,3), (6,6), (6,9), (8,3), (8,6), (8,9) }
+                        </font>
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Using Set Notation with Quantifiers</font></legend>
+          <p>
+            Sometimes, the domain of a quantified statement is restricted explicitly by making use of a particular notation.
+          </p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE11:</font></th>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8704;</font>x <font >&#8712;</font> S ( P ( x ) )</b> denotes the 
+                          universal quantification of <b>P ( x )</b> over all elements in the set <b>S</b>, which is a shorthand for 
+                          <b><font >&#8704;</font>x ( x <font >&#8712;</font> S 
+                          <font >&#8594;</font> P ( x ) )</b>.                          
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8707;</font>x <font >&#8712;</font> S ( P ( x ) )</b> denotes the 
+                          existential quantification of <b>P ( x )</b> over all elements in the set <b>S</b>, which is a shorthand for 
+                          <b><font >&#8707;</font>x ( x <font >&#8712;</font> S <font >&#8743;</font> P ( x ) )</b>.                          
+                        </font>
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="3"><font color="red">EXAMPLE12:</font></th>
+                  <td>
+                    <font color="red">
+                          What do the statements <b><font >&#8704;</font>x <font >&#8712;</font> R 
+                          ( x<sup>2</sup> <font >&ge;</font> 0 )</b> and <b><font >&#8707;</font>x
+                          <font >&#8712;</font> Z ( x<sup>2</sup> = 1 )</b> mean?
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The statement <b><font >&#8704;</font>x <font >&#8712;</font> R ( x<sup>2</sup> 
+                          <font >&ge;</font> 0 )</b> 
+                          <br>states that "<b>for every real number x, x<sup>2</sup> <font >&ge;</font> 0</b>" 
+                          <br>which also means that "<b>the square of every real number is non-negative</b>".
+                          <br>This statement happens to be a <b>T</b> statement.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The statement <b><font >&#8707;</font>x <font >&#8712;</font> Z ( x<sup>2</sup> = 
+                          1 )</b> 
+                          <br>states that "<b>there exists an integer x, such that x<sup>2</sup> = 1</b>" 
+                          <br>which also means that "<b>there is an integer whose square is 1</b>".
+                          <br>This statement happens to be a <b>T</b> statement.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Truth Sets of Quantifiers</font></legend>
+          <p>
+            Combining set theory and predicate logic, given a predicate <b>P</b> and a domain <b>D</b>, the
+                <a name="truth-set"><font color="blue"><b>truth set</b></font></a> of <b>P</b>, denoted by 
+                <b>{ x <font >&#8712;</font> D | P ( x ) }</b>, is defined to be the set of elements <b>x</b> in 
+                <b>D</b> for which <b>P ( x )</b> is <b>T</b>.
+          </p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE13:</font></th>
+                  <td>
+                    <font color="red">
+                          What are the <a href="#truth-set">truth sets</a> of the following predicates where the domain is the set of
+                          integers?
+                          <br><b>P ( x ) : | x | = 1</b>
+                          <br><b>Q ( x ) : x<sup>2</sup> = 2</b>
+                          <br><b>R ( x ) : | x | = x</b>
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The truth set of <b>P = { x <font >&#8712;</font> Z | | x | = 1} = { &#150;1, 1 }</b> 
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The truth set of <b>Q = { x <font >&#8712;</font> Z | x<sup>2</sup> = 2 } = 
+                          <font >&#8709;</font></b>
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The truth set of <b>R = { x <font >&#8712;</font> Z | | x | = x} = 
+                          <a href="#set-of-natural-numbers">N</a> <font >&#43;</font> { 0 }</b>
+                        </font>
+                  </td>
+                </tr>
+          </table>
+          <p>
+            Observe that <b><font >&#8704;</font>x P ( x )</b> is <b>T</b> over the domain <b><i>U</i></b> iff the
+                truth set of <b>P = <i>U</i></b>. &#160;
+                Likewise, <b><font >&#8707;</font>x P ( x )</b> is <b>T</b> over the domain <b><i>U</i></b> iff the
+                truth set of <b>P</b> is non-empty.
+          </p>
+        </fieldset>
+    <h4>SET OPERATIONS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="union"><font color="blue">Union</font></a></dt>
+                <dd>
+          of the sets <b>A</b> and <b>B</b>, denoted by <b>A <font ><font >&#8746;</font></font> B</b>,
+                  is the set of all elements <b>x</b> such that <b>x</b> is an element of <b>A <font color="blue">or</font> x</b> 
+                  is an element of <b>B</b> or <b>x</b> is in both, i.e.<br><br>
+              <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                      A <font >&#8746;</font> B = { x | x <font >&#8712;</font> A <font >&#8744;</font> x 
+                                  <font >&#8712;</font> B }
+                                </font>
+                          </th>
+                        </tr>
+              </table>
+                </dd>
+                <p align="center"><img src="images/100union.gif" alt="The union of A and B"></p>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE14:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { 3, 6, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr><th align="left"><font color="red">S<sub>1</sub> <font >&#8746;</font> S<sub>2</sub> = { 2, 3, 4, 6, 8, 9 }</font></th></tr>
+          </table>
+          <dl>
+            <dt><a name="intersection"><font color="blue">Intersection</font></a></dt>
+                <dd>
+          of the sets <b>A</b> and <b>B</b>, denoted by <b>A <font >&#8745;</font> B</b>,
+                  is the set of all elements <b>x</b> such that <b>x</b> is an element of <b>A <font color="blue">and</font> x</b> 
+                  is an element of <b>B</b>, i.e.<br><br>        
+              <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                      A <font >&#8745;</font> B = 
+                              { x | x <font >&#8712;</font> A <font >&#8743;</font> x <font >&#8712;</font> B }
+                                </font>
+                          </th>
+                        </tr>
+              </table>
+          </dl>
+          <p align="center"><img src="images/100intersection.gif" alt="A and B are disjoint"></p>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE15:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { 3, 6, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr><th align="left"><font color="red">S<sub>1</sub> <font >&#8745;</font> S<sub>2</sub> = { 6 }</font></th></tr>
+          </table>
+          <dl>
+            <dt><a name="disjoint-sets"><font color="blue">Disjoint Sets</font></a></dt>
+                <dd>
+                  <b>A</b> and <b>B</b> if <b>A <font >&#8745;</font> B = 
+                  <font >&#8709;</font></b>.
+                </dd>
+                <p align="center"><img src="images/100disjoint.gif" alt="A and B are disjoint"></p>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE16:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { 1, 3, 5, 7, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">S<sub>1</sub> <font >&#8745;</font> S<sub>2</sub> =  <font >&#8709;</font></font>
+                  </th>
+                </tr>
+          </table><br>
+          <dl>
+            <dt>
+                  <a name="difference"><font color="blue">Difference</font></a> or 
+                  <a name="relative-complement"><font color="blue">Relative Complement</font></a>
+                </dt>
+                <dd>
+          of the sets <b>A</b> and <b>B</b>, denoted by <b>A <font color="blue">&#150;</font> B</b>, is the set of all 
+                  elements <b>x</b> such that <b>x</b> is an element of <b>A</b> and <b>x</b> is not an element of <b>B</b>, i.e.
+                  <br><br>        
+              <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                      A &#150; B = { x | x <font >&#8712;</font> A <font >&#8743;</font> x <font >&#8713;</font> B }
+                                </font>
+                          </th>
+                        </tr>
+               </table>
+                </dd>
+                <p align="center"><img src="images/100difference.gif" alt="A minus B"></p>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE17:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { 3, 6, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr><th align="left"><font color="red">S<sub>1</sub> &#150; S<sub>2</sub> = { 3, 9 }</font></th></tr>
+          </table>
+          <dl>
+            <dt><a name="complement"><font color="blue">Complement</font></a></dt>
+                <dd>
+                  of a set <b>S</b>, denoted by <b>S<font color="blue"><sup>c</sup></font></b>, or S<font >&#8242;</font>, is the set of all elements <b>x</b>
+                  such that <b>x</b> is not an element of <b>S</b>, i.e.<br><br>                  
+              <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                                  S<sup>c</sup> = { x | x <font >&#8713;</font> S } = <i>U</i> &#150; S
+                                </font>
+                      </th>
+                        </tr>
+              </table>
+                </dd>
+                <p align="center"><img src="images/100complement.gif" alt="Complement of a Set"></p>
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE18:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br><i>U</i> = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+                          <br>S = { 2, 4, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr><th align="left">
+                  <font color="red"><i>U</i> &#150; S = S<sup>c</sup> = { 0, 1, 3, 5, 6, 7, 9 }</font></th>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="symmetric-difference"><font color="blue"><b>Symmetric Difference</b></font></a></dt>
+            <dd>
+                  of sets <b>A</b> and <b>B</b>, denoted by <b>A <font color="blue" >&#8853;</font> B</b> is the 
+                  difference between the union of <b>A</b> and <b>B</b> and the intersection of <b>A</b> and <b>B</b>, i.e.
+                  <br><br>        
+               <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                      A <font >&#8853;</font> B = ( A <font >&#8746;</font> B ) &#150; ( A 
+                                  <font >&#8745;</font> B )
+                                </font>
+                          </th>
+                        </tr>
+               </table>
+            </dd>
+                <p align="center"><img src="images/100symmetric-difference.gif" alt="Symmetric Difference of Two Sets"><br>
+                      Alternatively, the symmetric difference is also = ( A &#150; B ) <font >&#8746;</font> ( B &#150; A )
+          </dl>
+          <table cellpadding="5">
+                <tr valign="top">
+                  <th rowspan="5"><font color="red">EXAMPLE19:</font></th>
+                  <th align="left">
+                        <font color="red">
+                          Given
+                          <br>S<sub>1</sub> = { 3, 6, 9 }
+                          <br>S<sub>2</sub> = { 2, 4, 6, 8 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ( S<sub>1</sub> &#150; S<sub>2</sub> ) = { 3, 9 }
+                          <br>( S<sub>2</sub> &#150; S<sub>1</sub> ) = { 2, 4, 8}
+                          <br>( S<sub>1</sub> &#150; S<sub>2</sub> ) <font >&#8746;</font> ( S<sub>2</sub> &#150; S<sub>1</sub> ) = { 2, 3, 4, 8, 9 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ( S<sub>1</sub> <font >&#8746;</font> S<sub>2</sub> ) = { 2, 3, 4, 6, 8, 9 }
+                          <br>( S<sub>1</sub> <font >&#8745;</font> S<sub>2</sub> ) = { 6 }
+                          <br>( S<sub>1</sub> <font >&#8746;</font> S<sub>2</sub> ) &#150; ( S<sub>1</sub> <font >&#8745;</font> S<sub>2</sub> ) = { 2, 3, 4, 8, 9 }
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          S<sub>1</sub> <font >&#8853;</font> S<sub>2</sub> = 
+                          ( S<sub>1</sub> &#150; S<sub>2</sub> ) <font >&#8746;</font> ( S<sub>2</sub> &#150; S<sub>1</sub>) =
+                          ( S<sub>1</sub> <font >&#8746;</font> S<sub>2</sub> ) &#150; ( S<sub>1</sub> <font >&#8745;</font> S<sub>2</sub> ) =
+                          { 2, 3, 4, 8, 9 }
+                        </font>
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Set Identities</font></legend>
+          <br>
+          <table align="center" border cellpadding="5">
+            <tr><th colspan="2"><a name="set-identities"><font color="blue">SET IDENTITIES</font></a></th></tr>
+                <tr>
+                  <th>NAME</th>
+                  <th>IDENTITY</th>
+                </tr>
+                <tr>
+                  <td><a name="identity-laws"><font color="blue">Identity Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> <font >&#8709;</font> = A
+                        <br>A <font >&#8745;</font> <i>U</i> = A
+                        <br>A <font >&#8853;</font> <font >&#8709;</font> = A
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="domination-laws"><font color="blue">Domination Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> <i>U</i> = <i>U</i>
+                        <br>A <font >&#8745;</font> <font >&#8709;</font> =
+                        <font >&#8709;</font>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="idempotent-laws"><font color="blue">Idempotent Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> A = A
+                        <br>A <font >&#8745;</font> A = A
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <a name="complementation-law"><font color="blue">Complementation Law</font></a>
+                        <center>or</center>
+                        <a name="involution-law"><font color="blue">Involution Law</font></a>
+                  </td>
+                  <th>( A<font >&#8242;</font> )<font >&#8242;</font> = A</th>
+                </tr>
+                <tr>
+                  <td><a name="commutative-laws"><font color="blue">Commutative Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> B = B <font ><font >&#8746;</font></font> A
+                        <br>A <font >&#8745;</font> B = B 
+                        <font >&#8745;</font> A
+                        <br>A <font >&#8853;</font> B = B <font >&#8853;</font> A
+
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="associative-laws"><font color="blue">Associative Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> ( B <font ><font >&#8746;</font></font> C ) =
+                        ( A <font ><font >&#8746;</font></font> B ) <font ><font >&#8746;</font></font> C
+                        <br>A <font >&#8745;</font> ( B 
+                        <font >&#8745;</font> C ) = ( A 
+                        <font >&#8745;</font> B ) <font >&#8745;</font>
+                        C
+                        <br>A <font >&#8853;</font> ( B <font >&#8853;</font> C ) = ( A 
+                        <font >&#8853;</font> B ) <font >&#8853;</font> C
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="distributive-laws"><font color="blue">Distributive Laws</font></a></td>
+                  <th>
+                    A <font >&#8745;</font> ( B <font ><font >&#8746;</font></font> 
+                        C )        = ( A <font >&#8745;</font> B ) 
+                        <font ><font >&#8746;</font></font> ( A <font >&#8745;</font> C )
+                        <br>A <font ><font >&#8746;</font></font> ( B 
+                        <font >&#8745;</font> C ) = ( A 
+                        <font ><font >&#8746;</font></font> B ) <font >&#8745;</font> 
+                        ( A <font ><font >&#8746;</font></font> C )
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="demorgans-laws"><font color="blue">De Morgan's Laws</font></a></td>
+                  <th>
+                    ( A <font ><font >&#8746;</font></font> B )<font >&#8242;</font> = A<font >&#8242;</font> 
+                        <font >&#8745;</font> B<font >&#8242;</font>
+                        <br>( A <font >&#8745;</font> B )<font >&#8242;</font> = A<font >&#8242;</font>
+                        <font ><font >&#8746;</font></font> B<font >&#8242;</font>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="absorption-laws"><font color="blue">Absorption Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> ( A <font >&#8745;</font> 
+                        B ) = A
+                        <br>A <font >&#8745;</font> ( A 
+                        <font ><font >&#8746;</font></font> B ) = A
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="complement-laws"><font color="blue">Complement Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> A<font >&#8242;</font> = <i>U</i>
+                        <br>A <font >&#8745;</font> A<font >&#8242;</font> = <font >&#8709;</font>
+                        <br>A <font >&#8853;</font> A<font >&#8242;</font> = <i>U</i>
+                  </th>
+                </tr>
+            <tr>
+              <td><a name="inverse-law"><font color="blue">Inverse Law</font></a></td>
+              <th>A <font >&#8853;</font> A = <font >&#8709;</font></th>
+            <tr>
+            <tr>
+              <td><a name="bound-laws"><font color="blue">Bound Laws</font></a></td>
+                  <th>
+                    A <font ><font >&#8746;</font></font> <i>U</i> = <i>U</i>
+                        <br>A <font >&#8745;</font>        <font >&#8709;</font> =
+                        <font >&#8709;</font>
+                  </th>
+            </tr>
+            <tr>
+          <td><a name="01-laws"><font color="blue">0 / 1 Laws</font></a></td>
+                  <th>
+                    <font >&#8709;</font><font >&#8242;</font> = <i>U</i>
+                        <br><i>U</i><font >&#8242;</font> = <font >&#8709;</font>
+                  </th>
+            </tr>
+            <tr>
+              <td>
+                    <a name="principle-inclusion-exclusion"><font color="blue">Principle of<br>Inclusion-Exclusion</font></a>
+                  </td>
+                  <th>
+                    | A <font ><font >&#8746;</font></font> B | = | A | + | B | &#150; | A 
+                        <font >&#8745;</font> B |
+                        <br>| A <font ><font >&#8746;</font></font> B <font ><font >&#8746;</font></font> C
+                        | = | A | + | B | + | C | &#150; | A <font >&#8745;</font> B | &#150; | A
+            <font >&#8745;</font> C | &#150; | B
+            <font >&#8745;</font> C | + | A
+            <font >&#8745;</font> B
+            <font >&#8745;</font> C |
+                        <br>etc.
+                  </th>
+            </tr>
+            <tr>
+              <td><a name="duality-law"><font color="blue">Duality law</font></a></td>
+                  <td align="center">
+            If in any valid identity, the symbols <font ><font >&#8746;</font></font>,
+            <font >&#8745;</font>, <b><i>U</i></b>, and 
+                    <b><font >&#8709;</font></b>
+                        <br>are respectively replaced by <font >&#8745;</font>,
+            <font ><font >&#8746;</font></font>, <b><font >&#8709;</font></b>, and 
+                        <b><i>U</i></b>,
+                    <br>the result is another valid identity.
+                  </td>
+            </tr>
+          </table>
+          <dl>
+            <dt><a name="membership-table"><font color="blue">Membership Table</font></a></dt>
+                <dd>
+                  may be used to prove set identities by indicating the presence of an element in a set with <b>1</b> and the
+                  absence of an element in a set with <b>0</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE20:</font></th>
+                  <td>
+                    <font color="red">
+                      Prove the Distributive Law <b>A <font >&#8745;</font> ( B <font >&#8746;</font> C ) = ( A <font >&#8745;</font> B ) <font >&#8746;</font> ( A <font >&#8745;</font> C )</b> 
+                          using Membership Table.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table border cellpadding="5">
+                          <tr>
+                            <th><font color="red">A</font></th>
+                            <th><font color="red">B</font></th>
+                            <th><font color="red">C</font></th>
+                            <th><font color="red">B <font >&#8746;</font> C</font></th>
+                            <th><font color="red">A <font >&#8745;</font> ( B <font >&#8746;</font> C )</font></th>
+                            <th><font color="red">A <font >&#8745;</font> B</font></th>
+                            <th><font color="red">A <font >&#8745;</font> C</font></th>
+                            <th><font color="red">( A <font >&#8745;</font> B ) <font >&#8746;</font> ( A <font >&#8745;</font> C )</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">1</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">1</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">1</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th bgcolor="beige"><font color="red">0</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Generalized Unions and Intersections</font></legend>
+          <dl>
+            <dt><a name="collection-union"><font color="blue">Union of a Collection of Sets</font></a></dt>
+                <dd>
+                  <b>A<sub>1</sub>, A<sub>2</sub>, . . ., A<sub>n</sub></b>, denoted by <b>A<sub>1</sub>
+                  <font ><font >&#8746;</font></font> A<sub>2</sub> <font ><font >&#8746;</font></font>
+                  . . . <font ><font >&#8746;</font></font> A<sub>n</sub> = 
+                  <big><big><font >&#8746;</font></big></big>A<sub>i</sub></b>, where <b>i = 1, 2, . . ., n</b>, 
+                  is that set that contains those elements that are members of at least one set in the collection.          
+                </dd>
+                <p align="center"><img src="images/100collection-union.gif" alt="Union of Multiple Sets"></p>
+          </dl>
+          <dl>
+            <dt><a name="collection-intersection"><font color="blue">Intersection of a Collection of Sets</font></a></dt>
+                <dd>
+                  <b>A<sub>1</sub>, A<sub>2</sub>, . . ., A<sub>n</sub></b>, denoted by <b>A<sub>1</sub>
+                  <font >&#8745;</font> A<sub>2</sub> 
+                  <font >&#8745;</font> . . . <font >&#8745;</font> 
+                  A<sub>n</sub> = <big><big><font >&#8745;</font></big></big>A<sub>i</sub></b>, where 
+                  <b>i = 1, 2, . . ., n</b>, is that set that contains those elements that are members of all the sets in the 
+                  collection.          
+                </dd>
+                <p align="center"><img src="images/100collection-intersection.gif" alt="Intersection of Multiple Sets"></p>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Computer Representation of Sets</font></legend>
+          <p>
+            A set <b>S</b> is represented by a computer by using a 
+                <a name="bit-string"><font color="blue"><b>bit string</b></font></a> to represent the elements of a set.
+          </p>
+          <table cellpadding="5">
+            <tr valign="top">
+                     <th rowspan="20"><font color="red">EXAMPLE21:</font></th>
+                  <td align="right"><font color="red">Let <b>D</b></font></td>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }</font></th>
+                  <td><font color="red">represented by bit string <b>11 1111 1111</b></font></td>
+            </tr>
+            <tr>
+                  <td align="right"><font color="red">Let <b>E</b></font></td>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 2, 4, 6, 8 }</font></th>
+                  <td><font color="red">represented by bit string <b>00 1010 1010</b></font></td>
+            </tr>
+            <tr>
+                  <td align="right"><font color="red">Let <b>O</b></font></td>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 1, 3, 5, 7, 9 }</font></th>
+                  <td><font color="red">represented by bit string <b>01 0101 0101</b></font></td>
+            </tr>
+            <tr>
+                  <td align="right"><font color="red">Let <b>P</b></font></td>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 2, 3, 5, 7 }</font></th>
+                  <td><font color="red">represented by bit string <b>00 1101 0100</b></font></td>
+            </tr>
+            <tr>
+                  <th align="right"><font color="red">O <font >&#8746;</font> P</font></th>
+              <th><font color="red">=</font></th>
+              <th align="left"><font color="red">{ 1, 2, 3, 5, 7, 9 }</font></th>
+                  <td><font color="red">represented by bit string <b>01 1101 0101</b></font></td>
+               </tr>
+            <tr>
+                 <th align="right"><font color="red">O <font >&#8745;</font> P</font></th>
+              <th><font color="red">=</font></th>
+              <th align="left"><font color="red">{ 3, 5, 7 }</font></th>
+                  <td><font color="red">represented by bit string <b>00 0101 0100</b></font></td>
+            </tr>
+            <tr>
+                  <th align="right"><font color="red">D &#150; P</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 0, 1, 4, 6, 8, 9 }</font></th>
+                  <td><font color="red">represented by bit string <b>11 0010 1011</b></font></td>
+            </tr>
+            <tr>
+                  <th align="right"><font color="red">O <font >&#8853;</font> P</font></th> 
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 1, 2, 9 }</font></th>
+                  <td><font color="red">represented by bit string <b>01 1000 0001</b></font></td>
+            </tr>
+            <tr>
+                  <th align="right"><font color="red">E<font >&#8242;</font></font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{0, 1, 3, 5, 7, 9}</font></th>
+                  <td><font color="red">represented by bit string <b>11 0101 0101</b></font></td>
+            </tr>
+            <tr>
+                  <th align="right"><font color="red">| E |</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left" colspan="2"><font color="red">4</font></th>
+            </tr>
+            <tr valign="top">
+                  <th align="right"><font color="red"><font >&#222;</font> ( E )</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left" colspan="2">
+                    <font color="red">
+                      <big><big>{</big></big> 
+                          <font >&#8709;</font>, { 2 }, { 4 }, { 6 }, { 8 },
+                      <br>&#160; &#160;{ 2, 4 }, { 2, 6 }, { 2, 8 }, { 4, 6 }, { 4, 8 }, { 6, 8 },
+                      <br>&#160; &#160;{ 2, 4, 6 }, { 2, 4, 8 }, { 2, 6, 8 }, { 4, 6, 8 },
+                          <br>&#160; &#160;{ 2, 4, 6, 8 } 
+                          <big><big>}</big></big>
+                    </font>
+                  </th>
+            </tr>
+            <tr>
+                  <th align="right"><font color="red">| <font >&#222;</font> ( E ) |</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left" colspan="2"><font color="red">2<sup>| E |</sup> = 2<sup>4</sup> = 16</font></th>
+            </tr>
+                <tr valign="top">
+                  <th align="right"><font color="red">E x O</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left" colspan="2">
+                    <font color="red">
+				  <big><big>{</big></big>
+                            ( 2, 1 ), ( 2, 3 ), ( 2, 5 ), ( 2, 7 ), ( 2, 9 ),
+                            <br>&#160; &#160;( 4, 1 ), ( 4, 3 ), ( 4, 5 ), ( 4, 7 ), ( 4, 9 ),
+                            <br>&#160; &#160;( 6, 1 ), ( 6, 3 ), ( 6, 5 ), ( 6, 7 ), ( 6, 9 ),
+                            <br>&#160; &#160;( 8, 1 ), ( 8, 3 ), ( 8, 5 ), ( 8, 7 ), ( 8, 9 ),
+				  <big><big>}</big></big>
+                        </font>
+                  </th> 
+                </tr>
+                <tr>
+                  <th><font color="red">E <font >&#8746;</font> O <font >&#8745;</font> P</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red">{ 1, 2, 3, 4, 5, 6, 7, 8, 9 }</font></th>
+                  <td><font color="red">represented by bit string <b>01 1111 1111</b></font></td>
+                </tr>
+                <tr>
+                  <th><font color="red">E <font >&#8745;</font> O <font >&#8745;</font> P</font></th>
+                  <th><font color="red">=</font></th>
+                  <th align="left"><font color="red" >&#8709;</font></th>
+                  <td><font color="red">represented by bit string <b>00 0000 0000</b></font></td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <table align="center">
+          <tr>
+            <td>
+                    <small><small>
+                    <br><a href="#absorption-laws">Absorption Laws</a>
+                    <br><a href="#associative-laws">Associative Laws</a>
+                        <br>
+                    <br><a href="#bound-laws">Bound Laws</a>
+                        <br>
+                    <br><a href="#cardinality">Cardinality</a> |S|
+                    <br><a href="#cartesian-product">Cartesian Product</a>
+                    <br><a href="#commutative-laws">Commutative Laws</a>
+                    <br><a href="#complement">Complement</a>
+                    <br><a href="#complement-laws">Complement Laws</a>
+                    <br><a href="#complementation-law">Complementation Law</a>
+                        <br>
+                    <br><a href="#demorgans-laws">De Morgan's Laws</a>
+                    <br><a href="#difference">Difference</a>
+                    <br><a href="#disjoint-sets">Disjoint Sets</a>
+                    <br><a href="#distributive-laws">Distributive Laws</a>
+                    <br><a href="#domination-laws">Domination Laws</a>
+                    <br><a href="#duality-law">Duality Law</a>
+                        <br>
+                    <br><a href="#element">Element</a>
+                    <br><a href="#empty-set">Empty Set</a> <font >&#8709;</font>
+                    <br><a href="#enumeration">Enumeration</a>
+                    <br><a href="#equal-sets">Equal Sets</a>
+                        <br>
+                    <br><a href="#finite-set">Finite Set</a>
+                        <br>
+                    <br><a href="#idempotent-laws">Idempotent Laws</a>
+                    <br><a href="#identity-laws">Identity Laws</a>
+                    <br><a href="#infinite-set">Infinite Set</a>
+                    <br><a href="#set-of-integers">Integers, Set of</a> Z
+                    <br><a href="#intersection">Intersection</a> <font >&#199;</font>
+                    <br><a href="#collection-intersection">Intersection of a Collection of Sets</a>
+                    <br><a href="#inverse-law">Inverse Law</a>
+                    <br><a href="#involution-law">Involution Law</a>
+                        <br>
+                    <br><a href="#membership-table">Membership Table</a>
+                        <br>
+                    <br><a href="#set-of-natural-numbers">Natural Numbers, Set of</a> N
+                    <br><a href="#null-set">Null Set</a> <font >&#8709;</font>
+                        <br>
+                    <br><a href="#ordered-n-tuple">Ordered n-tuple</a>
+                    <br><a href="#ordered-pairs">Ordered Pairs</a>
+                        <br>
+                        <br><a href="#principle-inclusion-exclusion">Principle of Inclusion-Exclusion</a>
+                    <br><a href="#power-set">Power Set</a> <font >&#222;</font>(S)
+                    <br><a href="#proper-subset">Proper Subset</a> <font >&#8834;</font>
+                    <br><a href="#proper-superset">Proper Superset</a> <font >&#8839;</font>
+                        <br>
+                    <br><a href="#set-of-rational-numbers">Rational Numbers, Set of</a> Q
+                    <br><a href="#set-of-real-numbers">Real Numbers, Set of</a> R
+                    <br><a href="#relative-complement">Relative Complement</a>
+                        <br>
+                    <br><a href="#set-builder">Set Builder Notation</a>
+                    <br><a href="#set-identities">Set Identities</a>
+                    <br><a href="#set-of-integers">Set of Integers</a> Z
+                    <br><a href="#set-of-natural-numbers">Set of Natural Numbers</a> N
+                    <br><a href="#set-of-rational-numbers">Set of Rational Numbers</a> Q
+                    <br><a href="#set-of-real-numbers">Set of Real Numbers</a> R
+                    <br><a href="#set-representation">Set Representation</a>
+                    <br><a href="#singleton-set">Singleton Set</a>
+                    <br><a href="#subset">Subset</a> <font >&#8838;</font>
+                    <br><a href="#symmetric-difference">Symmetric Difference</a> <font >&#8853;</font>
+                        <br>
+                    <br><a href="#truth-set">Truth Set</a>
+                        <br>
+                    <br><a href="#union">Union</a> <font >&#200;</font>
+                    <br><a href="#collection-union">Union of a Collection of Sets</a>
+                    <br><a href="#universal-set">Universal Set</a> <i>U</i>
+                        <br>
+                    <br><a href="#venn-diagram">Venn Diagram</a>
+                        <br>
+                    <br><a href="#01-laws">0/1 Laws</a>
+                        <hr>
+                        <a href="../homework/03sets-hw.html" target="_blank">Homework on Sets</a>
+                    </small></small>
+                </td>
+      </tr>
+        </table>
+        
+    <h6 align="center">
+      <hr>
+  &#169; 2002-04-08 cpsm; rcm ; last update 
+  <!-- #BeginDate format:IS1m -->2013-06-10  23:51<!-- #EndDate -->
+  te --> 
+  <hr>
+    </h6>
+  </body>
+</html>

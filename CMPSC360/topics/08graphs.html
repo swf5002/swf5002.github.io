@@ -1,0 +1,2924 @@
+<html>
+  <head>
+    <title>PSLV Discrete Mathematics: Graphs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel=stylesheet type="text/css" href="../../course-style.css">
+        <style>dt {font-weight: bold}</style>
+  </head>
+
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif" alt="PSU Logo"></p>
+    <h3 align="center">GRAPHS</h3>
+    <h5 align="center">
+      Please note that the material on this website is not intended to be exhaustive.
+      <br>This is intended as a summary and supplementary material.
+    </h5>
+    <h4>GRAPHS AND GRAPH MODELS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="graph"><font color="blue">Graph</font></a></dt>
+                <dd>
+                  <b>G = ( V, E )</b> consists of a non-empty set <b>V</b> of 
+                  <a name="vertex"><font color="blue"><b>vertices</b></font></a> (or 
+                  <a name="node"><font color="blue"><b>nodes</b></font></a>) and a set <b>E</b> of
+                  <a name="edge"><font color="blue"><b>edges</b></font></a> (or 
+                  <a name="arc"><font color="blue"><b>arcs</b></font></a>).
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="infinite-graph"><font color="blue">Infinite Graph</font></a></dt>
+                <dd>is a graph with an infinite vertex set.</dd>
+          </dl>
+          <dl>
+            <dt><a name="finite-graph"><font color="blue">Finite Graph</font></a></dt>
+                <dd>is a graph with an finite vertex set.</dd>
+          </dl>
+          <dl>
+            <dt><a name="simple-graph"><font color="blue">Simple Graph</font></a></dt>
+                <dd>
+                  is a graph in which each edge connects two different vertices and where no two edges connect the same pair of
+                  vertices.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE01:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="left">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>3</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>5</sub> = { v<sub>1</sub>, v<sub>5</sub> }
+                                <br>e<sub>6</sub> = { v<sub>2</sub>, v<sub>5</sub> }
+                                <br>e<sub>7</sub> = { v<sub>3</sub>, v<sub>5</sub> }
+                                <br>e<sub>8</sub> = { v<sub>4</sub>, v<sub>5</sub> }
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100graph.gif" alt="Simple Grpahs"></td></tr>
+                <tr><td><font color="red"><b>G</b> is a simple graph.</font></td></tr>
+          </table>
+          <dl>
+            <dt><a name="multiple-edge"><font color="blue">Multiple Edges</font></a></dt>
+                <dd>is a graph that has more than one edge connecting the same vertices.</dd>
+          </dl>
+          <dl>
+            <dt><a name="multigraph"><font color="blue">Multigraph</font></a></dt>
+                <dd>is a graph that has <a href="#multiple-edge">multiple edges</a>.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE02:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>3</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>5</sub> = { v<sub>1</sub>, v<sub>5</sub> }
+                                <br>e<sub>6</sub> = { v<sub>2</sub>, v<sub>5</sub> }
+                                <br>e<sub>7</sub> = { v<sub>3</sub>, v<sub>5</sub> }
+                                <br>e<sub>8</sub> = { v<sub>4</sub>, v<sub>5</sub> }
+                                <br>e<sub>9</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>10</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100multigraph.gif" alt="Multigraphs"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b>G</b> is a multigraph since
+                          <br>edges <b>e<sub>9</sub></b> and <b>e<sub>4</sub></b> connect the same vertices
+                          <b>v<sub>1</sub></b> and <b>v<sub>4</sub></b>
+                          <br>and edges <b>e<sub>2</sub></b> and <b>e<sub>10</sub></b> connect the same vertices 
+                          <b>v<sub>2</sub></b> and <b>v<sub>3</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="loop"><font color="blue">Loop</font></a></dt>
+                <dd>is an edge <b>e</b> that connects a vertex <b>v</b> to itself, i.e. <b>e = { v, v }</b>.</dd>
+          </dl>
+          <dl>
+            <dt><a name="pseudograph"><font color="blue">Pseudograph</font></a></dt>
+                <dd>
+                  is a graph that may include <a href="#loop">loops</a> and possbily <a href="#multiple-edge">multiple edges</a>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE03:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub>, e<sub>11</sub>, e<sub>12</sub>, e<sub>13</sub>, 
+                          e<sub>14</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>3</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>5</sub> = { v<sub>1</sub>, v<sub>5</sub> }
+                                <br>e<sub>6</sub> = { v<sub>2</sub>, v<sub>5</sub> }
+                                <br>e<sub>7</sub> = { v<sub>3</sub>, v<sub>5</sub> }
+                                <br>e<sub>8</sub> = { v<sub>4</sub>, v<sub>5</sub> }
+                                <br>e<sub>9</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>10</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>11</sub> = { v<sub>1</sub>, v<sub>1</sub> }
+                                <br>e<sub>12</sub> = { v<sub>2</sub>, v<sub>2</sub> }
+                                <br>e<sub>13</sub> = { v<sub>3</sub>, v<sub>3</sub> }
+                                <br>e<sub>14</sub> = { v<sub>4</sub>, v<sub>4</sub> }
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100pseudograph.gif" alt="Pseudographs"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b>G</b> is a pseudograph because it has 
+                          <br>loops <b>e<sub>11</sub></b>, <b>e<sub>12</sub></b>, <b>e<sub>13</sub></b>, <b>e<sub>14</sub></b>, 
+                          <br>and multiple edges <b>e<sub>2</sub></b>, <b>e<sub>10</sub></b> and 
+                          <b>e<sub>4</sub></b>, <b>e<sub>9</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="directed-edge"><font color="blue">Directed Edge</font></a></dt>
+                <dd>
+                  <b>e</b> is associated with an ordered pair <b>(u, v)</b> where <b>u</b> is the 
+                  <a name="initial-vertex"><font color="blue"><b>initial vertex</b></font></a> and <b>v</b>
+                  is the <a name="terminal-vertex"><font color="blue"><b>terminal vertex</b></font></a>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="digraph"><font color="blue">Directed Graph</font> or <font color="blue">Digraph</font></a></dt>
+                <dd>
+                  consists of a non-empty set of vertices <b>V</b> and a set of directed edges <b>E</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE04:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub> }</b>
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = ( v<sub>2</sub>, v<sub>3</sub> )
+                                <br>e<sub>3</sub> = ( v<sub>3</sub>, v<sub>4</sub> )
+                                <br>e<sub>4</sub> = ( v<sub>1</sub>, v<sub>4</sub> )
+                                <br>e<sub>5</sub> = ( v<sub>1</sub>, v<sub>5</sub> )
+                                <br>e<sub>6</sub> = ( v<sub>5</sub>, v<sub>2</sub> )
+                                <br>e<sub>7</sub> = ( v<sub>5</sub>, v<sub>3</sub> )
+                                <br>e<sub>8</sub> = ( v<sub>4</sub>, v<sub>5</sub> )
+                                <br>e<sub>9</sub> = ( v<sub>1</sub>, v<sub>4</sub> )
+                                        <br>e<sub>10</sub> = ( v<sub>3</sub>, v<sub>2</sub> )
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100digraph.gif" alt="Digraphs"></td></tr>
+                <tr><td><font color="red"><b>G</b> is a digraph with directed edges.</font></td></tr>
+          </table>
+          <dl>
+            <dt><a name="simple-digraph"><font color="blue">Simple Digraph</font></a></dt>
+                <dd>
+                  is a <a href="#simple-graph">simple graph</a> with <a href="#directed-edge">directed edges</a> and no 
+                  <a href="#loop">loops</a>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="directed-multigraph"><font color="blue">Directed Multigraph</font></a></dt>
+                <dd>is a <a href="#multigraph">multigraph</a> with <a href="#directed-edge">directed edges</a>.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE05:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub>, e<sub>11</sub>, e<sub>12</sub>, e<sub>13</sub>, 
+                          e<sub>14</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = ( v<sub>1</sub>, v<sub>2</sub> )
+                                <br>e<sub>2</sub> = ( v<sub>2</sub>, v<sub>3</sub> )
+                                <br>e<sub>3</sub> = ( v<sub>3</sub>, v<sub>4</sub> )
+                                <br>e<sub>4</sub> = ( v<sub>4</sub>, v<sub>1</sub> )
+                                <br>e<sub>5</sub> = ( v<sub>1</sub>, v<sub>5</sub> )
+                                <br>e<sub>6</sub> = ( v<sub>5</sub>, v<sub>2</sub> )
+                                <br>e<sub>7</sub> = ( v<sub>5</sub>, v<sub>3</sub> )
+                                <br>e<sub>8</sub> = ( v<sub>4</sub>, v<sub>5</sub> )
+                                <br>e<sub>9</sub> = ( v<sub>1</sub>, v<sub>4</sub> )
+                                <br>e<sub>10</sub> = ( v<sub>3</sub>, v<sub>2</sub> )
+                                <br>e<sub>11</sub> = ( v<sub>1</sub>, v<sub>1</sub> )
+                                <br>e<sub>12</sub> = ( v<sub>2</sub>, v<sub>2</sub> )
+                                <br>e<sub>13</sub> = ( v<sub>3</sub>, v<sub>3</sub> )
+                                <br>e<sub>14</sub> = ( v<sub>4</sub>, v<sub>4</sub> )
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100dimultigraph.gif" alt="Directed Multigraphs"></td></tr>
+                <tr><td><font color="red"><b>G</b> is a directed multigraph.</font></td></tr>
+          </table>
+          <dl>
+            <dt><a name="multiplicity"><font color="blue">Multiplicity</font></a></dt>
+                <dd>
+                  <b>m</b> of an edge <b>e = ( u, v )</b> is the number of <a href="#directed-edge">directed edges</a> all 
+                  associated to the same ordered pair of vertices <b>( u, v )</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="mixed-graph"><font color="blue">Mixed Graph</font></a></dt>
+                <dd>is a graph with both directed and undirected edges.</dd>
+          </dl>
+          <table align="center" border cellpadding="9">
+            <tr><th colspan="4"><font color="blue">GRAPH TERMINOLOGY</font></th></tr>
+                <tr>
+                  <th>TYPE</th>
+                  <th>EDGES</th>
+                  <th>Multiple edges allowed?</th>
+                  <th>Loops allowed?</th>
+                </tr>
+                <tr>
+                  <td>Simple graph</td>
+                  <td>undirected</td>
+                  <td align="center">no</td>
+                  <td align="center">no</td>
+                </tr>
+                <tr>
+                  <td>Multigraph</td>
+                  <td>undirected</td>
+                  <td align="center">yes</td>
+                  <td align="center">no</td>
+                </tr>
+                <tr>
+                  <td>Pseudograph</td>
+                  <td>undirected</td>
+                  <td align="center">yes</td>
+                  <td align="center">yes</td>
+                </tr>
+                <tr>
+                  <td>Simple directed graph</td>
+                  <td>directed</td>
+                  <td align="center">no</td>
+                  <td align="center">no</td>
+                </tr>
+                <tr>
+                  <td>Directed multigraph</td>
+                  <td>undirected</td>
+                  <td align="center">yes</td>
+                  <td align="center">yes</td>
+                </tr>
+                <tr>
+                  <td>Mixed graph</td>
+                  <td>directed and undirected</td>
+                  <td align="center">yes</td>
+                  <td align="center">yes</td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Graph Models</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th align="left"><font color="red">Some examples of Graph Models (see pages 592 &#150; 595)</font></th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                          <li>Niche Overlap Graphs in Ecology</li>
+                          <li>Acquaintanceship Graphs</li>
+                          <li>Influence Graphs</li>
+                          <li>Hollywood Graph</li>
+                          <li>Round-Robin Tournaments</li>
+                          <li>Collaboration Graphs</li>
+                          <li>Call Graphs</li>
+                          <li>Web Graph</li>
+                          <li>Precedence Graphs and Concurrent Processing</li>
+                          <li>Roadmaps</li>
+                        </ul>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+    <h4>GRAPH TERMINOLOGY AND SPECIAL TYPES OF GRAPHS</h4>
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+        </fieldset!-->
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Basic Terminology</font></legend>
+          <dl>
+            <dt><a name="adjacent"><font color="blue">Adjacent</font> or <font color="blue">Neighbor</font></a></dt>                
+        <dd> 
+                  vertices <b>u</b> and <b>v</b> in an undirected graph <b>G</b>, if <b>u</b> and <b>v</b> are endpoints of an edge
+                  <b>e</b> in <b>G</b>, i.e. <b>e = ( u, v )</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="incident"><font color="blue">Incident</font></a></dt>
+                <dd>
+                  edge <b>e</b> with vertices <b>u</b> and <b>v</b> in a graph <b>G</b>, if <b>e = ( u, v )</b>. &#160;
+                  Edge <b>e</b> is also said to <a name="connect"><font color="blue"><b>connect</b></font></a> vertices <b>u</b>
+                  and <b>v</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="endpoint"><font color="blue">Endpoints</font></a></dt>
+                <dd>
+                  are vertices <b>u</b> and <b>v</b> that are connected by an undirected edge <b>e</b>, i.e. <b>e = ( u, v )</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="degree"><font color="blue">Degree</font></a></dt>
+                <dd>
+                  of a vertex <b>v</b>, denoted by <font color="blue"><b>deg ( v )</b></font>, in an undirected graph <b>G</b> is 
+                  the number of edges incident to <b>v</b>, except that a loop at <b>v</b> contributes twice to the degree of 
+                  <b>v</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="isolated"><font color="blue">Isolated</font></a></dt>
+                <dd>vertex <b>v</b> has <b>deg ( v ) = 0</b>.</dd>
+          </dl>
+          <dl>
+            <dt><a name="pendant"><font color="blue">Pendant</font></a></dt>
+                <dd>vertex <b>v</b> has <b>deg ( v ) = 1</b>.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><a name="thm01"><font color="magenta">THEOREM01:</font></a></th>
+                  <td><a name="handshaking"><font color="magenta">Handshaking Theorem</font></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    Let <b>G = ( V, E )</b> be an undirected graph with <b>n</b> edges. &#160;
+                    Then
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                          <tr valign="middle">
+                            <th>2n = </th>
+                                <th>
+                                  <font size="-2"><br></font>
+                                  <font face="symbol" size="+2">&#931;</font>
+                                  <font size="-2"><br>v<font face="symbol">&#8712;</font>V</font>
+                                </th>
+                                <th>deg ( v )</th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td>Note that his applies even if multiple edges and loops exist.</td></tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="7"><font color="red">EXAMPLE06:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub>, e<sub>11</sub>, e<sub>12</sub>, e<sub>13</sub>, 
+                          e<sub>14</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>3</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>5</sub> = { v<sub>1</sub>, v<sub>5</sub> }
+                                <br>e<sub>6</sub> = { v<sub>2</sub>, v<sub>5</sub> }
+                                <br>e<sub>7</sub> = { v<sub>3</sub>, v<sub>5</sub> }
+                                <br>e<sub>8</sub> = { v<sub>4</sub>, v<sub>5</sub> }
+                                <br>e<sub>9</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>10</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>11</sub> = { v<sub>1</sub>, v<sub>1</sub> }
+                                <br>e<sub>12</sub> = { v<sub>2</sub>, v<sub>2</sub> }
+                                <br>e<sub>13</sub> = { v<sub>3</sub>, v<sub>3</sub> }
+                                <br>e<sub>14</sub> = { v<sub>4</sub>, v<sub>4</sub> }
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100pseudograph.gif" alt="Graph Terminology 1"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b>deg ( v<sub>1</sub> ) = deg ( v<sub>2</sub> ) = deg ( v<sub>3</sub> ) = deg ( v<sub>4</sub> ) = 6
+                          <br>deg ( v<sub>5</sub> ) = 4</b>
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><font color="red"><b>G</b> has no isolated vertices nor pendant vertices.</font></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Note that <b>|E| = 14</b>.
+                          <br>According to the <a href="#thm01">Handshaking Theorem</a>, 
+                          <br>the sum of the degrees of all the vertices is twice the number of edges which would be <b>28</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                          <tr valign="middle">
+                                <th>
+                                  <font color="red" size="-2">5<br></font>
+                                  <font color="red" face="symbol" size="+2">&#931;</font>
+                                  <font color="red" size="-2"><br>i = 1</font>
+                                </th>
+                                <th>
+                                  <font color="red">
+                                    deg ( v<sub>i</sub> ) =  deg ( v<sub>1</sub> ) + deg ( v<sub>2</sub> ) + deg ( v<sub>3</sub> ) + 
+                                        deg ( v<sub>4</sub> ) + deg ( v<sub>5</sub> ) = 6 + 6 + 6 + 6 + 4 = 28 = 2 * 14
+                                  </font>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                <tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM02:</font></th>
+                  <td>An undirected graph <b>G</b> has an even number of vertices with odd degree.</td>
+                </tr>
+                <tr valign="top">
+                  <td align="right" rowspan="7">Proof:</td>
+                  <td>
+                    Let <b>V<sub>1</sub></b> be the set of vertices with even degrees and <b>V<sub>2</sub></b> be the set of
+                        vertices with odd degrees
+                        <br>in an undirected graph <b>G</b> that has <b>n</b> vertices. &#160;
+                        Then
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                          <tr>
+                            <th>2n = </th>
+                                <th>
+                                  <font size="-2"><br></font>
+                                  <font face="symbol" size="+2">&#931;</font>
+                                  <font size="-2"><br>v<font face="symbol">&#8712;</font>V</font>
+                                </th>
+                                <th>deg ( v ) = </th>
+                                <th>
+                                  <font size="-2"><br></font>
+                                  <font face="symbol" size="+2">&#931;</font>
+                                  <font size="-2"><br>w<font face="symbol">&#8712;</font>V<sub>1</sub></font>
+                                </th>
+                                <th>deg ( w ) + </th>
+                                <th>
+                                  <font size="-2"><br></font>
+                                  <font face="symbol" size="+2">&#931;</font>
+                                  <font size="-2"><br>x<font face="symbol">&#8712;</font>V<sub>2</sub></font>
+                                </th>
+                                <th>deg ( x ) = m + k</th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Since <b>V<sub>1</sub></b> is the set of vertices with even degrees, then
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                        <font face="symbol" size="+2">&#931;</font> deg ( w ) = m
+                        <font size="-2"><br>u<font face="symbol">&#8712;</font>V<sub>1</sub></font>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    is even. &#160;
+                        Since <b>2n</b> is even and <b>m</b> is even, then <b>2n - m = k</b> is also even where
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                        <font face="symbol" size="+2">&#931;</font> deg ( x ) = k
+                        <font size="-2"><br>x<font face="symbol">&#8712;</font>V<sub>1</sub></font>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    Since each <b>deg ( x )</b> is odd, then there must be an even number of odd degree edges to make <b>k</b>
+                        even.
+                  </td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="adjacent-to"><font color="blue">Adjacent to</font></a></dt>
+                <dd>
+                  When edge <b>e = ( u, v )</b> in a directed graph <b>G</b>, then vertex <b>u</b> is said to be 
+                  <font color="blue"><b>adjacent to</b></font> vertex <b>v</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="adjacent-from"><font color="blue">Adjacent from</font></a></dt>
+                <dd>
+                  When edge <b>e = ( u, v )</b> in a directed graph <b>G</b>, then vertex <b>v</b> is said to be 
+                  <font color="blue"><b>adjacent from</b></font> vertex <b>u</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="indegree"><font color="blue">Indegree</font></a></dt>
+                <dd>
+                  of vertex <b>v</b>, denoted by <font color="blue"><b>indeg ( v )</b></font>, is the number of edges where 
+                  <b>v</b> is the <a href="#terminal-vertex">terminal vertex</a> of the edges. 
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="outdegree"><font color="blue">Outdegree</font></a></dt>
+                <dd>
+                  of vertex <b>v</b>, denoted by <font color="blue"><b>outdeg ( v )</b></font>, is the number of edges where 
+                  <b>v</b> is the <a href="#initial-vertex">initial vertex</a> of the edges. 
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE07:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub>, e<sub>11</sub>, e<sub>12</sub>, e<sub>13</sub>, 
+                          e<sub>14</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = ( v<sub>1</sub>, v<sub>2</sub> )
+                                <br>e<sub>2</sub> = ( v<sub>2</sub>, v<sub>3</sub> )
+                                <br>e<sub>3</sub> = ( v<sub>3</sub>, v<sub>4</sub> )
+                                <br>e<sub>4</sub> = ( v<sub>4</sub>, v<sub>1</sub> )
+                                <br>e<sub>5</sub> = ( v<sub>1</sub>, v<sub>5</sub> )
+                                <br>e<sub>6</sub> = ( v<sub>5</sub>, v<sub>2</sub> )
+                                <br>e<sub>7</sub> = ( v<sub>5</sub>, v<sub>3</sub> )
+                                <br>e<sub>8</sub> = ( v<sub>4</sub>, v<sub>5</sub> )
+                                <br>e<sub>9</sub> = ( v<sub>1</sub>, v<sub>4</sub> )
+                                <br>e<sub>10</sub> = ( v<sub>3</sub>, v<sub>2</sub> )
+                                <br>e<sub>11</sub> = ( v<sub>1</sub>, v<sub>1</sub> )
+                                <br>e<sub>12</sub> = ( v<sub>2</sub>, v<sub>2</sub> )
+                                <br>e<sub>13</sub> = ( v<sub>3</sub>, v<sub>3</sub> )
+                                <br>e<sub>14</sub> = ( v<sub>4</sub>, v<sub>4</sub> )
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100dimultigraph.gif" alt="Graph Terminology 2"></td></tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                        <th align="left">
+                          <font color="red">
+                                indeg ( v<sub>1</sub> ) = 2
+                                <br>indeg ( v<sub>2</sub> ) = 4
+                                <br>indeg ( v<sub>3</sub> ) = 3
+                                <br>indeg ( v<sub>4</sub> ) = 3
+                                <br>indeg ( v<sub>5</sub> ) = 2
+                              </font>
+                        </th>
+                                <td width="33"></td>
+                        <th align="left">
+                          <font color="red">
+                                outdeg ( v<sub>1</sub> ) = 4 
+                                <br>outdeg ( v<sub>2</sub> ) = 2
+                                <br>outdeg ( v<sub>3</sub> ) = 3
+                                <br>outdeg ( v<sub>4</sub> ) = 3
+                                <br>outdeg ( v<sub>5</sub> ) = 2
+                              </font>
+                        </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="magenta">THEOREM03:</font></th>
+                  <td>
+                    Let <b>G = ( V, E )</b> be a directed graph. &#160;
+                        Then
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <font face="symbol" size="+2">&#931;</font> indeg ( v ) =
+                                  <font size="-2"><br>v<font face="symbol">&#8712;</font>V</font>
+                                </th>
+                            <th align="left">
+                                  <font face="symbol" size="+2">&#931;</font> outdeg ( v ) = |E|
+                                  <font size="-2"><br>v<font face="symbol">&#8712;</font>V</font>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="right">Proof:</td>
+                  <td>
+                    Since every edge has an initial vertex and a terminal vertex,
+                        <br>then the summation of all indegrees must be equal to the summation of all the outdegrees
+                        <br>which must also be equal to the number of edges.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Some Special Simple Graphs</font></legend>
+          <dl>
+            <dt><a name="complete-graph"><font color="blue">Complete Graph</font></a></dt>
+                <dd>
+                  on <b>n</b> vertices, denoted by <font color="blue"><b>K<sub>n</sub></b></font>, is the simple graph <b>G</b> 
+                  that contains exactly one edge between each pair of distinct vertices.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  
+    <th rowspan="4"><font color="red">EXAMPLE08:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following complete graphs <b>K<sub>2</sub></b>, <b>K<sub>3</sub></b>, <b>K<sub>4</sub></b>,
+                          <b>K<sub>5</sub></b>, <b>K<sub>6</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100k2k3k4.gif" alt="Complete Graphs 1"></td></tr>
+                <tr><td><img src="images/100k5.gif" alt="Complete Graphs 2"></td></tr>
+                <tr><td><img src="images/100k6.gif" alt="Complete Graphs 3"></td></tr>
+          </table>
+          <dl>
+            <dt><a name="cycle"><font color="blue">Cycle</font></a></dt>
+                <dd>
+                  denoted by <font color="blue"><b>C<sub>n</sub></b></font>, where <b>n <font face="symbol">&ge;</font> 3</b>, 
+                  consists of <b>n</b> vertices <b>v<sub>1</sub></b>, <b>v<sub>2</sub></b>, <b>v<sub>3</sub></b>, . . ., 
+                  <b>v<sub>n</sub></b> 
+                  <br>and edges <b>{ v<sub>1</sub>, v<sub>2</sub> }</b>, <b>{ v<sub>2</sub>, v<sub>3</sub> }</b>, 
+                  . . ., <b>{ v<sub>n-1</sub>, v<sub>n</sub> }</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE09:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following cycles <b>C<sub>3</sub></b>, <b>C<sub>4</sub></b>, <b>C<sub>5</sub></b>, 
+                          <b>C<sub>6</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100c3c4.gif" alt="Cycles 1"></td></tr>
+                <tr><td><img src="images/100c5.gif" alt="Cycles 2"></td></tr>
+                <tr><td><img src="images/100c6.gif" alt="Cycles 3"></td></tr>
+          </table>
+          <dl>
+            <dt><a name="wheel"><font color="blue">Wheel</font></a></dt>
+                <dd>
+                  denoted by <font color="blue"><b>W<sub>n</sub></b></font>, is a cycle <b>C<sub>n</sub></b> with an additional 
+                  vertex <b>x</b> connected to the original vertices of <b>C<sub>n</sub></b> where 
+                  <b>n <font face="symbol">&ge;</font> 3</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE10:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following wheels <b>W<sub>3</sub></b>, <b>W<sub>4</sub></b>, <b>W<sub>5</sub></b>, 
+                          <b>W<sub>6</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100w3w4.gif" alt="Wheels 1"></td></tr>
+                <tr><td><img src="images/100w5.gif" alt="Wheels 2"></td></tr>
+                <tr><td><img src="images/100w6.gif" alt="Wheels 3"></td></tr>
+          </table>
+          <dl>
+            <dt>
+                  <a name="n-cube"><font color="blue">n&#150;Cube</font> or 
+                  n&#150;dimensional <font color="blue">Hypercube</font></a>
+                </dt>
+                <dd>
+                   denoted by <font color="blue"><b>Q<sub>n</sub></b></font> is the graph that has vertices representing the 
+                   <b>2<sup>n</sup></b> bit strings of length <b>n</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2">OBSERVATION:</th>
+                  <th align="left">Construction of <b>n&#150;Cube</b></th>
+                </tr>
+                <tr>
+                  <td>
+                <ol type="1">
+                  <li>
+                        The <a name="1cube"><font color="blue"><b>1&#150;cube</b></font></a> <b>Q<sub>1</sub></b> consists of 
+                                <b>2</b> nodes labeled <b>0</b> and <b>1</b>.
+                      </li><br><br>
+                  <li>
+                        Suppose <b>Q<sub>n-1</sub></b> is an <b>(n-1)&#150;cube</b>.&#160;
+                        Make a duplicate copy of <b>Q<sub>n-1</sub></b>, say call it <b>Q<sub>n</sub></b>.&#160;
+                <br>To form an <b>n&#150;cube</b>, connect with an edge all corresponding
+                        vertices in <b>Q<sub>n-1</sub></b> and <b>Q<sub>n</sub></b>,
+                                <br>i.e. vertices with the same labels.&#160;
+                        <br>Then re-label the vertices in <b>Q<sub>n-1</sub></b> to <b>0L</b> and the vertices in <b>Q<sub>n</sub></b> 
+                        to <b>1L</b>.
+                      </li>
+                </ol>
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="7"><font color="red">EXAMPLE11:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following hypercubes <b>Q<sub>1</sub></b>, <b>Q<sub>2</sub></b>, <b>Q<sub>3</sub></b>,
+                          <b>Q<sub>4</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100q1q2.gif" alt="Hypercibes 1"></td></tr>
+                <tr><td><img src="images/100q3.gif" alt="Hypercibes 2"></td></tr>
+                <tr><td><img src="images/100q4.gif" alt="Hypercibes 3"></td></tr>
+                <tr><th>OR</th></tr>
+                <tr><td><img src="images/100q4b.gif" alt="Hypercibes 4"></td></tr>
+                <tr>
+                  <td>
+                    Since our world is just three dimensional, it would be a challenge to illustrate beyond three dimensions as
+                        illustrated by <b>Q<sub>4</sub></b>.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Bipartite Graphs</font></legend>
+          <dl>
+            <dt><a name="bipartite"><font color="blue">Bipartite</font></a></dt>
+                <dd>
+                  graph is a graph <b>G</b> where its vertex set <b>V</b> can be partitioned into two disjoint sets
+                  <b>V<sub>1</sub></b> and <b>V<sub>2</sub></b> 
+                  <br>such that every edge in the graph connects a vertex in <b>V<sub>1</sub></b> and a vertex in
+                  <b>V<sub>2</sub></b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="bipartition"><font color="blue">Bipartition</font></a></dt>
+                <dd>
+                  is the pair of disjoint vertex sets <b>( V<sub>1</sub>, V<sub>2</sub> )</b> in a bipartite graph.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM04:</font></th>
+                  <td>
+                    A simple graph is bipartite iff it is possible to assign one of two different colors to each vertex of the
+                        graph 
+                        <br>so that no two adjacent vertices are assigned the same color.
+                  </td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="complete-bipartite"><font color="blue">Complete Bipartite Graph</font></a></dt>
+                <dd>
+                  denoted by <font color="blue"><b>K<sub>m,n</sub></b></font>, is the graph <b>G</b> that has its vertex set 
+                  partitioned into two subsets of vertices <b>V<sub>1</sub></b> and <b>V<sub>2</sub></b> 
+                  <br>such that <b>|V<sub>1</sub>| = m</b> and <b>|V<sub>2</sub>| = n</b> and where every edge connects a vertex 
+                  from <b>V<sub>1</sub></b> to a vertex in <b>V<sub>2</sub></b>. 
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE12:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and  
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>}</b> 
+                          and where
+                        </font>
+              </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th>
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>5</sub>, v<sub>4</sub> }
+                                <br>e<sub>2</sub> = { v<sub>5</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>1</sub>, v<sub>3</sub> }
+                                <br>e<sub>5</sub> = { v<sub>2</sub>, v<sub>4</sub> }
+                                <br>e<sub>6</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                              </font>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100bipartite.gif" alt="Bipartite Graphs"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b>G</b> is a bipartite graph <b>K<sub>3,2</sub></b> with disjoint sets of vertices 
+                          <b>V<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub> }</b> and 
+                          <b>V<sub>2</sub> = { v<sub>3</sub>, v<sub>4</sub> }</b>.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Some Applications of Special Types of Graphs</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th align="left">
+                    <font color="red">Some examples of applications of Special Types of Graphs (see pages 604 &#150; 607).</font>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                          <li>Job Assignments</li>
+                          <li>Local Area Networks</li>
+                          <li>Interconnection Networks for Parallel Computation</li>
+                        </ul>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">New Graphs from Old</font></legend>
+          <dl>
+            <dt><a name="subgraph"><font color="blue">Subgraph</font></a></dt>
+                <dd>
+                  of a graph <b>G = ( V, E )</b> is a graph <b>H = ( W, F )</b> where <b>W <font face="symbol">&#8838;</font> V</b>
+                  and <b>F <font face="symbol">&#8838;</font> E</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="proper-subgraph"><font color="blue">Proper Subgraph</font></a></dt>
+                <dd>
+                  <b>H</b> of graph <b>G</b> only if <b>H <font face="symbol">&#8834;</font> G</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE13:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub> }</b>
+                          <br>and subgraph <b>H = ( W, F )</b> where 
+                          <br><b>W = { v<sub>1</sub>, v<sub>3</sub>, v<sub>4</sub> }</b> and
+                          <br><b>F = { e<sub>3</sub>, e<sub>6</sub>, e<sub>9</sub> }</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100stargraph.gif" alt="Subgraphs 1"></td></tr>
+                <tr><td><img src="images/100subgraph.gif" alt="Subgraphs 2"></td></tr>
+          </table>
+          <dl>
+            <dt><a name="union"><font color="blue">Union</font></a></dt>
+                <dd>
+                  of two simple graphs <b>G<sub>1</sub> = ( V<sub>1</sub>, E<sub>1</sub> )</b> and 
+                  <b>G<sub>2</sub> = ( V<sub>2</sub>, E<sub>2</sub> )</b>, denoted by <b>G<sub>1</sub> 
+                  &cup; G<sub>2</sub></b>, 
+                  <br>is the simple graph with vertex set <b>V<sub>1</sub> &cup; V<sub>2</sub></b> and edge set <b>E<sub>1</sub> 
+                  &cup; E<sub>2</sub></b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="5"><font color="red">EXAMPLE14:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following graph <b>G<sub>1</sub></b> with vertices 
+                          <b>{ v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b>
+                          <br>and graph <b>G<sub>2</sub></b> with vertices <b>{ v<sub>1</sub>, v<sub>3</sub>, v<sub>4</sub> }</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100graph.gif" alt="Subgraphs 3"></td></tr>
+                <tr><td><img src="images/100subgraph.gif" alt="Subgraphs 4"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The following is the union of the graphs <b>G<sub>1</sub></b> and <b>G<sub>2</sub></b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100graph-union.gif" alt="Graph Unions"></td></tr>
+          </table>
+        </fieldset>
+    <h4>REPRESENTING GRAPHS AND GRAPH ISOMORPHISM</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <p>
+            The objective is to determine whether two graphs are isomorphic
+                <br>in the sense that there is a 1-1 correspondence between the vertex sets of the graphs preserving edges.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Representing Graphs</font></legend>
+          <dl>
+            <dt><a name="adjacency-list"><font color="blue">Adjacency List</font></a></dt>
+                <dd>
+                  is a table that list the vertices in a graph <b>G</b> and all the vertices adjacent to each vertex.
+                </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Adjacency Matrices</font></legend>
+          <dl>
+            <dt><a name="adjacency-matrix"><font color="blue">Adjacency Matrix</font></a></dt>
+                <dd>
+                  of a graph <b>G</b> with <b>|V| = n</b>, denoted by 
+                  <font color="blue"><b>A<sub>G</sub> = [a<sub>ij</sub>]</b></font>, is an <b>n x n</b> matrix such that
+                  <table>
+                    <tr>
+                          <th>a<sub>ij</sub> =</th>
+                          <td>
+                            <b><font face="symbol">&#8968;</font> 1</b>, if <b>( v<sub>i</sub>, v<sub>j</sub> )</b> is an edge of 
+                                <b>G</b>
+                                <br><b><font face="symbol">|</font></b>
+                                <br><b><font face="symbol">&#8970;</font> 0</b>, otherwise
+                          </td>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Incidence Matrices</font></legend>
+          <dl>
+            <dt><a name="incidence-matrix"><font color="blue">Incidence Matrix</font></a></dt>
+                <dd>
+                  For an <i>undirected</i> graph <b>G</b> with <b>|V| = n</b> and <b>|E| = m</b>, denoted by 
+                  <font color="blue"><b>M<sub>G</sub> = [m<sub>ij</sub>]</b></font>, is an <b>n x m</b> matrix such that
+                  <table>
+                    <tr>
+                          <th>m<sub>ij</sub> =</th>
+                          <td>
+                            <b><font face="symbol">&#8968;</font> 1</b>, if edge <b>e<sub>j</sub></b> is incident with 
+                                <b>v<sub>i</sub></b>
+                                <br><b><font face="symbol">|</font></b>
+                                <br><b><font face="symbol">&#8970;</font> 0</b>, otherwise.
+                          </td>
+                        </tr>
+                  </table>
+                </dd>
+                <dd>
+                  For an <i>directed</i> graph <b>G</b> with <b>|V| = n</b> and <b>|E| = m</b>, denoted by
+                  <font color="blue"><b>M<sub>G</sub> = [m<sub>ij</sub>]</b></font>, is an <b>n x m</b> matrix such that
+                  <table>
+                    <tr>
+                          <th>m<sub>ij</sub> =</th>
+                          <td>
+                            <b><font face="symbol">&#8968;</font> 1</b>, if edge <b>e<sub>j</sub></b> is incident with
+                                <b>v<sub>i</sub></b> and incoming to v<sub>i</sub>, or the edge is a loop
+                                <br><b><font face="symbol">| -1</font></b>, if edge <b>e<sub>j</sub></b> is incident with
+                                <b>v<sub>i</sub></b> and outgoing.
+                                <br><b><font face="symbol">&#8970;</font> 0</b>, otherwise
+                          </td>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>        
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="6"><font color="red">EXAMPLE15:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the simple graph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="left">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>3</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>1</sub>, v<sub>4</sub> }
+                                <br>e<sub>5</sub> = { v<sub>1</sub>, v<sub>5</sub> }
+                                <br>e<sub>6</sub> = { v<sub>2</sub>, v<sub>5</sub> }
+                                <br>e<sub>7</sub> = { v<sub>3</sub>, v<sub>5</sub> }
+                                <br>e<sub>8</sub> = { v<sub>4</sub>, v<sub>5</sub> }
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100graph.gif" alt="Incidence Matrices 1"></td></tr>
+                <tr>
+                  <td>
+                    <table align="center" border cellpadding="5">
+                          <tr><th colspan="2"><font color="red">ADJACENCY LIST<br>of Simple Graph</font></th></tr>
+                          <tr>
+                            <th><font color="red">Vertex</font></th>
+                                <th><font color="red">Adjacent Vertices</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>1</sub></font></th>
+                                <th><font color="red">v<sub>2</sub>, v<sub>4</sub>, v<sub>5</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>2</sub></font></th>
+                                <th><font color="red">v<sub>1</sub>, v<sub>3</sub>, v<sub>5</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>3</sub></font></th>
+                                <th><font color="red">v<sub>2</sub>, v<sub>4</sub>, v<sub>5</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>4</sub></font></th>
+                                <th><font color="red">v<sub>1</sub>, v<sub>3</sub>, v<sub>5</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>5</sub></font></th>
+                                <th><font color="red">v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub></font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    The adjacency matrix of <b>G</b> is as follows:
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th colspan="2">&#160;</th>
+                                <th><font color="lime">v<sub>1</sub></font></th>
+                                <th><font color="lime">v<sub>2</sub></font></th>
+                                <th><font color="lime">v<sub>3</sub></font></th>
+                                <th><font color="lime">v<sub>4</sub></font></th>
+                                <th><font color="lime">v<sub>5</sub></font></th>
+                            <th>&#160;</th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>5</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    The incidence matrix of <b>G</b> is as follows:
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th colspan="2">&#160;</th>
+                                <th><font color="lime">e<sub>1</sub></font></th>
+                                <th><font color="lime">e<sub>2</sub></font></th>
+                                <th><font color="lime">e<sub>3</sub></font></th>
+                                <th><font color="lime">e<sub>4</sub></font></th>
+                                <th><font color="lime">e<sub>5</sub></font></th>
+                                <th><font color="lime">e<sub>6</sub></font></th>
+                                <th><font color="lime">e<sub>7</sub></font></th>
+                                <th><font color="lime">e<sub>8</sub></font></th>
+                            <th>&#160;</th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>5</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="6"><font color="red">EXAMPLE16:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the directed pseudograph <b>G = ( V, E )</b> where 
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and 
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>, 
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub>, e<sub>11</sub>, e<sub>12</sub>, e<sub>13</sub>, 
+                          e<sub>14</sub> }</b> and where
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                e<sub>1</sub> = ( v<sub>1</sub>, v<sub>2</sub> )
+                                <br>e<sub>2</sub> = ( v<sub>2</sub>, v<sub>3</sub> )
+                                <br>e<sub>3</sub> = ( v<sub>3</sub>, v<sub>4</sub> )
+                                <br>e<sub>4</sub> = ( v<sub>4</sub>, v<sub>1</sub> )
+                                <br>e<sub>5</sub> = ( v<sub>1</sub>, v<sub>5</sub> )
+                                <br>e<sub>6</sub> = ( v<sub>5</sub>, v<sub>2</sub> )
+                                <br>e<sub>7</sub> = ( v<sub>5</sub>, v<sub>3</sub> )
+                                <br>e<sub>8</sub> = ( v<sub>4</sub>, v<sub>5</sub> )
+                                <br>e<sub>9</sub> = ( v<sub>1</sub>, v<sub>4</sub> )
+                                <br>e<sub>10</sub> = ( v<sub>3</sub>, v<sub>2</sub> )
+                                <br>e<sub>11</sub> = ( v<sub>1</sub>, v<sub>1</sub> )
+                                <br>e<sub>12</sub> = ( v<sub>2</sub>, v<sub>2</sub> )
+                                <br>e<sub>13</sub> = ( v<sub>3</sub>, v<sub>3</sub> )
+                                <br>e<sub>14</sub> = ( v<sub>4</sub>, v<sub>4</sub> )
+                              </font>
+                            </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100dimultigraph.gif" alt="Incidence Matrices 2"></td></tr>
+                <tr>
+                  <td>
+                    <table align="center" border cellpadding="5">
+                          <tr><th colspan="2"><font color="red">ADJACENCY LIST<br>of a Digraph</font></th></tr>
+                          <tr>
+                            <th><font color="red">Vertex</font></th>
+                                <th><font color="red">Adjacent Vertices</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>1</sub></font></th>
+                                <th><font color="red">v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>5</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>2</sub></font></th>
+                                <th><font color="red">v<sub>2</sub>, v<sub>3</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>3</sub></font></th>
+                                <th><font color="red">v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>4</sub></font></th>
+                                <th><font color="red">v<sub>1</sub>, v<sub>4</sub>, v<sub>5</sub></font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="red">v<sub>5</sub></font></th>
+                                <th><font color="red">v<sub>2</sub>, v<sub>3</sub></font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    The adjacency matrix of <b>G</b> is as follows:
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th colspan="2"><font color="lime">to/from</font></th>
+                                <th><font color="lime">v<sub>1</sub></font></th>
+                                <th><font color="lime">v<sub>2</sub></font></th>
+                                <th><font color="lime">v<sub>3</sub></font></th>
+                                <th><font color="lime">v<sub>4</sub></font></th>
+                                <th><font color="lime">v<sub>5</sub></font></th>
+                            <th>&#160;</th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>5</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    The incidence matrix of <b>G</b> is as follows:
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th colspan="2">&#160;</th>
+                                <th><font color="lime">e<sub>1</sub></font></th>
+                                <th><font color="lime">e<sub>2</sub></font></th>
+                                <th><font color="lime">e<sub>3</sub></font></th>
+                                <th><font color="lime">e<sub>4</sub></font></th>
+                                <th><font color="lime">e<sub>5</sub></font></th>
+                                <th><font color="lime">e<sub>6</sub></font></th>
+                                <th><font color="lime">e<sub>7</sub></font></th>
+                                <th><font color="lime">e<sub>8</sub></font></th>
+                                <th><font color="lime">e<sub>9</sub></font></th>
+                                <th><font color="lime">e<sub>10</sub></font></th>
+                                <th><font color="lime">e<sub>11</sub></font></th>
+                                <th><font color="lime">e<sub>12</sub></font></th>
+                                <th><font color="lime">e<sub>13</sub></font></th>
+                                <th><font color="lime">e<sub>14</sub></font></th>
+                            <th>&#160;</th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                                <th><font color="lime">v<sub>5</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">-1</font></th>
+                                <th><font color="red">1</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                                <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Isomorphism of Graphs</font></legend>
+          <dl>
+            <dt><a name="isomorphism"><font color="blue">Isomorphism</font></a></dt>
+                <dd>
+                  of two simple graphs <b>G<sub>1</sub> = ( V<sub>1</sub>, E<sub>1</sub> )</b> and
+                  <b>G<sub>2</sub> = ( V<sub>2</sub>, E<sub>2</sub> )</b> occurs when there is a 1-1 and onto function
+                  <b>f: V<sub>1</sub> <font face="symbol">&#8594;</font> V<sub>2</sub></b> 
+                  <br>with the property that <b>a</b> and <b>b</b> are adjacent in <b>G<sub>1</sub></b> iff <b>f(a)</b> and 
+                  <b>f(b)</b> are adjacent in <b>G<sub>2</sub></b>, for all <b>a</b> and <b>b</b> in <b>V<sub>1</sub></b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+              <th>OBSERVATION:</th>
+                  <td>
+                    <ul>
+                          <li>
+                            Since isomorphic graphs are 1-1 between the sets of vertices,
+                                <br>then they must have the same number of vertices.
+                          </li>
+                          <li>
+                            Since isomorphic graphs are 1-1 between the sets of vertices, 
+                                <br>then they must have the same number of edges.
+                          </li>
+                          <li>The degrees of corresponding vertices in isomorphic simple graphs must be the same.</li>
+                        </ul>
+                  </td>
+                </tr>
+          </table>
+          <p>Another way of showing that two simple graphs are isomorphic is with an adjacency matrix.</p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="8"><font color="red">EXAMPLE17:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the graphs <b>G = ( V, E )</b> where <b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>,
+                          v<sub>4</sub> }</b> and <b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub> }</b>
+                          <br>and <b>H = ( W, F )</b> with <b>W = { w<sub>1</sub>, w<sub>2</sub>, w<sub>3</sub>, w<sub>4</sub>}</b> and
+                          <b>F = { f<sub>1</sub>, f<sub>2</sub>, f<sub>3</sub>, f<sub>4</sub> }</b>. &#160;
+                          <br>Are <b>G</b> and <b>H</b> isomorphic?
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100isomorphic.gif" alt="Isomorphisms"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          The function <b><font face="symbol">F</font>: G <font face="symbol">&#8594;</font> H</b> with
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="left">
+                                  <font color="red">
+                                <font face="symbol">F</font> ( v<sub>1</sub> ) = w<sub>1</sub>
+                                <br><font face="symbol">F</font> ( v<sub>2</sub> ) = w<sub>3</sub>
+                                <br><font face="symbol">F</font> ( v<sub>3</sub> ) = w<sub>2</sub>
+                                <br><font face="symbol">F</font> ( v<sub>4</sub> ) = w<sub>4</sub>
+                              </font>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          is 1-1 correspondence between <b>V</b> and <b>W</b> which preserves adjacency of vertices as illustrated
+                          as follows:
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center">
+                          <tr>
+                            <th align="left">
+                                  <font color="red">
+                                e<sub>1</sub> = { v<sub>1</sub>, v<sub>2</sub> }
+                                <br>e<sub>2</sub> = { v<sub>2</sub>, v<sub>3</sub> }
+                                <br>e<sub>3</sub> = { v<sub>3</sub>, v<sub>4</sub> }
+                                <br>e<sub>4</sub> = { v<sub>4</sub>, v<sub>1</sub> }
+                              </font>
+                                </th>
+                                <td width="33"></td>
+                            <th align="left">
+                                  <font color="red">
+                                f<sub>1</sub> = { w<sub>1</sub>, w<sub>3</sub> }
+                                <br>f<sub>2</sub> = { w<sub>3</sub>, w<sub>2</sub> }
+                                <br>f<sub>3</sub> = { w<sub>2</sub>, w<sub>4</sub> }
+                                <br>f<sub>4</sub> = { w<sub>4</sub>, w<sub>1</sub> }
+                              </font>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th colspan="7"><font color="red">Adjacency Matrix of G</font></th>
+                                <th rowspan="6" width="33">&#160;</th>
+                            <th colspan="7"><font color="red">Adjacency Matrix of H</font></th>
+                          </tr>
+                          <tr>
+                            <th colspan="2"></th>
+                            <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font color="lime">v<sub>4</sub></font></th>
+                                <th></th>
+                            <th colspan="2"></th>
+                            <th><font color="lime">w<sub>1</sub></font></th>
+                            <th><font color="lime">w<sub>3</sub></font></th>
+                            <th><font color="lime">w<sub>2</sub></font></th>
+                            <th><font color="lime">w<sub>4</sub></font></th>
+                                <th></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                            <th><font color="lime">w<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="lime">w<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="lime">w<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                            <th><font color="lime">w<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th colspan="7"><font color="red">Incidence Matrix of G</font></th>
+                                <th rowspan="6" width="33">&#160;</th>
+                            <th colspan="7"><font color="red">Incidence Matrix of H</font></th>
+                          </tr>
+                          <tr>
+                            <th colspan="2"></th>
+                            <th><font color="lime">e<sub>1</sub></font></th>
+                            <th><font color="lime">e<sub>2</sub></font></th>
+                            <th><font color="lime">e<sub>3</sub></font></th>
+                            <th><font color="lime">e<sub>4</sub></font></th>
+                                <th></th>
+                            <th colspan="2"></th>
+                            <th><font color="lime">f<sub>1</sub></font></th>
+                            <th><font color="lime">f<sub>2</sub></font></th>
+                            <th><font color="lime">f<sub>3</sub></font></th>
+                            <th><font color="lime">f<sub>4</sub></font></th>
+                                <th></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                            <th><font color="lime">w<sub>1</sub></font></th>
+                            <th><font face="symbol" color="red">&#8968;</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8969;</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="lime">w<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>3</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="lime">w<sub>2</sub></font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font face="symbol" color="red">|</font></th>
+                          </tr>
+                          <tr>
+                            <th><font color="lime">v<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                            <th><font color="lime">w<sub>4</sub></font></th>
+                            <th><font face="symbol" color="red">&#8970;</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">0</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font color="red">1</font></th>
+                            <th><font face="symbol" color="red">&#8971;</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+    <h4>CONNECTIVITY</h4>
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+        </fieldset!-->
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Path</font></legend>
+          <dl>
+            <dt><a name="path"><font color="blue">Path</font> or <font color="blue">Walk</font></a></dt>
+                <dd>
+                  of length <b>n &gt; 0</b> from vertex <b>u</b> to vertex <b>v</b> in an <u>undirected</u> graph <b>G</b> is a 
+                  sequence of edges <b>e<sub>1</sub>, e<sub>2</sub>, . . ., e<sub>n</sub></b> of <b>G</b> 
+                  <br>such that 
+                  <b>e<sub>1</sub> = { x<sub>0</sub>, x<sub>1</sub> }</b>, <b>e<sub>2</sub> = { x<sub>1</sub>, x<sub>2</sub> }</b>,
+                  . . ., <b>e<sub>n</sub> = { x<sub>n-1</sub>, x<sub>n</sub> }</b> where <b>x<sub>0</sub> = u</b> and 
+                  <b>x<sub>n</sub> = v</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt>
+                  <a name="circuit"><font color="blue">Circuit</font> or <font color="blue">Cycle</font> or 
+                  <font color="blue">Closed Walk</font></a>
+                </dt>
+                <dd>
+                  is a path that begins and ends with the same vertex, i.e. <b>u = v</b>, and has length greater than <b>0</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="dipath"><font color="blue">Directed Path</font></a></dt>
+                <dd>
+                  of length <b>n &gt; 0</b> from vertex <b>u</b> to vertex <b>v</b> in an <u>directed</u> graph <b>G</b> is a 
+                  sequence of edges <b>e<sub>1</sub>, e<sub>2</sub>, . . ., e<sub>n</sub></b> of <b>G</b> 
+                  <br>such that 
+                  <b>e<sub>1</sub> = ( x<sub>0</sub>, x<sub>1</sub> )</b>, <b>e<sub>2</sub> = ( x<sub>1</sub>, x<sub>2</sub> )</b>,
+                  . . ., <b>e<sub>n</sub> = ( x<sub>n-1</sub>, x<sub>n</sub> )</b> where <b>x<sub>0</sub> = u</b> and 
+                  <b>x<sub>n</sub> = v</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="pass-thru"><font color="blue">Pass Through</font></a></dt>
+                <dd>A path or circuit is said to <font color="blue">pass through</font> its vertices.</dd>
+          </dl>
+          <dl>
+            <dt><a name="traverse"><font color="blue">Traverse</font></a></dt>
+                <dd>A path or circuit is said to <font color="blue">traverse</font> its edges.</dd>
+          </dl>
+          <dl>
+            <dt>
+                  <a name="simple"><font color="blue">Simple Path</font> or <font color="blue">Simple Circuit</font> or
+                  <font color="blue">Trail</font></a>
+                </dt>
+                <dd>is path or circuit or trail that does not contain an edge more than once.</dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Connectedness in Undirected Graphs</font></legend>
+          <dl>
+            <dt><a name="connected"><font color="blue">Connected</font></a></dt>
+                <dd>
+                  undirected graph is a graph with a path between every pair of distinct vertices of the graph.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM05:</font></th>
+                  <td>There is a simple path between every pair of distinct vertices of a connected undirected graph.</td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Connectedness in Directed Graphs</font></legend>
+          <dl>
+            <dt><a name="strong-connect"><font color="blue">Strongly Connected</font></a></dt>
+                <dd>
+                  directed graph is a graph with a path from <b>a</b> to <b>b</b> and from <b>b</b> to <b>a</b> whenever <b>a</b>
+                  and <b>b</b> are vertices in a graph.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="weak-connect"><font color="blue">Weakly Connected</font></a></dt>
+                <dd>directed graph is a graph with a path between every two vertices in the underlying undirected graph.</dd>
+          </dl>
+        </fieldset>
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">Paths and Isomorphism</font></legend>
+        </fieldset!-->
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Counting Paths Between Vertices</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM06:</font></th>
+                  <td>
+                    Let <b>G</b> be a graph with adjacency matrix <b>A</b> with respect to the ordering 
+                        <b>v<sub>1</sub>, v<sub>2</sub>, . . ., v<sub>n</sub></b> 
+                        <br>(with directed or undirected edges, with multiple edges and loops allowed). &#160;
+                        <br>The number of different paths of length <b>r</b> from <b>v<sub>i</sub></b> to <b>v<sub>j</sub></b>, 
+                        <br>where
+                        <b>r</b> is a positive integer, equals the <b>(i,j)<sup>th</sup></b> entry of <b>A<sup>r</sup></b>.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+    <h4>EULER AND HAMILTONIAN PATHS</h4>
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+        </fieldset!-->
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Euler Paths and Circuits</font></legend>
+          <dl>
+            <dt><a name="euler-circuit"><font color="blue">Euler Circuit</font></a></dt>
+                <dd>in a graph <b>G</b> is a simple circuit containing every edge of <b>G</b>.</dd>
+          </dl>
+          <dl>
+            <dt><a name="euler-path"><font color="blue">Euler Path</font></a></dt>
+                <dd>in a graph <b>G</b> is a simple path containing every edge of <b>G</b>.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2">OBSERVATION:</th>
+                  <th align="left">Necessary and Sufficient Conditions for Euler Circuits and Paths</th>
+                </tr>
+                <tr><td>Every vertex must have an even degree.</td></tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM07:</font></th>
+                  <td>
+                    A connected multigraph with at least two vertices has an Euler circuit iff each of its vertices has even 
+                        degree.
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="purple">ALGORITHM01:</font></th>
+                  <th align="left"><font color="purple">Construction of Euler Circuits</font></th>
+                </tr>
+                <tr>
+                  <td>
+                    function <b>Euler</b> ( <b>G</b>: connected multigraph with all vertices of even degree )
+                        <br>&#160; &#160; {
+                        <br>&#160; &#160; &#160; &#160; <b>circuit</b> = a circuit in <b>G</b> beginning with an arbitrarily chosen 
+                        vertex 
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;
+                        with edges successively added to form a path that returns to this vertex ;
+                        <br>&#160; &#160; &#160; &#160; <b>H</b> = <b>G</b> with the edges of this circuit removed ;
+                        <br><br>&#160; &#160; &#160; &#160; while ( <b>H</b> has edges )
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; {
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <b>subcircuit</b> = a circuit in <b>H</b> beginning
+                        at a vertex in <b>H</b> 
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        &#160; &#160; &#160;  
+                        that also is an endpoint of an edge of <b>circuit</b> ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <b>H</b> = <b>H</b> with edges of <b>subcircuit</b>
+                        and all isolated vertices removed ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <b>circuit</b> = <b>circuit</b> with 
+                        <b>subcircuit</b> inserted at the appropriate vertex ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; }
+                        <br>&#160; &#160; }
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM08:</font></th>
+                  <td>
+                    A connected multigraph has an Euler path but not an Euler circuit
+                        <br>iff it has exactly two vertices of odd degree.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Hamiltonian Paths and Circuits</font></legend>
+          <dl>
+            <dt><a name="hamilton-path"><font color="blue">Hamiltonian Path</font></a></dt>
+                <dd>is a simple path in graph <b>G</b> that passes through every vertex  exactly once.</dd>
+          </dl>
+          <dl>
+            <dt><a name="hamilton-circuit"><font color="blue">Hamiltonian Circuit</font></a></dt>
+                <dd>is a simple circuit in graph <b>G</b> that passes through every vertex  exactly once.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="6"><font color="red">EXAMPLE18:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following graph which is often used to represent "A Voyage Around the World" where each vertex
+                          represents a city.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100globe.gif" alt="Globe 1"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Stretch the top <font color="green"><b>C<sub>5</sub></b></font> to flatten the "globe" as follows:
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100flatten.gif" alt="Globe 2"></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Following the red solid lines, is the following graph a Hamiltonian path or a Hamiltonian circuit?
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100hamilton.gif" alt="Globe 3"></td></tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="magenta">THEOREM09:</font></th>
+                  <th align="left"><font color="magenta">Construction of <a name="gray-codes">Gray Codes</a></font></th>
+                </tr>
+                <tr>
+                  <td>
+                    Let <b>G<sub>1</sub></b> denote the sequence <b>0, 1</b>. &#160;
+                        Define <b>G<sub>n</sub></b> in terms of <b>G<sub>n-1</sub></b> by the following rules:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ol type="1">
+                          <li>
+                            Let <b>G<sub>n-1</sub>'</b> denote the sequence obtained by prefixing each member of <b>G<sub>n-1</sub></b>
+                                with <b>0</b>.
+                          </li>
+                          <li>
+                            Let <b>G<sub>n-1</sub>"</b> denote the sequence obatined by prefixing each member of <b>G<sub>n-1</sub></b>
+                                with <b>1</b>.
+                          </li>
+                          <li>
+                            Let <b>G<sub>n</sub></b> be the sequence consisting of <b>G<sub>n-1</sub>'</b> followed by 
+                                <b>G<sub>n-1</sub>"</b>.
+                          </li>
+                        </ol>
+                  </td>
+                </tr>
+                <tr><td>Then <b>G<sub>n</sub></b> is a Gray code for every positive integer <b>n</b>.</td></tr>
+          </table>
+          <br>                
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="6"><font color="red">EXAMPLE19:</font></th>
+                  <td><font color="red">Construction of Gray Codes</font></td>
+                </tr>
+                <tr>
+          <td>
+                        <table>
+                          <tr>
+                            <th align="left" width="22"><font color="red">G<sub>1</sub></font></th>
+                                <th><font color="red">:</font></th>
+                               <th align="right" width="33"><font color="red">0</font></th>
+                              <th align="right" width="33"><font color="red">1</font></th>
+                      </tr>
+                    </table>                                        
+              </td>
+                   </tr>
+                <tr>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left" width="22"><font color="red">G<sub>1</sub>'</font></th>
+                            <th><font color="red">:</font></th>
+                            <th align="right" width="33"><font color="red">00</font></th>
+                               <th align="right" width="33"><font color="red">01</font></th>
+                      </tr>
+                        <tr>
+                          <th align="left"><font color="red">G<sub>1</sub>"</font></th>
+                               <th><font color="red">:</font></th>
+                               <th align="right"><font color="red">10</font></th>
+                            <th align="right"><font color="red">11</font></th>
+                        </tr>
+                      <tr>
+                            <th align="left"><font color="red">G<sub>2</sub></font></th>
+                                <th><font color="red">:</font></th>
+                               <th align="right"><font color="red">00</font></th>
+                               <th align="right"><font color="red">01</font></th>
+                               <th align="right" width="33"><font color="red">10</font></th>
+                               <th align="right" width="33"><font color="red">11</font></th>
+                        </tr>
+                     </table>
+                  </td>
+                   </tr>
+                   <tr>
+                     <td>
+                        <table>
+                        <tr>
+                          <th align="left" width="22"><font color="red">G<sub>2</sub>'</font></th>
+                               <th><font color="red">:</font></th>
+                               <th align="right" width="33"><font color="red">000</font></th>
+                               <th align="right" width="33"><font color="red">001</font></th>
+                               <th align="right" width="33"><font color="red">010</font></th>
+                               <th align="right" width="33"><font color="red">011</font></th>
+                      </tr>
+                       <tr>
+                          <th align="left"><font color="red">G<sub>2</sub>"</font></th>
+                               <th><font color="red">:</font></th>
+                               <th align="right"><font color="red">100</font></th>
+                               <th align="right"><font color="red">101</font></th>
+                               <th align="right"><font color="red">110</font></th>
+                               <th align="right"><font color="red">111</font></th>
+                        </tr>
+                       <tr>
+                        <th align="left"><font color="red">G<sub>3</sub></font></th>
+                               <th><font color="red">:</font></th>
+                                   <th align="right"><font color="red">000</font></th>
+                               <th align="right"><font color="red">001</font></th>
+                               <th align="right"><font color="red">010</font></th>
+                               <th align="right"><font color="red">011</font></th>
+                               <th align="right" width="33"><font color="red">100</font></th>
+                               <th align="right" width="33"><font color="red">101</font></th>
+                               <th align="right" width="33"><font color="red">110</font></th>
+                               <th align="right" width="33"><font color="red">111</font></th>
+                        </tr>
+                     </table>
+                  </td>
+                   </tr>
+                   <tr>
+          <td>
+                        <table>
+              <tr>
+                <th align="left" width="22"><font color="red">G<sub>3</sub>'</font></th>
+                <th><font color="red">:</font></th>
+                <th align="right" width="33"><font color="red">0000</font></th>
+                <th align="right" width="33"><font color="red">0001</font></th>
+                <th align="right" width="33"><font color="red">0010</font></th>
+                <th align="right" width="33"><font color="red">0011</font></th>
+                <th align="right" width="33"><font color="red">0100</font></th>
+                <th align="right" width="33"><font color="red">0101</font></th>
+                <th align="right" width="33"><font color="red">0110</font></th>
+                <th align="right" width="33"><font color="red">0111</font></th>
+              </tr>
+              <tr>
+                <th align="left"><font color="red">G<sub>3</sub>"</font></th>
+                <th><font color="red">:</font></th>
+                <th align="right"><font color="red">1000</font></th>
+                <th align="right"><font color="red">1001</font></th>
+                <th align="right"><font color="red">1010</font></th>
+                <th align="right"><font color="red">1011</font></th>
+                <th align="right"><font color="red">1100</font></th>
+                <th align="right"><font color="red">1101</font></th>
+                <th align="right"><font color="red">1110</font></th>
+                <th align="right"><font color="red">1111</font></th>
+              </tr>
+              <tr>
+                <th align="left"><font color="red">G<sub>4</sub></font></th>
+                <th><font color="red">:</font></th>
+                <th align="right"><font color="red">0000</font></th>
+                <th align="right"><font color="red">0001</font></th>
+                <th align="right"><font color="red">0010</font></th>
+                <th align="right"><font color="red">0011</font></th>
+                <th align="right"><font color="red">0100</font></th>
+                <th align="right"><font color="red">0101</font></th>
+                <th align="right"><font color="red">0110</font></th>
+                <th align="right"><font color="red">0111</font></th>
+                <th align="right" width="33"><font color="red">1000</font></th>
+                <th align="right" width="33"><font color="red">1001</font></th>
+                <th align="right" width="33"><font color="red">1010</font></th>
+                <th align="right" width="33"><font color="red">1011</font></th>
+                <th align="right" width="33"><font color="red">1100</font></th>
+                <th align="right" width="33"><font color="red">1101</font></th>
+                <th align="right" width="33"><font color="red">1110</font></th>
+                <th align="right" width="33"><font color="red">1111</font></th>
+              </tr>
+            </table>                                        
+          </td>
+            </tr>
+            <tr><td><font color="red">Determine <b>G<sub>5</sub></b>.</font></td></tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="magenta">THEOREM10:</font></th>
+                  <th align="left"><a name="dirac"><font color="magenta">Dirac's Theorem</font></a></th>
+                </tr>
+                <tr>
+                  <td>
+                    If <b>G</b> is a simple graph with <b>n <font face="symbol">&ge;</font> 3</b> vertices 
+                        <br>such that the degree of every vertex in <b>G</b> is at least <b>n / 2</b>,
+                        <br>then <b>G</b> has a Hamiltonian circuit.
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="magenta">THEOREM11:</font></th>
+                  <th align="left"><a name="ore"><font color="magenta">Ore's Theorem</font></a></th>
+                </tr>
+                <tr>
+                  <td>
+                    If <b>G</b> is a simple graph with <b>n <font face="symbol">&ge;</font> 3</b> vertices 
+                        <br>such that <b>deg ( u ) + deg ( v ) <font face="symbol">&ge;</font> n</b> for every pair of non-adjacent 
+                        vertices <b>u</b> and <b>v</b> in <b>G</b>, 
+                        <br>then <b>G</b> has a Hamiltonian circuit.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+    <h4>SHORTEST PATH PROBLEMS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="weighted-graph"><font color="blue">Weighted Graph</font></a></dt>
+                <dd>is a graph that has a number assigned to each edge.</dd>
+          </dl>
+          <dl>
+            <dt><a name="length"><font color="blue">Length</font></a></dt>
+                <dd>
+                  of a path in a weighted graph is the sum of the weights of the edges of this path.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+                  <tr valign="top">
+                  <th rowspan="6"><font color="red">EXAMPLE20:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider graph <b>G = ( V, E )</b> with
+                          <br><b>V = { v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> }</b> and
+                          <br><b>E = { e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, e<sub>4</sub>, e<sub>5</sub>, e<sub>6</sub>,
+                          e<sub>7</sub>, e<sub>8</sub>, e<sub>9</sub>, e<sub>10</sub>, e<sub>11</sub>, e<sub>12</sub>,
+                          e<sub>13</sub>, e<sub>14</sub>, e<sub>15</sub> }</b>
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100weighted.gif" alt="Weighted Graphs"></td></tr>
+                <tr><th><a href=""><font color="red">WEIGHTED EDGES</font></a></th></tr>
+                <tr>
+                  <td>
+                    <table align="center" cellpadding="5">
+                          <tr>
+                            <th align="left">
+                                  <font color="red">
+                    { v<sub>1</sub>, v<sub>2</sub> } = 15
+                                        <br>{ v<sub>1</sub>, v<sub>3</sub> } = 23
+                                        <br>{ v<sub>1</sub>, v<sub>4</sub> } = 21
+                                        <br>{ v<sub>1</sub>, v<sub>5</sub> } = 16
+                                        <br>{ v<sub>1</sub>, v<sub>6</sub> } = 5
+                                  </font>
+                                </th>
+                            <th align="left">
+                                  <font color="red">
+                                          { v<sub>2</sub>, v<sub>1</sub> } = 15
+                                        <br>{ v<sub>2</sub>, v<sub>3</sub> } = 14
+                                        <br>{ v<sub>2</sub>, v<sub>4</sub> } = 24
+                                        <br>{ v<sub>2</sub>, v<sub>5</sub> } = 22
+                                        <br>{ v<sub>2</sub>, v<sub>6</sub> } = 3
+                                  </font>
+                                </th>
+                            <th align="left">
+                                  <font color="red">
+                                        { v<sub>3</sub>, v<sub>1</sub> } = 23
+                                        <br>{ v<sub>3</sub>, v<sub>2</sub> } = 14
+                                          <br>{ v<sub>3</sub>, v<sub>4</sub> } = 12
+                                        <br>{ v<sub>3</sub>, v<sub>5</sub> } = 25
+                                        <br>{ v<sub>3</sub>, v<sub>6</sub> } = 7
+                                  </font>
+                                </th>
+                            <th align="left">
+                                  <font color="red">
+                                        { v<sub>4</sub>, v<sub>1</sub> } = 21
+                                        <br>{ v<sub>4</sub>, v<sub>2</sub> } = 24
+                                          <br>{ v<sub>4</sub>, v<sub>3</sub> } = 12
+                                        <br>{ v<sub>4</sub>, v<sub>5</sub> } = 17
+                                        <br>{ v<sub>4</sub>, v<sub>6</sub> } = 9
+                                  </font>
+                                </th>
+                            <th align="left">
+                                  <font color="red">
+                                        { v<sub>5</sub>, v<sub>1</sub> } = 16
+                                        <br>{ v<sub>5</sub>, v<sub>2</sub> } = 22
+                                        <br>{ v<sub>5</sub>, v<sub>3</sub> } = 25
+                                        <br>{ v<sub>5</sub>, v<sub>4</sub> } = 17
+                                        <br>{ v<sub>5</sub>, v<sub>6</sub> } = 2
+                                  </font>
+                                </th>
+                            <th align="left">
+                                  <font color="red">
+                                        { v<sub>6</sub>, v<sub>1</sub> } = 5
+                                        <br>{ v<sub>6</sub>, v<sub>2</sub> } = 3
+                                        <br>{ v<sub>6</sub>, v<sub>3</sub> } = 7
+                                        <br>{ v<sub>6</sub>, v<sub>4</sub> } = 9
+                                        <br>{ v<sub>6</sub>, v<sub>5</sub> } = 2
+                                  </font>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table align="center" cellpadding="5">
+                          <tr>
+                                <th><font color="red">PATH</font></th>
+                                <th><font color="red">LENGTH</font></th>
+                             </tr>
+                          <tr>
+                                <th align="right">
+                                  <font color="red">
+                                        v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub>,        v<sub>6</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 14 + 12 + 17 + 2 = 60</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>6</sub>, v<sub>5</sub> :
+                                  </font>
+                                </th>
+                            <th align="left"><font color="red">15 + 14 + 12 + 9 + 2 = 52</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                    v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>5</sub>, v<sub>4</sub>, v<sub>6</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 14 + 25 + 17 + 9 = 80</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                    v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>5</sub>, v<sub>6</sub>, v<sub>4</sub> : 
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 14 + 12 + 2 + 9 = 65</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>6</sub>, v<sub>4</sub>, v<sub>5</sub> : 
+                              </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 14 + 7 + 9 + 17 = 62</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                    v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>6</sub>, v<sub>5</sub>, v<sub>4</sub> : 
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 14 + 7 + 2 + 17 = 55</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                    v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>3</sub>, v<sub>5</sub>, v<sub>6</sub> : 
+                                  </font>
+                                </th>
+                                <th><font color="red">15 + 24 + 12 + 25 + 2 = 78</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                      v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>3</sub>, v<sub>6</sub>, v<sub>5</sub> : 
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 24 + 12 + 7 + 2 = 60</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                    v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>5</sub>, v<sub>3</sub>, v<sub>6</sub> : 
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 24 + 17 + 25 + 7 = 88</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                 v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>5</sub>, v<sub>6</sub>, v<sub>3</sub> : 
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 24 + 17 + 2 + 7 = 65</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                 v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>6</sub>, v<sub>3</sub>, v<sub>5</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 24 + 9 + 7 + 25 = 80</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>4</sub>, v<sub>6</sub>, v<sub>5</sub>, v<sub>3</sub> : 
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 24 + 9 + 2 + 25 = 75</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>6</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 22 + 25 + 12 + 9 = 83</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub>, v<sub>3</sub>, v<sub>6</sub>, v<sub>4</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 22 + 25 + 7 + 9 = 78</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub>, v<sub>4</sub>, v<sub>3</sub>, v<sub>6</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 22 + 17 + 12 + 7 = 73</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub>, v<sub>4</sub>, v<sub>6</sub>, v<sub>3</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 22 + 17 + 9 + 7 = 70</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub>, v<sub>6</sub>, v<sub>3</sub>, v<sub>4</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 22 + 2 + 7 + 12 = 58</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right">
+                                  <font color="red">
+                                     v<sub>1</sub>, v<sub>2</sub>, v<sub>5</sub>, v<sub>6</sub>, v<sub>4</sub>, v<sub>3</sub> :
+                                  </font>
+                                </th>
+                                <th align="left"><font color="red">15 + 22 + 2 + 9 + 12 = 60</font></th>
+                          </tr>
+                          <tr><th colspan="2"><font color="red">. . . etc. . . .</font></th>
+                          </tr>
+                      </table>
+              </td>
+            </tr>
+          </table>  
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">A Shortest-Path Algorithm</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="purple">ALGORITHM02:</font></th>
+                  <th align="left"><a name="dijkstra"><font color="purple">Dijkstra's Algorithm</font></a></th>
+                </tr>
+                <tr>
+                  <td>
+                    function <b>Dijkstra</b> ( <b>G</b> : weighted connected simple graph, with all weights positive )
+                        <br>&#160; &#160; {
+                        <br>&#160; &#160; &#160; &#160; { 
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; 
+                        <b>G</b> has vertices <b>a = v<sub>0</sub>, v<sub>1</sub>, . . .,
+                        v<sub>n</sub> = z</b> and weights <b>w ( v<sub>i</sub>, v<sub>j</sub> )</b> 
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; where 
+                        <b>w ( v<sub>i</sub>, v<sub>j</sub> ) = <font face="symbol">&#8734;</font></b> if 
+                        <b>( v<sub>i</sub>, v<sub>j</sub> )</b> is not an edge in <b>G</b>
+                        <br><br>&#160; &#160; &#160; &#160; &#160; &#160; for <b>( i = 1; i &lt;= n; i++ )</b>
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; {
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        <b>L ( v<sub>i</sub> ) = <font face="symbol">&#8734;</font></b> ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; }
+                        <br><br>&#160; &#160; &#160; &#160; &#160; &#160; <b>L ( a ) = 0</b> ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; <b>S = <font face="symbol">&#8709;</font></b> ;
+                        <br><br>&#160; &#160; &#160; &#160; &#160; &#160; 
+                        { the labels are now initialized so that the label of <b>a</b> is <b>0</b>
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        and all other labels are <b><font face="symbol">&#8734;</font></b>, and <b>S</b> is the empty set }
+                        <br><br>&#160; &#160; &#160; &#160; &#160; &#160; while ( <b>z <font face="symbol">&#8713;</font> S</b> )
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; {
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        <b>u =</b> a vertex not in <b>S</b> with <b>L ( u )</b> minimal ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <b>S = S <font face="symbol">&#8899;</font> { u }</b> ;
+                        <br><br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        for ( all vertices <b>v</b> not in <b>S</b> )
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; {
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        if ( <b>L ( u ) + w ( u, v ) &lt; L ( v )</b> )
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        &#160; {
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        &#160; &#160; &#160; <b>L ( v ) = L ( u ) + w ( u, v )</b> ;
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        &#160; }
+                        <br><br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        { this adds a vertex to <b>S</b> with minimal label 
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 
+                        and updates the labels of vertices not in <b>S</b> }
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; }
+                        <br>&#160; &#160; &#160; &#160; &#160; &#160; }
+                        <br>&#160; &#160; }
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="10"><font color="red">EXAMPLE21:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following weighted simple graph. &#160;
+                          <br>Determine the shortest distance from <b>a</b> to <b>z</b> using <b>Dijkstra's Algorithm</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100weighted1.gif" alt="Weighted Graphs 1"></td></tr>
+                <tr><td><img src="images/100weighted2.gif" alt="Weighted Graphs 2"></td></tr>
+                <tr><td><img src="images/100weighted3.gif" alt="Weighted Graphs 2"></td></tr>
+                <tr><td><img src="images/100weighted4.gif" alt="Weighted Graphs 4"></td></tr>
+                <tr><td><img src="images/100weighted5.gif" alt="Weighted Graphs 5"></td></tr>
+                <tr><td><img src="images/100weighted6.gif" alt="Weighted Graphs 6"></td></tr>
+                <tr><td><img src="images/100weighted7.gif" alt="Weighted Graphs 7"></td></tr>
+                <tr><td><img src="images/100weighted8.gif" alt="Weighted Graphs 8"></td></tr>
+                <tr><td><font color="red">The shortest path is <b>a, c, b, d, e, z</b>.</font></td></tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM12:</font></th>
+                  <td>
+                    Dijkstra's algorithm finds the length of the shortest path between two vertices in a connected simple 
+                        indirected weighted graph.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">The Traveling Salesman Problem</font></legend>
+        </fieldset!-->
+    <h4>PLANAR GRAPHS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="planar"><font color="blue">Planar</font></a></dt>
+                <dd>
+                  graph is one that can drawn in the plane without any edges crossing 
+                  <br>(where a crossing of edges is the intersection of the lines or arcs representing them at a point other than 
+                  their common endpoint).
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="3"><font color="red">EXAMPLE22:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following graph <b>G</b> with <b>|V| = 20</b> and <b>|E| = 30</b>. &#160; 
+                          Is it planar?
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><img src="images/100globe.gif" alt="Globe 4"></tr>
+                <tr><td><img src="images/100flatten.gif" alt="Globe 5"></tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Euler's Formula</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="magenta">THEOREM13:</font></th>
+                  <th align="left"><font color="magenta">Euler's Formula</font></th>
+                </tr>
+                <tr>
+                  <td>
+                    Let <b>G</b> be a connected planar simple graph with <b>|V| = n</b> vertices and <b>|E| = k</b> edges. &#160;
+                    <br>The number of regions <b>r</b> in a planar representation of <b>G</b> is <b>r = k &#150; n + 2</b>.
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">COROLLARY13-01:</font></th>
+                  <td>
+                    If <b>G</b> is a connected planar simple graph with <b>|V| = n</b> vertices and <b>|E| = k</b> edges, 
+                        <br>where 
+                        <b>n <font face="symbol">&ge;</font> 3</b>, then <b>k <font face="symbol">&le;</font> 3n &#150; 6</b>.
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">COROLLARY13-02:</font></th>
+                  <td>
+                    If <b>G</b> is a connected planar simple graph, then <b>G</b> has a vertex of degree not exceeding <b>5</b>.
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">COROLLARY13-03:</font></th>
+                  <td>
+                    If <b>G</b> is a connected planar simple graph with <b>|V| = n</b> vertices and <b>|E| = k</b> edges, 
+                        <br>where <b>n <font face="symbol">&ge;</font> 3</b> and has no circuits of length <b>3</b>, then
+                        <b>k <font face="symbol">&le;</font> 2n &#150; 4</b>.
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE23:</font></th>
+                  <td>
+                    <font color="red">
+                          Consider the following planar graph <b>G</b> with <b>|V| = 20</b> vertices and <b>|E| = 30</b> edges.
+                        </font>
+              </td>
+                </tr>
+                <tr><td><img src="images/100regions.gif" alt="Graph Regions"></td></tr>
+                <tr><td><font color="red">The number of regions <b>r = 30 &#150; 20 + 2 = 12</b>.</font></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Observe also that <b>3 * 20 &#150; 6 = 54 <font face="symbol">&ge;</font> |E| = 30</b>.
+                        </font>
+                  </td>
+            </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Kuratowski's Theorem</font></legend>
+          <dl>
+            <dt><a name="elem-subdiv"><font color="blue">Elementary Subdivision</font></a></dt>
+                <dd>
+                  is the operation of removing an edge <b>{ u, v }</b> from a planar graph 
+                  <br>and adding a new vertex <b>w</b> together with edges <b>{ u, w }</b> and <b>{ w, v }</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="homeomorphic"><font color="blue">Homeomorphic</font></a></dt>
+                <dd>
+                  graphs <b>G<sub>1</sub> = ( V<sub>1</sub>, E<sub>1</sub> )</b> and <b>G<sub>2</sub> = ( V<sub>2</sub>,
+                  E<sub>2</sub> )</b> are obtained from the same graph <b>G</b> by a sequence of elementary subdivision.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="magenta">THEOREM14:</font></th>
+                  <td>
+                    A graph is non-planar iff it contains a subgraph homeomorphic to <b>K<sub>3,3</sub></b> or 
+                        <b>K<sub>5</sub></b>.
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+    <h4>GRAPH COLORING</h4>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="coloring"><font color="blue">Coloring</font></a></dt>
+                <dd>
+                  of a simple graph is the assignment of a color to each vertex of the graph 
+                  <br>so that no two adjacent vertices are assigned the same color.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="chromatic"><font color="blue">Chromatic Number</font></a></dt>
+                <dd>
+                  of a graph <b>G</b>, denoted by <b><font face="symbol">c</font> ( G )</b>, is the least number of colors needed 
+                  for a coloring of the graph.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="magenta">THEOREM15:</font></th>
+                  <th align="left"><font color="magenta">Four Color Theorem</font></th>
+                </tr>
+                <tr><td>The chromatic number of a planar graph is no greater than <b>4</b>.</td></tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE24:</font></th>
+                  <td><font color="red">Consider the following planar graph <b>G</b>.</font></td>
+                </tr>
+                <tr><tdimg src="images/100colors.gif" alt="Graph Coloring"></td></tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Applications of Graph Colorings</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr>
+                  <th align="left" colspan="2">
+                    <font color="red">Some examples of applications of Graph Colorings (see pages 671 &#150; 672 )</font>
+                  </th>
+                </tr>
+                <tr valign="top">
+                  <th align="left">Scheduling Final Exams</th>
+                  <td>How can the final exams be scheduled so no student has two exams at the same time?</td>
+                </tr>          
+                <tr valign="top">
+                  <th align="left">Frequency Assignments</th>
+                  <td>
+                    How can TV channels be assigned to TV stations so no two stations within 150 miles can operate on the same
+                        channel?
+                  </td>
+                </tr>          
+                <tr valign="top">
+                  <th align="left">Index Registers</th>
+                  <td>
+                    How can TV channels be assigned to TV stations so no two stations within 150 miles can operate on the same
+                        channel?
+                  </td>
+                </tr>          
+          </table>
+        </fieldset>
+        <br>
+        <table align="center">
+          <tr>
+            <td>
+                  <font size="-2">
+                    <br><a href="#adjacency-list">Adjacency List</a>
+                    <br><a href="#adjacent">Adjacent</a>
+                    <br><a href="#adjacent-from">Adjacent From</a>
+                    <br><a href="#adjacent-to">Adjacent To</a>
+                    <br><a href="#arc">Arc</a>
+            <br>  
+                    <br><a href="#bipartite">Bipartite</a>
+                    <br><a href="#bipartition">Bipartition</a>
+            <br>  
+                    <br><a href="#circuit">Circuit</a>
+                    <br><a href="#circuit">Closed Walk</a>
+                    <br><a href="#coloring">Coloring</a>
+                    <br><a href="#complete-bipartite">Complete Bipartite Graph</a> K<sub>m,n</sub>
+                    <br><a href="#complete-graph">Complete Graph</a> K<sub>n</sub>
+                    <br><a href="#connect">Connect</a>
+                    <br><a href="#connected">Connected</a>
+                    <br><a href="#cycle">Cycle</a> C<sub>n</sub>
+            <br>  
+                    <br><a href="#degree">Degree</a> deg(v)
+                    <br><a href="#digraph">Digraph</a>
+                    <br><a href="#dijkstra">Dijkstra</a>
+                    <br><a href="#dirac">Dirac's Theorem</a>
+                    <br><a href="#directed-edge">Directed Edge</a>
+                    <br><a href="#digraph">Directed Graph</a>
+                    <br><a href="#directed-multigraph">Directed Multigraph</a>
+                    <br><a href="#dipath">Directed Path</a>
+            <br>  
+                    <br><a href="#edge">Edge</a>
+                    <br><a href="#elem-subdiv">Elementary Subdivision</a>
+                    <br><a href="#endpoint">Endpoint</a>
+                    <br><a href="#euler-circuit">Euler Circuit</a>
+                    <br><a href="#euler-formula">Euler Formula</a>
+                    <br><a href="#euler-path">Euler Path</a>
+            <br>  
+                    <br><a href="#finite-graph">Finite Graph</a>
+                        <br>
+                    <br><a href="#graph">Graph</a>
+                    <br><a href="#gray-codes">Gray Codes</a>
+                        <br>
+                    <br><a href="#hamilton-circuit">Hamiltonian Circuit</a>
+                    <br><a href="#hamilton-path">Hamiltonian Path</a>
+                    <br><a href="#handshaking">Handshaking Theorem</a>
+                    <br><a href="#homeomorphic">Homeomorphic</a>
+                    <br><a href="#n-cube">Hypercube</a> Q<sub>n</sub>
+            <br>  
+                    <br><a href="#incident">Incident</a>
+                    <br><a href="#incidence-matrix">Incidence Matrix</a>
+                    <br><a href="#indegree">Indegree</a> indeg
+                    <br><a href="#infinite-graph">Infinite Graph</a>
+                    <br><a href="#initial-vertex">Initial Vertex</a>
+                    <br><a href="#isolated">Isolated</a>
+                    <br><a href="#isomorphism">Isomorphism</a>
+            <br>  
+                    <br><a href="#length">Length</a>
+                    <br><a href="#loop">Loop</a>
+            <br>  
+                    <br><a href="#mixed-graph">Mixed Graph</a>
+                    <br><a href="#multigraph">Multigraph</a>
+                    <br><a href="#multiple-edge">Multiple Edges</a>
+                    <br><a href="#multiplicity">Multiplicity</a>
+                        <br>
+                    <br><a href="#n-cube">n-Cube</a> Q<sub>n</sub>
+                    <br><a href="#adjacent">Neighbor</a>
+                    <br><a href="#node">Node</a>
+                        <br>
+                    <br><a href="#ore">Ore's Theorem</a>
+                    <br><a href="#outdegree">Outdegree</a> outdeg
+                        <br>
+                    <br><a href="#pass-thru">Pass Through</a>
+                    <br><a href="#path">Path</a>
+                    <br><a href="#pendant">Pendant</a>
+                    <br><a href="#planar">Planar</a>
+                    <br><a href="#proper-subgraph">Proper Subgraph</a>
+                    <br><a href="#pseudograph">Pseudograph</a>
+            <br>  
+                    <br><a href="#simple">Simple Circuit</a>
+                    <br><a href="#simple-digraph">Simple Digraph</a>
+                    <br><a href="#simple-graph">Simple Graph</a>
+                    <br><a href="#simple">Simple Path</a>
+                    <br><a href="#strong-connect">Strongly Connected</a>
+                    <br><a href="#subgraph">Subgraph</a>
+                        <br>
+                    <br><a href="#terminal-vertex">Terminal Vertex</a>
+                    <br><a href="#simple">Trail</a>
+                    <br><a href="#traverse">Traverse</a>
+                        <br>
+                    <br><a href="#union">Union</a>
+                        <br>
+                    <br><a href="#vertex">Vertex</a>
+                        <br>
+                    <br><a href="#path">Walk</a>
+                    <br><a href="#weak-connect">Weakly Connected</a>
+                    <br><a href="#weighted-graph">Weighted Graph</a>
+                    <br><a href="#wheel">Wheel</a> W<sub>n</sub>
+            <hr><a href="../homework/08graphs-hw.html" target="_blank">Homework on Graphs</a>
+                  </font>
+                </td>
+          </tr>
+        </table>
+        
+    <h6 align="center">
+      <hr>
+  &#169; 2002-04-08 <a href="mailto:ojjcourse@psu.edu">cpsm</a> ; last update 
+  <!-- #BeginDate format:IS1m -->2010-08-10  0:43<!-- #EndDate -->
+      <hr>
+    </h6>
+
+  </body>
+</html>

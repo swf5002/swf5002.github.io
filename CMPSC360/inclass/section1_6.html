@@ -1,0 +1,272 @@
+<html>
+<head>
+    <title>IST 230, CMPSC 360</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link rel=stylesheet type="text/css" href="course-style.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif"></p>
+        <h3 align="center">IST 230, CMPSC 360: Section 1.6</h3>
+    </p>
+    <ul>
+        <li>4.
+            <ul>
+                <li>a. Simplification</li>
+                <li>b. Disjunctive Syllogism</li>
+                <li>c. Modus Ponens</li>
+                <li>d. Addition</li>
+                <li>e. Hypothetical Syllogism</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        </li>6.
+            <p>Note: in logic (which is timeless and eternal) verb tense does not usually matter. The past, present, and future tenses of sentences are considered the same. Also note that the justifications in the proof below uses the abbreviations on the hand out sheet given in class.</p>
+            <ul>
+                <li>r = it rains</li>
+                <li>f = it is foggy</li>
+                <li>s = sailing race will be held</li>
+                <li>d = lifesaving demonstration will go on</li>
+                <li>t = trophy is awarded</li>
+            </ul>
+            <br>
+            <table align="center" border cellpadding="5">
+                <tr>
+                    <th>1. (<font face="symbol">&#172;</font>r <font face="symbol">&#8744; &#172;</font>f) <font face="symbol">&#8594;</font> (s <font face="symbol">&#8743;</font> d)</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>2. s <font face="symbol">&#8594;</font> t</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>3. <font face="symbol">&#172;</font>t</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>4. <font face="symbol">&#172;</font>s</th>
+                    <th>MT,2,3</th>
+                </tr>
+                <tr>
+                    <th>5. <font face="symbol">&#172;</font>s <font face="symbol">&#8744; &#172;</font>t</th>
+                    <th>ADD,4</th>
+                </tr>
+                <tr>
+                    <th>6. <font face="symbol">&#172;</font>(s <font face="symbol">&#8743;</font> d)</th>
+                    <th>DEM,5</th>
+                </tr>
+                <tr>
+                    <th>7. <font face="symbol">&#172;</font>(<font face="symbol">r <font face="symbol">&#8744; &#172;</font>f)</th>
+                    <th>MT,1,6</th>
+                </tr>
+                <tr>
+                    <th>8. r <font face="symbol">&#8743;</font>f</th>
+                    <th>DEM,DN,7</th>
+                </tr>
+                <tr>
+                    <th>9. r</th>
+                    <th>SIMP,8</th>
+                </tr>
+            </table>
+        </li>
+    </ul>
+    <br>
+    <ul>
+        </li>8.
+            <br>
+            <table align="center" border cellpadding="5">
+                <tr>
+                    <th>1. (p <font face="symbol">&#8743;</font> t) <font face="symbol">&#8594;</font> (r <font face="symbol">&#8744;</font> s)</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>2. q <font face="symbol">&#8594;</font> (u <font face="symbol">&#8743;</font> t)</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>3. u <font face="symbol">&#8594;</font> p</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>4. <font face="symbol">&#172;</font>s</th>
+                    <th>premise</th>
+                </tr>
+                <tr>
+                    <th>5. q</th>
+                    <th>assumption for CP</th>
+                </tr>
+                <tr>
+                    <th>6. u <font face="symbol">&#8743;</font> t</th>
+                    <th>MP,2,5</th>
+                </tr>
+                <tr>
+                    <th>7. u</th>
+                    <th>SIMP,6</th>
+                </tr>
+                <tr>
+                    <th>8. t</th>
+                    <th>SIMP,6</th>
+                </tr>
+                <tr>
+                    <th>9. p</th>
+                    <th>MP,3,7</th>
+                </tr>
+                <tr>
+                    <th>10. p <font face="symbol">&#8743;</font> t</th>
+                    <th>CONJ,8,9</th>
+                </tr>
+                <tr>
+                    <th>11. r <font face="symbol">&#8744;</font> s</th>
+                    <th>MT,1,10</th>
+                </tr>
+                <tr>
+                    <th>12. r</th>
+                    <th>DS,4,11</th>
+                </tr>
+                <tr>
+                    <th>13. <font face="symbol">&#8756;</font> q </font face="symbol">&#8594;</font> r</th>
+                    <th>CP,5-12</th>
+                </tr>
+            </table>
+        </li>
+    </ul>
+    <br>
+    <ul>
+        <li>18. EI must choose an s <b>new</b> to the proof.</li>
+    </ul>
+    <br>
+    <ul>
+        <li>34.
+            <p>
+            We are only interested in the cases where both assumptions (premises) are true. In the truth table below, the cases where at least one premise is false are in blue, and the remainder of that row is a <b>don't care</b> as indicated by Xs in that row.</p>
+            <p>
+            In the remaining cases, a conclusion follows from both premises if it <b>never</b> happens that the premises are both true and the conclusion is false (shown in red). For all the remaining cases, the conclusion follows from the premises (shown in green).</p>
+            <p>As a result, conclusions b and c DO NOT follow from the premises, and conclusions a, d, and e DO follow from the premises.
+            </p>
+            <ul>
+                <li>d = logic is difficult</li>
+                <li>m = many students like logic</li>
+                <li>e = math is easy</li>
+            </ul>
+            <br>
+            <ul>
+                <li>Assumptions (premises):</li>
+                <li>A1. d <font face="symbol">&#8744; &#172;</font> m</li>
+                <li>A2. e <font face="symbol">&#8594; &#172;</font>d</li>
+            </ul>
+            <br>
+            <br>
+            <table align="center" border cellpadding="5">
+                <tr>
+                    <th>d</th>
+                    <th>m</th>
+                    <th>e</th>
+                    <th>A1. d <font face="symbol">&#8744; &#172;</font>m</th>
+                    <th>A2. e <font face="symbol">&#8594; &#172;</font>d</th>
+                    <th>a. m <font face="symbol">&#8594; &#172;</font>e</th>
+                    <th>b. <font face="symbol">&#172;</font>e <font face="symbol">&#8594; &#172;</font>m</th>
+                    <th>c. <font face="symbol">&#172;</font>e <font face="symbol">&#8744;</font> d</th>
+                    <th>d. <font face="symbol">&#172;</font>d <font face="symbol">&#8744; &#172;</font>e</th>
+                    <th>e. m <font face="symbol">&#8594;</font> (<font face="symbol">&#172;</font>e <font face="symbol">&#8744; &#172;</font>d)</th>
+                </tr>
+                <tr>
+                    <th>T</th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th>X</th>
+                    <th><font color="blue">F</font></th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                </tr>
+                <tr>
+                    <th>T</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="red">F</font></th>
+                    <th>T</th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="green">T</font></th>
+                </tr>
+                <tr>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>X</th>
+                    <th><font color="blue">F</font></th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                </tr>
+                <tr>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>F</th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="green">T</font></th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="green">T</font></th>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th><font color="blue">F</font></th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th><font color="blue">F</font></th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                    <th>X</th>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th><font color="green">T</font></th>
+                    <th>T</th>
+                    <th><font color="red">F</font></th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="green">T</font></th>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <th>F</th>
+                    <th>F</th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th><font color="green">T</font></th>
+                    <th>T</th>
+                    <th>T</th>
+                    <th><font color="green">T</font></th>
+                    <th><font color="green">T</font></th>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</body>
+</html>

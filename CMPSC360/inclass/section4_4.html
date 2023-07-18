@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>IST 230, CMPSC 360</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link rel=stylesheet type="text/css" href="course-style.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif"></p>
+        <h3 align="center">IST 230, CMPSC 360: Section 4.4</h3>
+    </p>
+    <ul>
+        <li>6.
+            <ul>
+            <li>a.  Find the inverse of 2 mod 17. Note gcd(2,17) = 1
+            <p>
+            17 = 8<font face="symbol">&#8901;</font>2 + 1<br>
+            1 = 1<font face="symbol">&#8901;</font>17 - 8<font face="symbol">&#8901;</font>2<br>
+            Therefore -8 is the inverse of 2 mod 17.
+            </p>
+            </li>
+            <li>b. Find the inverse of 34 mod 89.
+            Euclidean determination of gcd:</br>
+            89 = 2<font face="symbol">&#8901;</font>34 + 21<br>
+            34 = 1<font face="symbol">&#8901;</font>21 + 13<br>
+            21 = 1<font face="symbol">&#8901;</font>13 + 8<br>
+            13 = 1<font face="symbol">&#8901;</font>8 + 5<br>
+            8 = 1<font face="symbol">&#8901;</font>5 + 3<br>
+            5 = 1<font face="symbol">&#8901;</font>3 + 2<br>
+            3 = 1<font face="symbol">&#8901;</font>2 + 1<br>
+            2 = 2<font face="symbol">&#8901;</font>1 + 0<br>
+            Therefore gcd(34,89) = 1.<br>
+            Working backwards:<br>
+            1 = 3 - 1<font face="symbol">&#8901;</font>2<br>
+            2 = 5 - 1<font face="symbol">&#8901;</font>3 <font face="symbol">&#8658;</font> 1 = 3 - 1(5 - 1<font face="symbol">&#8901;</font>3) = 2<font face="symbol">&#8901;</font>3 - 1<font face="symbol">&#8901;</font>5<br>
+            3 = 8 - 1<font face="symbol">&#8901;</font>5 <font face="symbol">&#8658;</font> 1 = 2(8 - 1<font face="symbol">&#8901;</font>5) - 1<font face="symbol">&#8901;</font>5 = 2<font face="symbol">&#8901;</font>8 - 3<font face="symbol">&#8901;</font>5<br>
+            5 = 13 - 1<font face="symbol">&#8901;</font>8 <font face="symbol">&#8658;</font> 1 = 2<font face="symbol">&#8901;</font>8 - 3(13 - 1<font face="symbol">&#8901;</font>8) = 5<font face="symbol">&#8901;</font>8 - 3<font face="symbol">&#8901;</font>13<br>
+            8 = 21 - 1<font face="symbol">&#8901;</font>13 <font face="symbol">&#8658;</font> 1 = 5(21 - 1<font face="symbol">&#8901;</font>3) - 3<font face="symbol">&#8901;</font>13 = 5<font face="symbol">&#8901;</font>21 - 8<font face="symbol">&#8901;</font>13<br>
+            13 = 34 - 1<font face="symbol">&#8901;</font>21 <font face="symbol">&#8658;</font> 1 = 5<font face="symbol">&#8901;</font>21 - 8(34 - 1<font face="symbol">&#8901;</font>21) = 13<font face="symbol">&#8901;</font>21 - 8<font face="symbol">&#8901;</font>34<br>
+            21 = 89 - 2<font face="symbol">&#8901;</font>34 <font face="symbol">&#8658;</font> 1 = 13(89 - 2<font face="symbol">&#8901;</font>34) - 8<font face="symbol">&#8901;</font>34 = 13<font face="symbol">&#8901;</font>89 - 34<font face="symbol">&#8901;</font>34<br>
+            Therefore, gcd(34,89) = 1 = 13<font face="symbol">&#8901;</font>89 - 34<font face="symbol">&#8901;</font>34 is the Bezout indentity.<br>
+            Check that 1 = 1157 - 1156.<br>
+            Therefore -34 is the inverse of 34 mod 89.
+            </p>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>10. 2x <font face="symbol">&#8801;</font> 7 (mod 17).
+        <p>
+        -8<font face="symbol">&#8901;</font>2x <font face="symbol">&#8801;</font> -8<font face="symbol">&#8901;</font>7 (mod 17)<br>
+        x = -56 (mod 17)<br>
+        -56 = -4<font face="symbol">&#8901;</font + r<br>
+        -56 = -68 + 12<br>
+        Therefore 12 (mod 7) is a solution, and so are:<br>
+        ... -9, -2, 5, 12, 19, 26, 33, ...
+        </p>
+        </li>
+    </ul>
+    <ul>
+        <li>20. Simultaneous solution of: x <font face="symbol">&#8801;</font> 2 (mod 3), x <font face="symbol">&#8801;</font> 1 (mod 4), and x <font face="symbol">&#8801;</font> 3 (mod 5)
+        <p>
+        a<sub>1</sub> = 2, a<sub>2</sub> = 1, a<sub>3</sub> = 3<br>
+        m = 3<font face="symbol">&#8901;</font>4<font face=symbol">&#8901;</font>5 = 60<br>
+        M<sub>1</sub> = 60/3 = 20, M<sub>2</sub> = 60/4 = 15, M<sub>3</sub> = 60/5 = 12<br>
+        y<sub>1</sub> = 2; 2 is an inverse of 20 (mod 3) because 2<font face="symbol">&#8901;</font>20 = 3<font face="symbol">&#8901;</font>13 + 1 <font face="symbol">&#8801;</font> 1 (mod 3)<br>
+        y<sub>2</sub> = 3; 3 is an inverse of 15 (mod 4) because 3<font face="symbol">&#8901;</font>15 = 4<font face="symbol">&#8901;</font>11 + 1 <font face="symbol">&#8801;</font> 1 (mod 4)<br>
+        y<sub>3</sub> = 3; 3 is an inverse of 12 (mod 5) because 3<font face="symbol">&#8901;</font>12 = 5<font face="symbol">&#8901;7 + 1 <font face="symbol">&#8801;</font> 1 (mod 5)<br>
+        Then: 2<font face="symbol">&#8901;</font>20<font face="symbol">&#8901;</font>2 + 1<font face="symbol">&#8901;</font>15<font face="symbol">&#8901;</font>3 + 3<font face="symbol">&#8901;</font>12<font face="symbol">&#8901;</font>3 = 233, and<br>
+        233 = 3<font face="symbol">&#8901;</font>60 + 53 <font face="symbol">&#8801;</font> 53 (mod 60)<br>
+        Therefore x = 53.
+        </p>
+        </li>
+    </ul>
+</body>
+</html>

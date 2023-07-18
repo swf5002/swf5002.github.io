@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>PSLV Discrete Mathematics: Functions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel=stylesheet type="text/css" href="../../course-style.css">
+        <style>dt {font-weight: bold}</style>
+  </head>
+
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif" alt="PSU Logo"></p>
+    <h3 align="center">FUNCTIONS</h3>
+    <h5 align="center">
+      Please note that the material on this website is not intended to be exhaustive.
+      <br>This is intended as a summary and supplementary material.
+    </h5>
+    <h4>FUNCTIONS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="function"><font color="blue">Function</font></a></dt>
+                <dd>
+                  <b>f</b> from non-empty set <b>A</b> to non-empty set <b>B</b>, denoted by 
+                  <font color="blue"><b>f : A <font >&#8594;</font> B</b></font> and read as 
+                  "<font color="blue"><b>f maps A to B</b></font>", 
+                  is an assignment of <i>exactly one</i> element of <b>B</b> to each element of <b>A</b>. The exactly one proviso means: for all a<sub>1</sub> and a<sub>2</sub> in A, if a<sub>1</sub> = a<sub>2</sub>, then f(a<sub>1</sub>) = f(a<sub>2</sub>). &#160;
+                  <br><br>The set <b>A</b> is said to be the <a name="domain"><font color="blue"><b>domain</b></font></a> of <b>f</b>
+                  and the set <b>B</b> is said to be the <a name="codomain"><font color="blue"><b>co-domain</b></font></a> of
+                  <b>f</b>.
+                  <br><br><font color="blue"><b>f ( a ) = b</b></font> indicates that <b>b</b> is the unique element of <b>B</b> 
+                  assigned by the function <b>f</b> to the element <b>a</b> of <b>A</b>.
+                  <br>The element <b>b</b> is said to be the <a name="image"><font color="blue"><b>image</b></font></a> of <b>a</b>
+                  whereas the element <b>a</b> is said to be the <a name="preimage"><font color="blue"><b>pre-image</b></font></a> 
+                  of <b>b</b>.
+                  <br><br>The <a name="range"><font color="blue"><b>range</b></font></a> of <b>f</b> is the set of all images of
+                  elements of <b>A</b>.
+                  <br><br>A function is sometimes also called a <a name="mapping"><font color="blue"><b>mapping</b></font></a> or a
+                  <a name="transformation"><font color="blue"><b>transformation</b></font></a>.
+                </dd>
+                <p align="center"><img src="images/100function.gif" alt="Mappings"></p>
+          </dl>
+          <dl>
+            <dt><a name="equal-functions"><font color="blue">Equal Functions</font></a></dt>
+                <dd>
+                  <b>f</b> and <b>g</b> are equal if they have the same <a href="#domain"><b>domain</b></a>, have the same
+                  <a href="#codomain"><b>co-domain</b></a>, and map elements of their common domain to the same elements of their 
+                  common co-domain.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="function-sum"><font color="blue">Sum of Functions</font></a></dt>
+                <dd>
+                  <b>f<sub>1</sub> : A <font >&#8594;</font> R</b> and 
+                  <b>f<sub>2</sub> : A <font >&#8594;</font> R</b>, denoted by 
+                  <font color="blue"><b>f<sub>1</sub> + f<sub>2</sub></b></font>, is also a function from <b>A</b> to <b>R</b> 
+                  defined by<br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">( f<sub>1</sub> + f<sub>2</sub> ) ( x ) = f<sub>1</sub> ( x ) + f<sub>2</sub> 
+                                ( x )</font>
+                          </th>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="function-product"><font color="blue">Product of Functions</font></a></dt>
+                <dd>
+                  <b>f<sub>1</sub> : A <font >&#8594;</font> R</b> and 
+                  <b>f<sub>2</sub> : A <font >&#8594;</font> R</b>, denoted by 
+                  <font color="blue"><b>f<sub>1</sub> f<sub>2</sub></b></font>, is also a function from <b>A</b> to <b>R</b> 
+                  defined by<br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">( f<sub>1</sub> f<sub>2</sub> ) (  x ) = f<sub>1</sub> ( x ) f<sub>2</sub> ( x )</font>
+                          </th>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="subset-image"><font color="blue">Subset Image</font></a></dt>
+                <dd>
+                  of subset <b>S <font >&#8838;</font> A</b> under the function 
+                  <b>f : A <font >&#8594;</font> B</b>, denoted by <font color="blue"><b>f ( S )</b></font>, 
+                  consists of the images of the elements of <b>S</b>, i.e.<br><br>
+                  <table align="center" border cellpadding="9">
+                    <tr>
+                          <th>
+                            <font color="blue">
+                          f ( S ) = { t | <font >&#8707;</font>s <font >&#8712;</font> S ( t = f ( s ) ) }
+                              <br><font color="red">or</font>
+                              <br>f ( S ) = { f ( s ) | s <font >&#8712;</font> S}
+                                </font>
+                          </th>
+                        </tr>
+                  </table>
+                </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">One-to-One and Onto Functions</font></legend>
+          <dl>
+            <dt>
+                  <a name="injection"><font color="blue">Injection</font></a> or 
+                  <a name="one-to-one"><font color="blue">One-to-One</font></a>
+                </dt>
+                <dd>
+          A function <b>f : A <font >&#8594;</font> B</b> is <b><font color="blue">1&#150;1</font></b> or 
+                  <b><font color="blue">one&#150;to&#150;one</font></b> or <b><font color="blue">injective</font></b> iff
+                  <b>for all a<sub>1</sub> and a<sub>2</sub> in A,
+                  f(a<sub>1</sub>) = f(a<sub>2</sub>) implies a<sub>1</sub> = a<sub>2</sub>.</b> This definition is often stated in the contrapositive as: <b>a<sub>1</sub> <font >&#8800;</font> a<sub>2</sub> implies f(a<sub>1</sub>) <font >&#8800;</font> f(a<sub>2</sub>)</b>.
+                </dd>
+                <p align="center"><img src="images/100injection.gif" alt="Injections"></p>
+          </dl>
+          <dl>
+            <dt><a name="strictly-increasing"><font color="blue">Strictly Increasing</font></a></dt>
+                <dd>
+                  A function <b>f</b> whose domain and co-domain are subsets of the set of real numbers is called 
+                  <a name="increasing"><font color="blue"><b>increasing</b></font></a> if <b>f ( x ) 
+                  <font >&#8804;</font> f ( y )</b>, and <font color="blue"><b>strictly increasing</b></font> if 
+                  <b>f ( x ) < f ( y )</b>, whenever <b>x < y</b> and <b>x</b> and <b>y</b> are in the domain of <b>f</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="strictly-decreasing"><font color="blue">Strictly Decreasing</font></a></dt>
+                <dd>
+                  A function <b>f</b> whose domain and co-domain are subsets of the set of real numbers is called 
+                  <a name="decreasing"><font color="blue"><b>decreasing</b></font></a> if <b>f ( x ) 
+                  <font >&#8805;</font> f ( y )</b>, and <font color="blue"><b>strictly decreasing</b></font> if 
+                  <b>f ( x ) > f ( y )</b>, whenever <b>x < y</b> and <b>x</b> and <b>y</b> are in the domain of <b>f</b>.
+                </dd>
+          </dl>
+          <dl>
+                <dt>
+                  <a name="surjection"><font color="blue">Surjection</font></a> or
+                  <a name="onto"><font color="blue">Onto</font></a>
+                </dt>
+                <dd>
+          A function <b>f : A <font >&#8594;</font> B</b> is <b><font color="blue">onto</font></b> or 
+                  <b><font color="blue">surjective</font></b> if <b><font >&#8704;</font>b 
+                  <font >&#8712;</font> B, <font >&#8707;</font>a <font >&#8712;</font> A, f ( a ) = b</b>.
+                </dd>
+                <p align="center"><img src="images/100surjection.gif" alt="Surjections"></p>
+          </dl>
+          <dl>
+            <dt>
+                  <a name="bijection"><font color="blue">Bijection</font></a> or 
+                  <a name="1-1correspondence"><font color="blue">1&#150;1 Correspondence</font></a>
+                </dt>
+                <dd>
+          A function <b>f: A <font >&#8594;</font> B</b> is 
+                  <font color="blue"><b>1&#150;1 correspondence</b></font> or <font color="blue"><b>bijective</b></font> between
+                  <b>A</b> and <b>B</b> if <b>f</b> is both injective and surjective, that is, both one-to-one and onto.
+                </dd>
+                <p align="center"><img src="images/100bijection.gif" alt="Bijections"></p>
+          </dl>
+          <dl>
+            <dt><a name="identity-function"><font color="blue">Identity Function</font></a></dt>
+                <dd>
+                  on <b>A</b> is the function 
+                  <font color="blue"><b>i<sub>A</sub>: A <font >&#8594;</font> A</b></font>, where 
+                  <b>i<sub>A</sub> ( x ) = x, <font >&#8704;</font>x <font >&#8712;</font> A</b>, i.e. this
+                  function assigns each element to itself. &#160;
+                  Observe that <b>i<sub>A</sub></b> is 1-1 and onto, and is therefore a bijection.
+                </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Inverse Functions and Compositions of Functions</font></legend>
+          <dl>
+            <dt><a name="inverse-function"><font color="blue">Inverse Function</font></a></dt>
+                <dd>
+                  of a bijective function <b>f</b> from the set <b>A</b> to the set <b>B</b>, denoted by 
+                  <font color="blue"><b>f<sup>-1</sup></b></font>, is the function that assigns to an element <b>b</b> belonging to
+                  <b>B</b> the unique element <b>a</b> in <b>A</b> such that <b>f ( a ) = b</b>. &#160;
+                  Hence, <b>f<sup>-1</sup> ( b ) = a</b> when <b>f ( a ) = b</b>.
+                </dd>
+                <p align="center"><img src="images/100inverse-function.gif" alt="Inverses"></p>
+          </dl>
+          <dl>
+            <dt><a name="invertible"><font color="blue">Invertible</font></a></dt>
+                <dd>function is a <b>1-1 Correspondence</b> function, i.e., the function has an inverse.</dd>
+          </dl>
+          <dl>
+            <dt><a name="composition"><font color="blue">Composition</font></a></dt> 
+                <dd>
+                  of the function <b>f</b> and <b>g</b>, denoted by <font color="blue"><b>f &#176; g</b></font>, is defined by
+                  <table align="center" border cellpadding="9">
+                    <tr><th><font color="blue">( f &#176; g ) ( a ) = f ( g ( a ) )</font></th></tr>
+                  </table>
+                </dd>
+                <p align="center"><img src="images/100composition.gif" alt="Compositions"></p>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">The Graphs of Functions</font></legend>
+          <dl>
+            <dt><a name="graph"><font color="blue">Graph</font></a></dt>
+                <dd>
+                  of a function <b>f</b> is the set of ordered pairs 
+                  <b>{ ( a, b ) | a <font >&#8712;</font> A <font >&#8743;</font> f ( a ) = b }</b>.
+                </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Some Important Functions</font></legend>
+          <dl>
+            <dt><a name="floor-function"><font color="blue">Floor Function</font></a></dt>
+                <dd>
+                  denoted by 
+                  <font color="blue"><b><font >&#8970;</font> x <font >&#8971;</font></b></font>, 
+                  assigns to a real number <b>x</b> the largest integer that is less than or equal to <b>x</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="ceiling-function"><font color="blue">Ceiling Function</font></a></dt>
+                <dd>
+                  denoted by 
+                  <font color="blue"><b><font >&#8968;</font> x <font >&#8969;</font></b></font>, 
+                  assigns to a real number <b>x</b> the smallest integer that is greater than or equal to <b>x</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="greatest-integer-function"><font color="blue">Greatest Integer Function</font></a></dt>
+                <dd>denoted by <font color="blue"><b>[ x ]</b></font> is another name for the floor function.</dd>
+          </dl>
+          <table align="center" border cellpadding="5">
+            <tr>
+                  <th colspan="2">
+                    <a name="upffcf"><font color="blue">USEFUL PROPERTIES<br>of the FLOOR FUNCTION<br>and the CEILING 
+                        FUNCTION</font></a>
+                        <br>where n is an integer
+                  </th>
+                </tr>
+                <tr>
+                  <td>(1a)</td>
+                  <th align="left">
+                    <font >&#8970;</font> x <font >&#8971;</font> = n iff 
+                        n <font >&#8804;</font>        x < n + 1
+                  </th>
+                </tr>
+                <tr>
+                  <td>(1b)</td>
+                  <th align="left">
+                    <font >&#8968;</font> x <font >&#8969;</font> = n iff 
+                        n &#150; 1 < x <font >&#8804;</font> n
+                  </th>
+                </tr>
+                <tr>
+                  <td>(1c)</td>
+                  <th align="left">
+                    <font >&#8970;</font> x <font >&#8971;</font> = n iff 
+                        x &#150; 1 < n <font >&#8804;</font> x
+                  </th>
+                </tr>
+                <tr>
+                  <td>(1d)</td>
+                  <th align="left">
+                    <font >&#8968;</font> x <font >&#8969;</font> = n iff 
+                        x <font >&#8804;</font>        n < x + 1
+                  </th>
+                </tr>
+                <tr>
+                  <td>(2)</td>
+                  <th align="left">
+                    x &#150; 1 < <font >&#8970;</font> x <font >&#8971;</font> 
+                        <font >&#8804;</font> x <font >&#8804;</font>
+                        <font >&#8968;</font> x <font >&#8969;</font> < x + 1
+                  </th>
+                </tr>
+                <tr>
+                  <td>(3a)</td>
+                  <th align="left">
+                    <font >&#8970;</font> &#150; x <font >&#8971;</font> = &#150; 
+                        <font >&#8968;</font> x <font >&#8969;</font>
+                  </th>
+                </tr>
+                <tr>
+                  <td>(3b)</td>
+                  <th align="left">
+                    <font >&#8968;</font> &#150; x <font >&#8969;</font> = &#150;
+                        <font >&#8970;</font> x <font >&#8971;</font>
+                  </th>
+                </tr>
+                <tr>
+                  <td>(4a)</td>
+                  <th align="left">
+                    <font >&#8970;</font> x + n <font >&#8971;</font> = 
+                        <font >&#8970;</font> x <font >&#8971;</font> + n
+                  </th>
+                </tr>
+                <tr>
+                  <td>(4b)</td>
+                  <th align="left">
+                    <font >&#8968;</font> x + n <font >&#8969;</font> =
+                        <font >&#8968;</font> x <font >&#8969;</font> + n
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <table align="center">
+          <tr>
+            <td>
+                  <small><small>
+                    <br><a href="#bijection">Bijection</a>
+                        <br>
+                    <br><a href="#ceiling-function">Ceiling Function</a> 
+                        <font >&#8968;</font>x<font >&#8969;</font>
+                    <br><a href="#codomain">Co-Domain</a>
+                    <br><a href="#composition">Composition</a> f &#176; g
+                        <br>
+                    <br><a href="#decreasing">Decreasing</a>
+                    <br><a href="#domain">Domain</a>
+                        <br>
+                    <br><a href="#equal-functions">Equal Functions</a>
+                        <br>
+                    <br><a href="#floor-function">Floor Function</a>
+                        <font >&#8970;</font>x<font >&#8971;</font>
+                    <br><a href="#function">Function</a>
+                        <br>
+                    <br><a href="#graph">Graph</a>
+                    <br><a href="#greatest-integer-function">Greatest Integer Function</a> [ x ]
+                        <br>
+                    <br><a href="#identity-function">Identity Function</a> i<sub>A</sub>
+                    <br><a href="#image">Image</a>
+                    <br><a href="#increasing">Increasing</a>
+                    <br><a href="#injection">Injection</a>
+                    <br><a href="#inverse-function">Inverse Function</a> f<sup>-1</sup>
+                    <br><a href="#invertible">Invertible</a>
+                        <br>
+                    <br><a href="#mapping">Mapping</a>
+                        <br>
+                    <br><a href="#one-to-one">One-to-One</a> 1-1
+                    <br><a href="#1-1correspondence">One-to-One Correspondence</a> 1-1 Correspondence
+                    <br><a href="#onto">Onto</a>
+                        <br>
+                    <br><a href="#preimage">Pre-Image</a>
+                    <br><a href="#function-product">Product of Functions</a>
+                        <br>
+                    <br><a href="#range">Range</a>
+                        <br>
+                    <br><a href="#strictly-decreasing">Strictly Decreasing</a>
+                    <br><a href="#strictly-increasing">Strictly Increasing</a>
+                    <br><a href="#subset-image">Subset Image</a>
+                    <br><a href="#function-sum">Sum of Functions</a>
+                    <br><a href="#surjection">Surjection</a>
+                        <br>
+                    <br><a href="#transformation">Transformation</a>
+                        <br>
+                        <br><a href="#upffcf">Useful Properties of the Floor Function and the Ceiling Function</a>
+                        <hr>
+                        <a href="../homework/05functions-hw.html" target="_blank">Homework on Functions</a>
+                  </small></small>
+                </td>
+      </tr>
+        </table>
+        
+    <h6 align="center">
+      <hr>
+  &#169; 2002-04-08 cpsm; rcm ; last update 
+  <!-- #BeginDate format:IS1m -->2013-06-10  0:12<!-- #EndDate -->
+      <hr>
+    </h6>
+  </body>
+</html>

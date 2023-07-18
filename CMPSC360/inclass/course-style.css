@@ -1,0 +1,16 @@
+BODY {background: white;
+      color: black;}
+FONT center, dd, dt, legend, li, p, td, th 
+                    {font-style: arial;
+                     font-size: medium;
+                     font-face: Arial, Helvetica, sans-serif, Verdana}
+FONT dt, legend {font-weight: bold;}
+H3 {background: navy;
+    border: solid black;
+    color: white;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;}
+H5 {border: solid black;
+    color: red;}

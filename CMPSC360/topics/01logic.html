@@ -1,0 +1,2707 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>PSLV Discrete Mathematics: Logic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel=stylesheet type="text/css" href="../../course-style.css">
+        <style>dt {font-weight: bold}</style>
+  </head>
+
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif" alt="PSU Logo"></p>
+    <h3 align="center">LOGIC</h3>
+    <h5 align="center">
+      Please note that the material on this website is not intended to be exhaustive.
+      <br>This is intended as a summary and supplementary material.
+    </h5>
+    <h4>PROPOSITIONAL LOGIC</h4>
+        <br>
+    <fieldset>
+      <legend><font color="maroon">Introduction</font></legend>
+      <p>
+        The rules of logic give precise meaning to mathematical statements distinguishing between valid and invalid 
+        arguments. &#160;
+        Logic is the study of correct reasoning. &#160;
+                Logic's focus is the relationship between statements, and not the content of statements.
+      </p>
+    </fieldset>
+        <br>
+    <fieldset>
+      <legend><font color="maroon">Propositions</font></legend>
+      <p>Propositions are the building blocks of logic.</p>
+      <dl>
+        <dt><a name="proposition"><font color="blue">Proposition</font></a></dt>
+        <dd>
+                  is a statement that is either <font color="blue"><b>true</b></font> or <font color="blue"><b>false</b></font>.
+                </dd>
+      </dl>
+      <table cellpadding="5">
+        <tr valign="top">
+          <th rowspan="2"><font color="red">EXAMPLE01:</font></th>
+          <td><font color="red">Which of the following statements are propositions?</font></td>
+        </tr>
+        <tr valign="top">
+          <th align="left">
+            <font color="red">
+              Today is Wednesday.
+              <br>My dog is a dachshund.
+              <br>This is a discrete mathematics course.
+              <br>x + y = 3
+              <br>Rats!
+              <br>Have you completed your project?
+            </font>
+          </th>
+        </tr>
+      </table>
+      <p>Only the first three are propositions.</p>
+      <p>
+        <font color="green"><b>NOTATION:</b></font> &#160; 
+        Propositions are represented by lower case letters <b>p, q, r, t, s, . . .</b> known as 
+                <a name="propositional-variable"><b>propositional variables</b></a>.
+      </p>
+      <p>
+        <font color="green"><b>NOTATION:</b></font> &#160; 
+        Truth values are represented by <a name="true"><font color="blue"><b>T</b></font> for <b>true</b></a> and 
+                <a name="false"><font color="blue"><b>F</b></font> for <b>false</b></a>.
+      </p>
+      <dl>
+        <dt>
+                  <a name="propositional-logic"><font color="blue">Propositional Logic</font></a> or 
+                  <a name="propositional-calculus"><font color="blue">Propositional Calculus</font></a>
+                </dt>
+        <dd>is the area of logic that deals with propositions.</dd>
+      </dl>
+      <dl>
+        <dt><a name="compound-proposition"><font color="blue">Compound Proposition</font></a></dt>
+        <dd>is a new proposition constructed by combining one or more existing propositions.</dd>
+      </dl>
+      <dl>
+        <dt><a name="negation"><font color="blue">Negation</font></a></dt>
+        <dd>
+          of a proposition <b>p</b>, denoted by <b><font color="blue"><font >&#172; p</font></b></font>, is the statement 
+                  "<font color="blue"><b>It is not the case that p</b></font>" which is also read as "<b>not p</b>". &#160;
+          The truth value of <b>&#172; p</b> is the opposite of the truth value of <b>p</b>.
+        </dd>
+      </dl>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>&#172; p</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+        </tr>
+      </table>
+      <dl>
+        <dt><a name="conjunction"><font color="blue">Conjunction</font></a></dt>
+        <dd>
+          of propositions <b>p</b> and <b>q</b>, denoted by <b><font color="blue">p <font >&#8743;</font> q</font></b>, is the propositions 
+                  "<font color="blue"><b>p and q</b></font>". &#160;
+          The truth value of <b>p <font >&#8743;</font> q</b> is <b>T</b> when both <b>p</b> and <b>q</b> are <b>T</b>, and is <b>F</b> 
+          otherwise.
+        </dd>
+      </dl>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>q</th>
+          <th>p <font >&#8743;</font> q</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+      </table>
+      <dl>
+        <dt><a name="disjunction"><font color="blue">Disjunction</font></a></dt>
+        <dd>
+          of propositions <b>p</b> and <b>q</b>, denoted by <b>p <font color="blue"><font >&#8744;</font></font> q</b>, is the propositions 
+                  "<font color="blue"><b>p or q</b></font>". &#160;
+          The truth value of <b>p <font >&#8744;</font> q</b> is <b>F</b> when both <b>p</b> and <b>q</b> are <b>F</b>, and is <b>T</b> 
+          otherwise.
+        </dd>
+      </dl>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>q</th>
+          <th>p <font >&#8744;</font> q</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+      </table>
+      <dl>
+        <dt><a name="exclusive-or"><font color="blue">Exclusive-Or</font></a></dt>
+        <dd>
+          of propositions <b>p</b> and <b>q</b>, denoted by <b><font color="blue">p <font >&#8853;</font> 
+                  q</font></b>. &#160;
+          The truth value of <b>p <font >&#8853;</font> q</b> is <b>T</b> when exactly one of <b>p</b> and 
+          <b>q</b> is <b>T</b>, and is <b>F</b> otherwise.
+        </dd>
+      </dl>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>q</th>
+          <th>p <font >&#8853;</font> q</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+      </table>
+          <br>
+      <table cellpadding="5">
+        <tr valign="top">
+          <th rowspan="12"><font color="red">EXAMPLE02:</font></th>
+          <td align="center" colspan="2"> <font color="red">STATEMENT</font></td>
+          <td><font color="red">VALUE</font></td>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">p:<br>q:<br>r:</font></th>
+          <td>
+            <font color="red">
+              Hank is a willful red brown dachshund.
+              <br>Columbia is in South America.
+              <br>It snows in the Philippines.
+            </font>
+          </td>
+          <th><font color="red">T<br>T<br>F</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">&#172; p:</font></th>
+          <td><font color="red">Hank is <font color="maroon"><b>not</b></font> a willful red brown dachshund.</font></td>
+          <th><font color="red">F</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">&#172; r:</font></th>
+          <td><font color="red">It <font color="maroon"><b>never</b></font> snows in the Philippines.</font></td>
+          <th><font color="red">T</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">p <font >&#8743;</font> q:</font></th>
+          <td>
+            <font color="red">
+                          Hank is a willful red brown dachshund <font color="maroon"><b>and</b></font> Columbia is in South America.
+                        </font>
+          </td>
+          <th><font color="red">T</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">q <font >&#8743;</font> r:</font></th>
+          <td>
+                    <font color="red">
+                          Columbia is in South America <font color="maroon"><b>and</b></font> it snows in the 
+                          Philippines.
+                        </font>
+                  </td>
+          <th><font color="red">F</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">p <font >&#8744;</font> q:</font></th>
+          <td>
+            <font color="red">
+                          Hank is a willful red brown dachshund <font color="maroon"><b>or</b></font> Columbia is in South America.
+                        </font>
+          </td>
+          <th><font color="red">T</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">p <font >&#8744;</font> &#172; r:</font></th>
+          <td>
+                    <font color="red">
+                          Hank is a willful red brown dachshund <font color="maroon"><b>or</b></font> it 
+                          <font color="maroon"><b>never</b></font> snows in the Philippines.
+                        </font>
+                  </td>
+          <th><font color="red">T</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">q <font >&#8853;</font> &#172; q:</font></th>
+          <td>
+            <font color="red">
+                          Either Columbia is in South America <font color="maroon"><b>(exclusive) or</b></font> it is not.
+                        </font>
+          </td>
+          <th><font color="red">T</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">&#172(q <font >&#8744;</font> r):</font></th>
+          <td>
+            <font color="red">
+                          <font color="maroon"><b>Neither</b></font> is Columbia in South America <font color="maroon"><b>nor</b></font> does it snow in the Philippines.
+                        </font>
+          </td>
+          <th><font color="red">F</font></th>
+        </tr>
+        <tr valign="top">
+          <th align="right"><font color="red">&#172(q <font >&#8743;</font> r):</font></th>
+          <td>
+            <font color="red">
+                          <font color="maroon"><b>Not both</b></font> Columbia is in South America <font color="maroon"><b>and</b></font> it snows in the Philippines.
+                        </font>
+          </td>
+          <th><font color="red">T</font></th>
+        </tr>
+      </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Conditional Statements</font></legend>
+      <dl>
+        <dt>
+                  <a name="conditional"><font color="blue">Conditional Statement</font></a> or 
+                  <a name="implication"><font color="blue">Implication</font></a>
+                </dt>
+        <dd>
+          of propositions <b>p</b> and <b>q</b>, denoted by <b><font color="blue">p <font >&#8594;</font> 
+                  q</font></b>, is the proposition "<font color="blue"><b>if p, then q</b></font>". &#160;
+          The truth value of <b>p <font >&#8594;</font> q</b> is <b>F</b> when <b>p</b> is <b>T</b> and 
+          <b>q</b> is <b>F</b>, and <b>T</b> otherwise. &#160;
+          The proposition <b>p</b> is called the <a name="hypothesis"><font color="blue"><b>hypothesis</b></font></a> or 
+                  <a name="antecedent"><font color="blue"><b>antecedent</b></font></a> or 
+                  <a name="premise"><font color="blue"><b>premise</b></font></a> and <b>q</b> is called the 
+                  <a name="conclusion"><font color="blue"><b>conclusion</b></font></a> or 
+                  <a name="consequent"><font color="blue"><b>consequence</b></font></a>.
+        </dd>
+      </dl>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>q</th>
+          <th>p <font >&#8594;</font> q</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>T</th>
+        </tr>
+      </table>
+      <p>Conditional statements are also read as follows (all of the following are symbolized as <b>p <font >&#8594;</font> q)</b>:</p>
+      <p align="center">
+        if <b>p</b>, then <b>q</b>
+        <br><b>p</b> implies <b>q</b>
+        <br>if <b>p</b>, <b>q</b>
+        <br><b>p</b> only if <b>q</b>
+        <br><b>p</b> is sufficient for <b>q</b>
+        <br>a sufficient condition for <b>q</b> is <b>p</b>
+        <br><b>q</b> if <b>p</b>
+        <br><b>q</b> whenever <b>p</b>
+        <br><b>q</b> when <b>p</b>
+        <br><b>q</b> is necessary for <b>p</b>
+        <br>a necessary condition for <b>p</b> is <b>q</b>
+        <br><b>q</b> follows from <b>p</b>
+        <br><b>q</b> unless <b>not p</b> 
+        <br><b>not p</b> unless <b>q</b> 
+      </p>
+      <dl>
+        <dt><a name="converse"><font color="blue">Converse</font></a></dt>
+        <dd>
+          of <b>p <font >&#8594;</font> q</b> is the proposition <b>q <font >&#8594;</font> p</b>.
+        </dd>
+      </dl>
+      <dl>
+        <dt><a name="contrapositive"><font color="blue">Contrapositive</font></a></dt>
+        <dd>
+          of <b>p <font >&#8594;</font> q</b> is the proposition <b>&#172; q <font >&#8594;</font> 
+          &#172; p</b>.
+        </dd>
+      </dl>
+      <dl>
+        <dt><a name="inverse"><font color="blue">Inverse</font></a></dt>
+        <dd>
+          of <b>p <font >&#8594;</font> q</b> is the proposition <b>&#172; p <font >&#8594;</font> 
+          &#172; q</b>.
+        </dd>
+      </dl>
+      <dl>
+        <dt><a name="equivalent"><font color="blue">Equivalent</font></a></dt>
+        <dd>compound propositions have the same truth values.</dd>
+      </dl>
+      <p>
+        A <b><font color="green">conditional proposition</font></b> and its 
+                <b><font color="green">contrapositive</font></b> are equivalent compound propositions.
+        <br>Similarly, the <b><font color="maroon">converse</font></b> and <b><font color="maroon">inverse</font></b> of a 
+                conditional propositions are equivalent compound propositions.
+      </p>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>q</th>
+          <th>&#172; p</th>
+          <th>&#172; q</th>
+          <th><font color="green">p <font >&#8594;</font> q</font></th>
+          <th><font color="maroon">q <font >&#8594;</font> p</font></th>
+          <th><font color="green">&#172; q <font >&#8594;</font> &#172; p</font></th>
+          <th><font color="maroon">&#172; p <font >&#8594;</font> &#172; q</font></th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+          <th><font color="green">T</font></th>
+          <th><font color="maroon">T</font></th>
+          <th><font color="green">T</font></th>
+          <th><font color="maroon">T</font></th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+          <th>T</th>
+          <th><font color="green">F</font></th>
+          <th><font color="maroon">T</font></th>
+          <th><font color="green">F</font></th>
+          <th><font color="maroon">T</font></th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th><font color="green">T</font></th>
+          <th><font color="maroon">F</font></th>
+          <th><font color="green">T</font></th>
+          <th><font color="maroon">F</font></th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th><font color="green">T</font></th>
+          <th><font color="maroon">T</font></th>
+          <th><font color="green">T</font></th>
+          <th><font color="maroon">T</font></th>
+        </tr>
+      </table>
+      <dl>
+        <dt>
+                  <a name="biconditional"><font color="blue">Biconditional Statement</font></a> or 
+                  <a name="biimplication"><font color="blue">Bi-implication</font></a>
+                </dt>
+        <dd>
+          statement of propositions <b>p</b> and <b>q</b>, denoted by <b><font color="blue">p 
+                  <font >&#8596;</font> q</font></b>, is the proposition "<font color="blue"><b>p if and only if 
+                  q</b></font>" or "<font color="blue"><b>p iff q</b></font>". &#160;
+          The truth value of <b>p <font >&#8596;</font> q</b> is <b>T</b> when <b>p</b> and <b>q</b> have the
+          same truth values, and is <b>F</b> otherwise.
+        </dd>
+      </dl>
+      <table align="center" border cellpadding="9">
+        <tr>
+          <th>p</th>
+          <th>q</th>
+          <th>p <font >&#8596;</font> q</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+        </tr>
+        <tr>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>T</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>T</th>
+        </tr>
+      </table>
+      <p>Biconditional statements are also read as follows:</p>
+      <p align="center">
+        <b>p</b> is necessary and sufficient for <b>q</b>
+        <br>if <b>p</b> then <b>q</b>, and conversely
+        <br><b>p</b> iff <b>q</b>
+      </p>
+          <table cellpadding="5">
+            <tr valign="top">
+              <th rowspan="9"><font color="red">EXAMPLE03:</font></th>
+                   <th align="right"><font color="red">p:&#160;</font></th>
+                  <td><font color="red">This class is Discrete Mathematics.</font></td>
+                </tr>
+                <tr valign="top">
+                  <th align="right"><font color="red">q:&#160;</font></th>
+                  <td><font color="red">It is the fall semester.</font></td>
+                </tr>
+                <tr valign="top">
+                  <th align="right"><font color="red">r:&#160;</font></th>
+                  <td><font color="red">Today is Thursday.</font></td>
+                 </tr>
+                  <tr valign="top">
+                  <th align="right"><font color="red">p <font >&#8594;</font> q:&#160;</font></th>
+                  <td>
+                <font color="red">
+                            <font color="maroon"><b>If</b></font> this class is Discrete Mathematics,
+                          <br><font color="maroon"><b>then</b></font> it is the fall semester. 
+                          </font>
+                   </td>
+                </tr>
+                <tr valign="top">
+                  <th align="right">
+                    <font color="red">&#172; q <font >&#8594;</font> ( r <font >&#8743;</font> p ):</font>
+                  </th>
+              <td>
+                     <font color="red">
+                  <font color="maroon">If</font> it is <font color="maroon"><b>not</b></font> the fall semester,
+                          <br><font color="maroon"><b>then</b></font> today is Thursday <font color="maroon"><b>and</b></font> this 
+                          class is Discrete Mathematics.
+                        </font>
+                   </td>
+                </tr>
+                <tr valign="top">
+               <th align="right">
+                    <font color="red">&#172; p <font >&#8594;</font> ( q <font >&#8744;</font> r ):</font>
+                  </th>
+                   <td>
+                      <font color="red">
+                  <font color="maroon"><b>If it is not the case that</b></font> this class is Discrete Mathematics,
+                          <br><font color="maroon"><b>then</b></font> it is the fall semester <font color="maroon"><b>or</b></font> 
+                          today is Thursday.
+                          </font>
+                  </td>
+                 </tr>
+                <tr valign="top">
+               <th align="right">
+                    <font color="red">&#172; ( p <font >&#8744;</font> q ) <font >&#8596;</font> r:</font>
+                  </th>
+          <td> 
+                        <font color="red">
+                  <font color="maroon"><b>Neither</b></font> is this class Discrete Mathematics 
+                          <font color="maroon"><b>nor</b></font> is it the fall semester
+                          <br><font color="maroon"><b>iff</b></font> today is Thursday. 
+                         </font> 
+          </td>
+        </tr>
+                <tr valign="top">
+               <th align="right">
+                       <font color="red">( p <font >&#8743;</font> ( q <font >&#8744;</font> r ) ) <font >&#8594;</font> ( r <font >&#8744;</font> ( q <font >&#8744;</font> p ) ):</font>
+                  </th>
+                 <td>
+                     <font color="red">
+                         <font color="maroon"><b>If</b></font> this class is Discrete Mathematics,
+                          <br><font color="maroon"><b>and</b></font> it is the fall semester <font color="maroon"><b>or</b></font> 
+                          today is Thursday,
+                          <br><font color="maroon"><b>then</b></font> today is Thursday
+                          <br><font color="maroon"><b>or</b></font> it is the fall semester <font color="maroon"><b>or</b></font> this 
+                          class is Discrete Mathematics.
+                        </font>
+                  </td>
+                   </tr>
+                <tr valign="top">
+                     <th align="right">
+                           <font color="red">
+                             ( p <font >&#8744;</font> ( &#172; p <font >&#8743;</font> &#172; ( q <font >&#8744;</font> r ) ) <font >&#8594;</font> ( p <font >&#8744;</font> &#172; ( r <font >&#8744;</font> p ) ):
+                      </font>
+                   </th>
+                     <td>
+                         <font color="red">
+                      <font color="maroon"><b>If</b></font> this class is Discrete Mathematics, 
+                          <font color="maroon"><b>or</b></font> this class is 
+                          <font color="maroon"><b>not</b></font> Discrete Mathematics 
+                          <br><font color="maroon"><b>and neither</b></font> is it the fall semester 
+                          <font color="maroon"><b>nor</b></font> is today Thursday,
+                          <br><font color="maroon"><b>then</b></font> this class is Discrete Mathematics,
+                          <br><font color="maroon"><b>or neither</b></font> is today Thursday <font color="maroon"><b>nor</b></font> 
+                          is it the fall semester.
+                         </font>
+                   </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Truth Tables of Compound Propositions</font></legend>
+          <dl>
+            <dt><a name="logical-connective"><font color="blue">Logical Connectives</font></a></dt>
+                <dd> 
+                  &#150; conjunction, disjunction, conditional statements, biconditional statements, as well as negation &#150; 
+                  are used to build up more complicated compound propositions involving any number of propositional variables.
+          </dl>
+          <dl>
+            <dt><a name="truth-table"><font color="blue">Truth Table</font></a></dt>
+                <dd>
+                  may be used to determine the truth values of a new compound proposition <i>by considering all possible combinations
+                  of the truth values of the individual propositions</i>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE04:</font></th>
+                  <td colspan="6">
+                    <font color="red">
+                          Determine the truth values of <b>(p <font >&#8744;</font> &#172; q) <font >&#8594;</font></font> (p <font >&#8743;</font> q)</b>
+                        </font>
+              </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table border cellpadding="5">                        
+                      <tr valign="top">
+                        <th><font color="red">p</font></th>
+                        <th><font color="red">q</font></th>
+                        <th><font color="red">&#172; q</font></th>
+                        <th><font color="red">p <font >&#8744;</font> &#172; q</font></th>
+                        <th><font color="red">p <font >&#8743;</font> q</font></th>
+                        <th><font color="red">(p <font >&#8744;</font> &#172; q) <font >&#8594;</font> (p <font >&#8743;</font> q)</font></th>
+                      </tr>
+                      <tr valign="top">
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                      </tr>
+                      <tr valign="top">
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                      </tr>
+                      <tr valign="top">
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                      </tr>
+                      <tr valign="top">
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Precedence of Logical Operators</font></legend>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="3">
+                    <a name="oplo"><font color="blue">ORDER OF PRECEDENCE<br>of LOGICAL OPERATORS</font></a><br>(OPLO)
+                  </th>
+                </tr>
+                <tr>
+                  <th>PRECEDENCE</th>
+                  <th colspan="2">OPERATOR</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th>&#172;</th>
+                  <th><a href="#negation" name="negation-opr">Negation</a></th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th><font >&#8743;</font></th>
+                  <th><a href="#conjunction" name="conjunction-opr">Conjunction</a></th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th><font >&#8744;</font></th>
+                  <th><a href="#disjunction" name="disjunction-opr">Disjunction</a></th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th><font >&#8594;</font></th>
+                  <th><a href="#conditional" name="conditional-opr">Conditional</a></th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th><font >&#8596;</font></th>
+                  <th><a href="#biconditional" name="biconditional-opr">Biconditional</a></th>
+                </tr>
+          </table>
+          <p>Parentheses are used to override the order of precedence.</p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Translating English Sentences</font></legend>
+          <p>
+            Since English is often ambiguous, translating English sentences into expressions involving propositional variables
+                and logical connectives eliminates ambiguity.
+          </p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="6"><font color="red">EXAMPLE05:</font></th>
+                  <td colspan="3">
+                    <font color="red">How can this English sentence be translated into a logical expression?</font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="right" colspan="2"><font color="red">Statement:</font></td>
+                  <th align="left">
+                    <font color="red">
+                          You can access the Discrete Math course notes on Angel, if the professor has posted the notes on Angel
+                          and if you are registered in the course.
+                        </font>
+                  </th>
+                </tr>
+                <tr valign="top">
+                  <td align="right" rowspan="3"><font color="red">Let</font></td>
+                  <th align="right"><font color="red">p:</font></th>
+                  <td><font color="red">You can access the Discrete Math course notes on Angel.</font></td>
+                </tr>
+                <tr valign="top">
+                  <th align="right"><font color="red">q:</font></th>
+                  <td><font color="red">The professor has posted the Discrete Math course notes on Angel.</font></td>
+                </tr>
+                <tr valign="top">
+                  <th align="right"><font color="red">r:</font></th>
+                  <td><font color="red">You are registered in the Discrete Math course.</font></td>
+                </tr>
+                <tr valign="top">
+                  <td align="right" colspan="2"><font color="red">Proposition:</font></td>
+                  <th align="left"><font color="red">( q <font >&#8743;</font> r ) <font >&#8594;</font> p</font></th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">System Specifications</font></legend>
+          <p>
+            Translating natural language requirements into precise and unambiguous specifications are used as the basis for
+                system development. &#160;
+                System specifications should be consistent, i.e. there are no conflicting requirements that could result in 
+                contradiction.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Boolean Searches</font></legend>
+          <p>
+            Logical connectives are routinely and extensively used in Boolean searches of large collection of information such 
+                as databases and indexes of Web pages.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Logic Puzzles</font></legend>
+          <p>
+            Logic puzzles are puzzles that are solved using logical reasoning. &#160;
+                They are excellent way to practice with the rules of logic.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Logic and Bit Operations</font></legend>
+          <p>Computers represent information using bits.</p>
+          <dl>
+            <dt><a name="bit"><font color="blue">Bit</font></a></dt>
+                <dd>
+                  which is derived from <b><font color="blue">b</font></b>inary dig<b><font color="blue">it</font></b>,
+                  is a symbol with two possible values namely <b>0</b> (zero) or <b>1</b> (one). &#160;
+                  Analogously, <b>1</b> represents truth value <b>T</b> and <b>0</b> represents truth value <b>F</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="boolean-variable"><font color="blue">Boolean Variable</font></a></dt>
+                <dd>is a variable whose value is either <b>T</b> or <b>F</b>.</dd>
+          </dl>
+          <dl>
+            <dt><a name="bit-opn"><font color="blue">Bit Operation</font></a></dt>
+                <dd>is a computer operation that corresponds to logical connectives.</dd>
+          </dl>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th>LOGIC</th>
+                  <th>BIT</th>
+                </tr>
+                <tr>
+                  <th>T</th>
+                  <th>1</th>
+                </tr>
+                <tr>
+                  <th>F</th>
+                  <th>0</th>
+                </tr>
+                <tr>
+                  <th><font >&#8743;</font></th>
+                  <th>AND</th>
+                </tr>
+                <tr>
+                  <th><font >&#8744;</font></th>
+                  <th>OR</th>
+                </tr>
+                <tr>
+                  <th><font >&#8853;</font></th>
+                  <th>XOR</th>
+                </tr>
+                <tr>
+                  <th><font >&#8595;</font></th>
+                  <th>NOR</th>
+                </tr>
+                <tr>
+                  <th><font >&#124;</font></th>
+                  <th>NAND</th>
+                </tr>
+          </table>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th>x</th>
+                  <th>y</th>
+                  <th>x <font >&#8743;</font> y</th>
+                  <th>x <font >&#8744;</font> y</th>
+                  <th>x <font >&#8853;</font> y</th>
+                  <th>x <font >&#8595;</font> y</th>
+                  <th>x <font >&#124;</font> y</th>
+                </tr>
+            <tr>
+                  <th>1</th>
+                  <th>1</th>
+                  <th>1</th>
+                  <th>1</th>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>0</th>
+                </tr>
+            <tr>
+                  <th>1</th>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>1</th>
+                  <th>1</th>
+                  <th>0</th>
+                  <th>1</th>
+                </tr>
+            <tr>
+                  <th>0</th>
+                  <th>1</th>
+                  <th>0</th>
+                  <th>1</th>
+                  <th>1</th>
+                  <th>0</th>
+                  <th>1</th>
+                </tr>
+            <tr>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>1</th>
+                  <th>1</th>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="bit-string"><font color="blue">Bit String</font></a></dt>
+                <dd>is a sequence of zero or more bits, the <b>length</b> of which is the number of bits in the string.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="red">EXAMPLE06:</font></th>
+                  <td>
+                    <font color="red">
+                          Find the bitwise <b>OR</b>, bitwise <b>AND</b>, and bitwise <b>XOR</b> of the bit strings <b>01 0100 0011</b>
+                          and <b>11 0110 1001</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table cellpadding="5">
+                          <tr valign="bottom">
+                            <th>
+                          <font color="red">
+                                    01 0100 0011
+                                <br>11 0110 1001
+                                  </font>
+                                </th>
+                          </tr>
+                          <tr><td><hr></td></tr>
+                          <tr>
+                            <th><font color="red">11 0110 1011</font></th>
+                                <td><font color="red">bitwise <b>OR</b></font></td>
+                          </tr>
+                          <tr>
+                            <th><font color="red">01 0100 0001</font></th>
+                                <td><font color="red">bitwise <b>AND</b></font></td>
+                          </tr>
+                          <tr>
+                            <th><font color="red">10 0010 1010</font></th>
+                                <td><font color="red">bitwise <b>XOR</b></font></td>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+          <br>
+        <fieldset>
+          <legend><font color="maroon">Summary of Propositional Logical Operators</font></legend>
+          <p>
+          This table summarizes the various unary and binary propositional logical operators, including <b>T</b> and <b>F</b> (note that NAND and NOR can be used as logical operators, and thay have the same truth tables as their bitwise analogues).
+          </p>
+          <table align="center" border cellpadding="5">
+            <tr>
+              <th><font color="blue"><b>T</b></font></th>
+              <th><font color="blue"><b><font >&#8744;</font></b></font></th>
+              <th> </th>
+              <th><font color="blue"><b><font >&#8594;</font></b></font></th>
+              <th><font color="blue"><b><font >&#124;</font></b></font></th>
+              <th><font color="blue"><b>p</b></th>
+              <th><font color="blue"><b><font >&#8596;</font></b></font></th>
+              <th><font color="blue"><b><font >&#172;</font>p</b></font></th>
+              <th><font color="blue"><b>q</b></font></th>
+              <th><font color="blue"><b><font >&#8853;</font></b></font></th>
+              <th><font color="blue"><b><font >&#172;</font>q</b></font></th>
+              <th><font color="blue"><b><font >&#8743;</font></b></font></th>
+              <th> </th>
+              <th> </th>
+              <th><font color="blue"><b><font >&#8595;</font></b></font></th>
+              <th><font color="blue"><b>F</b></font></th>
+            </tr>
+            <tr>
+              <th>T</th>
+              <th>T</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>F</th>
+              <th>F</th>
+            </tr>
+            <tr>
+              <th>T</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>F</th>
+            </tr>
+            <tr>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+            </tr>
+            <tr>
+              <th>T</th>
+              <th>F</th>
+              <th>T</th>
+              <th>T</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+              <th>F</th>
+              <th>F</th>
+              <th>T</th>
+              <th>F</th>
+            </tr>
+          </table>
+        </fieldset>
+          <br>
+        <h4>PROPOSITIONAL EQUIVALENCES</h4>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Introduction</font></legend>
+          <dl>
+            <dt><a name="tautology"><font color="blue">Tautology</font></a></dt>
+                <dd>
+                  is a compound proposition that is always <b>T</b> no matter what the truth values of the individual propositions
+                  are.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="contradiction"><font color="blue">Contradiction</font></a></dt>
+                <dd>
+                  is a compound proposition that is always <b>F</b> no matter what the truth values of the individual propositions
+                  are.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="contingency"><font color="blue">Contingency</font></a></dt>
+                <dd>is a compound proposition that is neither a tautology or a contradiction.</dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="red">EXAMPLE07:</font></th>
+                  <td>
+                <table border cellpadding="5">
+                  <tr valign="top">
+                        <td colspan="2">&#160;</td>
+                        <th><font color="red">TAUTOLOGY</font></th>
+                        <th><font color="red">CONTRADICTION</font></th>
+                      </tr>
+                      <tr>
+                        <th><font color="red">p</font></th>
+                        <th><font color="red">&#172; p</font></th>
+                        <th><font color="red">p <font >&#8744;</font> &#172; p</font></th>
+                        <th><font color="red">p <font >&#8743;</font> &#172; p</font></th>
+                      </tr>
+                      <tr>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                      </tr>
+                      <tr>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                      </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Logical Equivalences</font></legend>
+          <p>Replacement of equivalent propositional statements results in the construction of mathematical proofs.</p>
+          <dl>
+            <dt><a name="logically-equivalent"><font color="blue">Logically equivalent</font></a></dt>
+                <dd>
+                  compound propositions <b><font color="red">p</font></b> and <b><font color="red">q</font></b>, which is denoted by 
+                  <b><font color="maroon">p <font >&#8801;</font> q</font></b> 
+                  (triple bar), occurs when <b><font color="green">p <font >&#8596;</font> q</font></b> is a tautology.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="red">EXAMPLE08:</font></th>
+                  <td>
+                <table border cellpadding="5">
+                  <tr>
+                        <td colspan="8">
+                          <font color="red">
+                                    Verify by truth table that  
+                                    <b><a href="#demorgan-d">&#172; ( p <font >&#8744;</font> q ) <font >&#8801;</font> &#172; p <font >&#8743;</font> &#172; 
+                                        q</a></b>
+                                  </font>
+                        </td>
+                      </tr>
+                  <tr>
+                        <th><font color="red">p</font></th>
+                        <th><font color="red">q</font></th>
+                        <th><font color="red">&#172; p</font></th>
+                        <th><font color="red">&#172; q</font></th>
+                        <th><font color="red">p <font >&#8744;</font> q</font></th>
+                        <th><font color="maroon">&#172; ( p <font >&#8744;</font> q )</font></th>
+                        <th><font color="maroon">&#172; p <font >&#8743;</font> &#172; q</font></th>
+                        <th><font color="green">&#172; ( p <font >&#8744;</font> q ) <font >&#8596;</font> ( &#172; p <font >&#8743;</font> &#172; q )</font></th>
+                      </tr>
+                  <tr>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="maroon">F</font></th>
+                        <th><font color="maroon">F</font></th>
+                        <th><font color="green">T</font></th>
+                      </tr>
+                  <tr>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="maroon">F</font></th>
+                        <th><font color="maroon">F</font></th>
+                        <th><font color="green">T</font></th>
+                      </tr>
+                  <tr>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="maroon">F</font></th>
+                        <th><font color="maroon">F</font></th>
+                        <th><font color="green">T</font></th>
+                      </tr>
+                  <tr>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">T</font></th>
+                        <th><font color="red">F</font></th>
+                        <th><font color="maroon">T</font></th>
+                        <th><font color="maroon">T</font></th>
+                        <th><font color="green">T</font></th>
+                      </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <p>
+            This example shows that one of DeMorgan's Laws is a logical equivalence. Whenever we have a compound propsition that is the negation of a disjunction (the left side of the logical equivalence), we can <b>replace</b> it with the conjunction of two negations (the right side of the logical equivalence). Similarly, whenever we have a conjunction of two negations (the right side) we can <b>replace</b> it with the negation of a disjunction (the left side).
+          </p>
+          <p>
+            In the following table when <b>T</b> is used in a compound proposition, it can be replaced by any tautology, and vice versa because a tautology is always true. Similarly, when <b>F</b> is used, it can be replaced by any contradiction and vice versa, because a contradiction is always false.
+          </p>
+          <p>
+These equivalences allow us to rewrite any formula of the form on the left with a formula of the form on the right, and vice versa, without loss of truth value.
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="2">
+                    <a name="lecd"><font color="blue">LOGICAL EQUIVALENCES<br>involving<br>CONJUNCTIONS and DISJUNCTIONS</font></a>
+                        <br>(LECD)
+                  </th>
+                </tr>
+                <tr>
+                  <th>NAME</th>
+                  <th>EQUIVALENCE</th>
+                </tr>
+                <tr>
+                  <td><a name="identity-laws"><font color="blue">Identity Laws</font></a></td>
+                  <th>
+                    <a name="identity-c">p <font >&#8743;</font> T <font >&#8801;</font> p</a>
+                        <br><a name="identity-d">p <font >&#8744;</font> F <font >&#8801;</font> p</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="domination-laws"><font color="blue">Domination Laws</font></a></td>
+                  <th>
+                        <a name="domination-c">p <font >&#8743;</font> F <font >&#8801;</font> F</a>
+                    <br><a name="domination-d">p <font >&#8744;</font> T <font >&#8801;</font> T</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="idempotent-laws"><font color="blue">Idempotent Laws</font></a></td>
+                  <th>
+                        <a name="idempotent-c">p <font >&#8743;</font> p <font >&#8801;</font> p</a>
+                    <br><a name="idempotent-d">p <font >&#8744;</font> p <font >&#8801;</font> p</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="double-negation-law"><font color="blue">Double Negation Law</font></a></td>
+                  <th><a name="doublenegation">&#172; ( &#172; p ) <font >&#8801;</font> p</a></th>
+                </tr>
+                <tr>
+                  <td><a name="commutative-laws"><font color="blue">Commutative Laws</font></a></td>
+                  <th>
+                        <a name="commutative-c">p <font >&#8743;</font> q <font >&#8801;</font> q <font >&#8743;</font> p</a>
+                    <br><a name="commutative-d">p <font >&#8744;</font> q <font >&#8801;</font> q <font >&#8744;</font> p</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="associative-laws"><font color="blue">Associative Laws</font></a></td>
+                  <th>
+                        <a name="associative-c">( p <font >&#8743;</font> q ) <font >&#8743;</font> r <font >&#8801;</font> p <font >&#8743;</font> ( q <font >&#8743;</font> r )</a>
+                    <br><a name="associative-d">( p <font >&#8744;</font> q ) <font >&#8744;</font> r <font >&#8801;</font> p <font >&#8744;</font> ( q <font >&#8744;</font> r )</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="distributive-laws"><font color="blue">Distributive Laws</font></a></td>
+                  <th>
+                        <a name="distributive-cd">p <font >&#8743;</font> ( q <font >&#8744;</font> r ) <font >&#8801;</font> ( p <font >&#8743;</font> q ) <font >&#8744;</font> ( p <font >&#8743;</font> r )</a>
+                    <br><a name="distributive-dc">p <font >&#8744;</font> ( q <font >&#8743;</font> r ) <font >&#8801;</font> ( p <font >&#8744;</font> q ) <font >&#8743;</font> ( p <font >&#8744;</font> r )</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="demorgans-laws"><font color="blue">De Morgan's Laws</font></a></td>
+                  <th>
+                    <a name="demorgan-c">&#172; ( p <font >&#8743;</font> q ) <font >&#8801;</font> &#172; p <font >&#8744;</font> &#172; q</a>
+                        <br><a name="demorgan-d">&#172; ( p <font >&#8744;</font> q ) <font >&#8801;</font> &#172; p <font >&#8743;</font> &#172; q</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="absorption-laws"><font color="blue">Absorption Laws</font></a></td>
+                  <th>
+                        <a name="absorption-cd">p <font >&#8743;</font> ( p <font >&#8744;</font> q ) <font >&#8801;</font> p</a>
+                    <br><a name="absorption-dc">p <font >&#8744;</font> ( p <font >&#8743;</font> q ) <font >&#8801;</font> p</a>
+                  </th>
+                </tr>
+                <tr>
+                  <td><a name="negation-laws"><font color="blue">Negation Laws</font></a></td>
+                  <th>
+                        <a name="negation-c">p <font >&#8743;</font> &#172; p <font >&#8801;</font> F</a>
+                    <br><a name="negation-d">p <font >&#8744;</font> &#172; p <font >&#8801;</font> T</a>
+                  </th>
+                </tr>
+          </table>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="2">
+                    <a name="lecs"><font color="blue">LOGICAL EQUIVALENCES<br>involving<br>CONDITIONAL STATEMENTS</font></a>
+                        <br>(LECS)                        
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional1">1</a></td>
+                  <th>p <font >&#8594;</font> q <font >&#8801;</font> &#172; p <font >&#8744;</font> q</th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional2">2</a></td>
+                  <th>
+                        p <font >&#8594;</font> q <font >&#8801;</font> &#172; q 
+                        <font >&#8594;</font> &#172; p
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional3">3</a></td>
+                  <th>p <font >&#8744;</font> q <font >&#8801;</font> &#172; p <font >&#8594;</font> q</th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional4">4</a></td>
+                  <th>p <font >&#8743;</font> q <font >&#8801;</font> &#172; ( p <font >&#8594;</font> &#172; q )</th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional5">5</a></td>
+                  <th>&#172; ( p <font >&#8594;</font> q ) <font >&#8801;</font> p <font >&#8743;</font> &#172; q</th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional6">6</a></td>
+                  <th>
+                    ( p <font >&#8594;</font> q ) <font >&#8743;</font> ( p <font >&#8594;</font> r ) 
+                        <font >&#8801;</font> p <font >&#8594;</font> ( q <font >&#8743;</font> r )
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional7">7</a></td>
+                  <th>
+                    ( p <font >&#8594;</font> r ) <font >&#8743;</font> ( q <font >&#8594;</font> r )
+                        <font >&#8801;</font> ( p <font >&#8744;</font> q ) <font >&#8594;</font> r
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional8">8</a></td>
+                  <th>
+                    ( p <font >&#8594;</font> q ) <font >&#8744;</font> ( p <font >&#8594;</font> r )
+                        <font >&#8801;</font> p <font >&#8594;</font> ( q <font >&#8744;</font> r )
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="conditional9">9</a></td>
+                  <th>
+                    ( p <font >&#8594;</font> r ) <font >&#8744;</font> ( q <font >&#8594;</font> r )
+                        <font >&#8801;</font> ( p <font >&#8743;</font> q ) <font >&#8594;</font> r)
+                  </th>
+                </tr>
+          </table>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="2">
+                    <a name="lebs"><font color="blue">LOGICAL EQUIVALENCES<br>involving<br>BICONDITIONAL STATEMENTS</font></a>
+                        <br>(LEBS)
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="biconditional1">1</a></td>
+                  <th>
+                    p <font >&#8596;</font> q <font >&#8801;</font> ( p <font >&#8594;</font> 
+                        q ) <font >&#8743;</font> ( q <font >&#8594;</font> p )
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="biconditional2">2</a></td>
+                  <th>
+                    p <font >&#8596;</font> q <font >&#8801;</font> &#172; p 
+                        <font >&#8596;</font> &#172; q
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="biconditional3">3</a></td>
+                  <th>
+                    p <font >&#8596;</font> q <font >&#8801;</font> ( p <font >&#8743;</font> q ) <font >&#8744;</font> ( &#172; p <font >&#8743;</font> &#172; q )
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center"><a name="biconditional4">4</a></td>
+                  <th>
+                    &#172; ( p <font >&#8596;</font> q ) <font >&#8801;</font> p 
+                        <font >&#8596;</font> &#172; q
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Using De Morgan's Laws</font></legend>
+          <p>De Morgan's Laws indicate how to negate conjunctions and disjunctions.</p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Constructing New Logical Equivalences</font></legend>
+          <p>The use of logical equivalences give rise to additional logical equivalences.</p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="8"><font color="red">EXAMPLE09:</font></th>
+                  <td colspan="4">
+                <font color="red">
+                      Show that <b>&#172; ( p <font >&#8744;</font> ( &#172; p <font >&#8743;</font> q ) )</b> and <b>&#172; p <font >&#8743;</font> &#172; q</b> are logically equivalent 
+                          <br>by developing a series of logical equivalences instead of using a truth table.
+                    </font>
+                  </td>
+            <tr valign="top">
+                  <th align="right" rowspan="7"><font color="red">&#172; ( p <font >&#8744;</font> ( &#172; p <font >&#8743;</font> q ) )</font></th>
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; p <font >&#8743;</font> &#172; ( &#172; p <font >&#8743;</font> q )</font></th>
+                  <td><font color="red">by the <a href="#demorgan-c">first DeMorgan's Law</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; p <font >&#8743;</font> [ &#172; ( &#172; p ) <font >&#8744;</font> &#172; q ]</font></th>
+                  <td><font color="red">by the <a href="#demorgan-d">second DeMorgan's Law</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; p <font >&#8743;</font> ( p <font >&#8744;</font> &#172; q )</font></th>
+                  <td><font color="red">by the <a href="#doublenegation">Double Negation Law</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">( &#172; p <font >&#8743;</font> p ) <font >&#8744;</font> ( &#172; p <font facee="symbol">&#8743;</font> &#172; q )</font></th>
+                  <td><font color="red">by the <a href="#distributive-cd">first Distributive Law</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">F <font >&#8744;</font> ( &#172; p <font >&#8743;</font> &#172; q )</font></th>
+                  <td><font color="red">by the <a href="#negation-c">Negation Law for Conjunction</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">( &#172; p <font >&#8743;</font> &#172; q ) <font >&#8744;</font> F</font></th>
+                  <td><font color="red">by the <a href="#commutative-d">Commutative Law for Disjunction</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; p <font >&#8743;</font> &#172; q</font></th>
+                  <td><font color="red">by the <a href="#identity-d">Identity Law for F</a></font></td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="8"><font color="red">EXAMPLE10:</font></th>
+                  <td colspan="4">
+                    <font color="red">
+                      Show that <b>( p <font >&#8743;</font> q ) <font color="red" >&#8594;</font> ( p <font >&#8744;</font> q )</b> is a tautology by
+                      developing<br>a series of logical equivalences instead of using a truth table.
+                        </font>
+                  </td>
+                </tr>
+            <tr valign="top">
+                  <th align="right" rowspan="7">
+                    <font color="red">( p <font >&#8743;</font> q ) <font color="red" >&#8594;</font> ( p <font >&#8744;</font> q )</font>
+                  </th>
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; ( p <font >&#8743;</font> q ) <font >&#8744;</font> ( p <font >&#8744;</font> q )</font></th>
+                  <td><font color="red">by the <a href="#conditional1">LECS #1</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">( &#172; p <font >&#8744;</font> &#172; q ) <font >&#8744;</font> ( p <font >&#8744;</font> q )</font></th>
+                  <td><font color="red">by the <a href="#demorgan-c">first DeMorgan's Law</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; p <font >&#8744;</font> &#172; q <font >&#8744;</font> p <font >&#8744;</font> q</font></th>
+                  <td><font color="red">the above is an extended disjunction; remove parentheses</font><a href="#"></a></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">&#172; p <font >&#8744;</font> p <font >&#8744;</font> &#172; q <font >&#8744;</font> q</font></th>
+                  <td><font color="red">by the <a href="#commutative-d">Commutative Law for Disjunction</a></font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">( &#172; p <font >&#8744;</font> p ) <font >&#8744;</font> ( &#172; q <font >&#8744;</font> q )</font></th>
+                  <td><font color="red">by the <a href="#associative-d">Associative Law for Disjunction</a> (add parentheses)</font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">T <font >&#8744;</font> T</font></th>
+                  <td><font color="red">by the <a href="#negation-d">Negation Law for Disjunction</a> (used twice)</font></td>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red" >&#8801;</font></th>
+                  <th align="left"><font color="red">T</font></th>
+                  <td><font color="red">by the <a href="#domination-d">Domination Law for Disjunction</a> </font></td>
+                </tr>
+          </table>
+        </fieldset>
+        <h4>PREDICATES AND QUANTIFIERS</h4>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Introduction</font></legend>
+          <p>
+            Predicate Logic enables the expression of the meaning of a wide range of statements in ways that permit the
+                reasoning and exploration of relationships between objects.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Predicates</font></legend>
+          <dl>
+            <dt><a name="propositional-fn"><font color="blue">Propositional Function</font></a></dt>
+                <dd>
+                  Let <b>D</b> be a set and variable <b>x <font >&#8712;</font> D</b>.
+                  <br><br><b>P ( x )</b> is the proposition or the value of the 
+                  <b><font color="blue">propositional function</font> P</b> at <b>x</b> or with respect to <b>D</b>; another way of reading <b>P ( x )</b> is: an x in domain D has the <b>property</b> P.
+                  <br><br><b>D</b> is called the <a name="domain"><font color="blue"><b>domain</b></font></a> of the discourse of 
+                  <b>P</b>. &#160;
+                  The variable <b>x</b> in the propositional function <b>P(x)</b> is called a 
+                  <a name="free-variable"><font color="blue"><b>free variable</b></font></a>.
+                  <br><br><b>R ( x<sub>1</sub>, x<sub>2</sub>, . . ., x<sub>n</sub> )</b> is the proposition or value of the
+                  <b>propositional function R</b> at the n-tuple <b>( x<sub>1</sub>, x<sub>2</sub>, . . ., x<sub>n</sub> )</b>, and
+                  <b>R</b> is also called an <b>n-place <a name="predicate"><font color="blue">predicate</font></a></b> or 
+                  <b>n-ary predicate</b>; similarly it asserts of n elements in the domain D that they satisfy the <b>relation</b> R. 
+                </dd>
+          </dl>
+          <p>
+            When the variables in a propositional function are assigned values, the resulting statement becomes a proposition
+                with a certain truth value.
+          </p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="9"><font color="red">EXAMPLE11:</font></th>
+                  <td><font color="red">Let</font></td>
+                  <td align="right"><font color="red"><b>P ( x ):</b></font></td>
+                  <th align="left" width="222"><font color="red">x &gt; 3</font></th>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3"><font color="red">What are the truth values of <b>P ( 7 ) and P ( 1 )</b>?</font></td>
+                </tr>
+                <tr valign="top">
+                  <td rowspan="2"></td>
+                  <th align="right"><font color="red">P ( 7 ):</font></th>
+                  <td><font color="red"><b>7 &gt; 3</b> is <b>T</b></font></td>
+                </tr>
+                <tr valign="top">
+                  <th align="right"><font color="red">P ( 1 ):</font></th>
+                  <td><font color="red"><b>1 &gt; 3</b> is <b>F</b>.</font></td>
+                </tr>
+                <tr><td colspan="3"><hr></td></tr>
+                <tr valign="top">
+                  <td><font color="red">Let</font></td>
+                  <th align="left"><font color="red">R ( x, y ):</font></th>
+                  <th align="left"><font color="red">y = x + 3</font></th>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3"><font color="red">What are the truth values of <b>R ( 2, 4 ) and R ( 3, 6 )</b> ?</font></td>
+                </tr>
+                <tr valign="top">
+                  <td rowspan="2"></td>
+                  <th align="left"><font color="red">R ( 2, 4 ):</font></th>
+                  <td><font color="red"><b>4 = 2 + 3</b> is <b>F</b></font></td>
+                </tr>
+                <tr valign="top">
+                  <th align="left"><font color="red">R ( 3, 6 ):</font></th>
+                  <td><font color="red"><b>6 = 3 + 3</b> is <b>T</b></font></td>
+                </tr>
+          </table>
+          <p>
+            Predicates are also used for the verification of the correctness of a program, i.e. that the desired output, known 
+                as <a name="postcondition"><font color="blue"><b>postcondition</b></font></a>, is always produced given valid 
+                input, known as <a name="precondition"><font color="blue"><b>precondition</b></font></a>.
+          </p>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="red">EXAMPLE12:</font></th>
+                  <td>
+                    <font color="red">
+              void Swap ( int &x, int &y )
+              <br>&#160; &#160; {
+              <br>&#160; &#160; &#160; &#160; int temp ;
+              <br>        
+              <br>&#160; &#160; &#160; &#160; temp = x ;
+              <br>&#160; &#160; &#160; &#160; x = y ;
+              <br>&#160; &#160; &#160; &#160; y = temp ;
+                  <br>
+              <br>&#160; &#160; &#160; &#160; return ;
+              <br>&#160; &#160; }
+                        </font>
+                  </td>
+                  <td>
+                    <font color="red">
+                          Precondition <b>P ( x, y ): x = a ; y = b ;</b>
+                          <br>
+                          <br>x = a ; y = b ; temp = undefined;
+                          <br>
+                          <br>x = a ; y = b ; temp = a ;
+                          <br>x = b ; y = b ; temp = a ;
+                          <br>x = b ; y = a ; temp = a ;
+                          <br>
+                          <br>Postcondition <b>Q ( x, y ): x = b ; y = a ;</b>
+                        </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Quantifiers</font></legend>
+          <dl>
+            <dt><a name="quantification"><font color="blue">Quantification</font></a></dt>
+                <dd>expresses the extent to which a predicate is <b>T</b> over a range of elements.</dd>
+          </dl>
+          <dl>
+            <dt><a name="predicate-calculus"><font color="blue">Predicate Calculus</font></a></dt>
+                <dd>is the area of logic that deals with predicates and quantifiers.</dd>
+          </dl>
+          <dl>
+            <dt><a name="universal-quantification"><font color="blue">Universal Quantification</font></a></dt>
+                <dd>
+                  of <b>P ( x )</b> is the statement "<b>P ( x )</b> for all values of <b>x</b> in the domain", is denoted by 
+                  <font color="blue"><b><font >&#8704;</font>x P ( x )</b></font>.
+                  <br><b><font color="blue" >&#8704;</font></b> is called the 
+                  <a name="universal-quantifier"><font color="blue"><b>universal quantifier</b></font></a> and 
+                  <b><font >&#8704;</font>x P ( x )</b> is read as "for all <b>x P ( x )</b>" or "for every <b>x P ( x 
+                  )</b>".
+                  <br>An element, x, for which <b>P ( x )</b> is <b>F</b> is called a <b>counterexample</b> of 
+                  <b><font >&#8704;</font>x P ( x )</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="existential-quantification"><font color="blue">Existential Quantification</font></a></dt>
+                <dd>
+                  of <b>P ( x )</b> is the statement "there exists an element <b>x</b> in the domain such that <b>P ( x )</b>", 
+                  is denoted by <font color="blue"><b><font >&#8707;</font>x P ( x )</b></font>.
+                  <br><b><font color="blue" >&#8707;</font></b> is called the 
+                  <a name="existential-quantifier"><font color="blue"><b>existential quantifier</b></font></a> and 
+                  <b><font >&#8707;</font>x P ( x )</b> is read as "there is an <b>x</b> such that <b>P ( x )</b>" or 
+                  "there is at least one <b>x</b> such that <b>P ( x )</b>" or "for some <b>x P ( x )</b>".
+                </dd>
+          </dl>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="3">
+                    <a name="quantification-of-1variable"><font color="blue">QUANTIFICATION of ONE VARIABLE</font></a>
+              </th>
+                </tr>
+                <tr>
+                  <th>Statement</th>
+                  <th>When <b>T</b>?</th>
+                  <th>When <b>F</b>?</th>
+                </tr>
+                <tr>
+                  <th><font >&#8704;</font>x P ( x )</th>
+                  <td><b>P ( x )</b> is <b>T</b> for every <b>x</b></td>
+                  <td>There is an <b>x</b> for which <b>P ( x )</b> is <b>F</b></td>
+                </tr>
+                <tr>
+                  <th><font >&#8707;</font>x P ( x )</th>
+                  <td>There is an <b>x</b> for which <b>P ( x )</b> is <b>T</b></td>
+                  <td><b>P ( x )</b> is <b>F</b> for every <b>x</b></td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Other Quantifiers</font></legend>
+          <dl>
+            <dt><a name="unique-quantification"><font color="blue">Uniqueness Quantification</font></a></dt>
+                <dd>
+                  of <b>P ( x )</b> is the statement "there exists a unique <b>x</b> in the domain such that <b>P ( x )</b>",
+                  denoted by <font color="blue"><b><font >&#8707;!</font>x P ( x )</b></font> ( or 
+                  <b><font >&#8707;</font><sub>1</sub>x P ( x )</b> ). &#160;
+                  <b><font color="blue" >&#8707;!</font></b> is called the 
+                  <a name="uniqueness-quantifier"><font color="blue"><b>uniqueness quantifier</b></font></a>.
+                </dd>
+          </dl>
+          <p>
+          The variable <b>x</b> in the proposition <b><font >&#8704;</font>x P ( x )</b>, <b><font >&#8707;</font>x P ( x )</b>, or <b><font >&#8707;</font>!x P ( x )</b> is called a 
+                          <a name="bound-variable"><font color="blue"><b>bound variable</b></font></a>, and this means x is bound by the quantifier. Propositions that have <b>no</b> free variables, that is, propositions in which <b>all</b> of the variables are bound, have a truth value of <b>T</b> or <b>F</b>.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><a name="Aristotelian-classification"><font color="maroon">Aristotelian Classification of English Sentences Using Quantifiers</font></legend></a>
+          <dl>
+            <dt>
+              <dd>
+                <b>A propositions</b> have the form "All Ss are Ps" and are best symbolized with the universal quatifier and a conditional: <font color="red"><b><font >&#8704;x( S ( x ) <font >&#8594;</font> P ( x ))</b></font></font>.
+              </dd>
+              <dd>
+                <b>E propositions</b> have the form "No Ss are Ps" and are best symbolized with the universal quantifier and a conditional with a negated predicate (P): <font color="red"><b><font >&#8704;</font>x( S( x ) <font >&#8594;</font> &#172; P( x ))</b></font> OR as a negated existential quantifier of a conjunction: <font color="red"><b>&#172;<font >&#8707;</font>x( S( x ) <font >&#8743;</font> P( x ))</b></font>.
+              </dd>
+              <dd>
+                <b>I propositions</b> have the form "Some Ss are Ps" and are best symbolized with the existential quantifier and a conjunction: <font color="red"><b><font >&#8707;</font>x( S( x ) <font >&#8743;</font> P( x ))</b></font>.
+              </dd>
+              <dd>
+                <b>O propositions</b> have the form "Some Ss are not Ps" and are best symbolized with the existential quatifier and a conjunction with a negated predicate (P): <font color="red"><b><font >&#8707;</font>x( S( x ) <font >&#8743;</font> &#172; P( x ))</b></font>.
+              </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Quantifiers with Restricted Domains</font></legend>
+          <p>
+            The restriction of a universal quantification is the same as the universal quantification of a conditional
+                statement. The statement: "all negative numbers have a square that is positive" can be symbolized as follows:
+          </p>
+          <table cellpadding="5">
+            <tr>
+                  <th valign="top"><font color="blue">EXAMPLE13:</font></th>
+                  <th align="left" valign="bottom">
+                    <font color="red">
+                          <font >&#8704;</font>x &lt; 0 ( x<sup>2</sup> &gt; 0 )
+                          <br><font >&#8704;</font>x ( x &lt; 0 <font >&#8594;</font> x<sup>2</sup> &gt; 0 )
+                        </font>
+                  </th>
+                </tr>
+          </table>
+          <p>
+            The restriction of an existential quantification is the same as the existential quantification of a conjunction. The statement: "There is a positive real number where square is 2" can be symbolized as:
+          </p>
+          <table cellpadding="5">
+            <tr>
+                  <th valign="top"><font color="red">EXAMPLE14:</font></th>
+                  <th align="left" valign="bottom">
+                    <font color="red">
+                          <font >&#8707;</font>x &gt; 0 ( x<sup>2</sup> = 2 )
+                          <br><font >&#8707;</font>x ( x &gt; 0 <font >&#8743;</font> x<sup>2</sup> = 2 )
+                        </font>
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Precedence of Quantifiers</font></legend>
+          <p>
+            The quantifiers <b><font >&#8704;</font></b> and <b><font >&#8707;</font></b> have higher
+                precedence than all logical operators from propositional calculus.
+          </p>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="3">
+                    <a name="oploq"><font color="blue">ORDER of PRECEDENCE
+                        <br>of LOGICAL OPERATORS and QUANTIFIERS</font></a>
+                        <br>(OPLOQ)
+                  </th>
+                </tr>
+                <tr>
+                  <th>PRECEDENCE</th>
+                  <th colspan="2">OPERATOR</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th><font >&#8704;</font> or <font >&#8707;</font></th>
+                  <th>
+                    <a href="#universal-quantification">Universal Quantifier</a> or 
+                        <a href="#existential-quantification">Existential Quantifier</a>
+                  </th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>&#172;</th>
+                  <th><a href="#negation">Negation</a></th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th><font >&#8743;</font></th>
+                  <th><a href="#conjunction">Conjunction</a></th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th><font >&#8744;</font></th>
+                  <th><a href="#disjunction">Disjunction</a></th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th><font >&#8594;</font></th>
+                  <th><a href="#conditional">Conditional</a></th>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <th><font >&#8596;</font></th>
+                  <th><a href="#biconditional">Biconditional</a></th>
+                </tr>
+          </table>
+          <p>
+            <font color="red">
+                  <b>EXAMPLE15:</b> &#160;
+                  <b><font >&#8707;</font>x P ( x ) <font >&#8743;</font> Q ( x )</b> means 
+                  <b>( <font >&#8707;</font>x P ( x ) ) <font >&#8743;</font> Q ( x )</b> rather than
+                  <b><font >&#8707;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) )</b>.
+                </font>
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Binding Variables</font></legend>
+          <p>
+            When a quantifier is used on a variable, the occurrence of the variable is said to be 
+                <a name="bound-variable"><b>bound</b></font></a>.
+          </p>
+          <p>
+            An occurrence of a variable that is not bound by a quantifier is said to be 
+                <b>free</b>.
+          </p>
+          <p>
+            All variables that occur in a propositional function must be bound to turn it into a
+                proposition which if T or F.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Logical Equivalences Involving Quantifiers</font></legend>
+          <dl>
+            <dt><a name="logically-equivalent-quantifiers"><font color="blue">Logically Equivalent</font></a></dt>
+                <dd>
+                  Statements <b>S</b> and <b>T</b> with predicates and quantifiers are 
+                  <b><font color="blue">logically equivalent</font></b>, denoted by 
+                  <b><font color="blue">S <font >&#8801;</font> T</font></b>, 
+                  iff they have the same truth value no matter which predicates are substituted into these statements 
+                  and which domain of discourse is used for the variables in these propositional functions.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="5"><font color="red">EXAMPLE16:</font></th>
+                  <td>
+                    <font color="red">
+                          Prove that <b><font >&#8704;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) )</b> and 
+                          <b><font >&#8704;</font>x P ( x ) <font >&#8743;</font> <font >&#8704;</font>x Q ( x )</b> are logically
+                          equivalent.
+                          <br>If proven, this indicates that <b><font >&#8704;</font></b> can be distributed over 
+                          conjunction.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          First, show that if <b><font >&#8704;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) )</b> is <b>T</b>,
+                          then <b><font >&#8704;</font>x P ( x ) <font >&#8743;</font> <font >&#8704;</font>x Q ( x )</b> is 
+                          <b>T</b>.
+                          <br>Second, show that if <b><font >&#8704;</font>x P ( x ) <font >&#8743;</font> <font >&#8704;</font>x 
+                          Q ( x )</b> is <b>T</b>, then <b><font >&#8704;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) )</b> is <b>T</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Suppose <b><font >&#8704;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) )</b> is <b>T</b>.
+                          <br>This means that for <b>a <font >&#8712;</font> D</b>,
+                          <b>P ( a ) <font >&#8743;</font> Q ( a )</b> is <b>T</b>.
+                          <br>Since <b>P ( a )</b> is <b>T</b> and <b>Q ( a )</b> is <b>T</b> for every element in <b>D</b>,
+                          then <b><font >&#8704;</font>x P ( x )</b> and <b><font >&#8704;</font>x Q ( x )</b> 
+                          are both <b>T</b>.
+                          <br>Hence, <b><font >&#8704;</font>x P ( x ) <font >&#8743;</font> <font >&#8704;</font>x Q ( x )</b> is
+                          <b>T</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Suppose <b><font >&#8704;</font>x P ( x ) <font >&#8743;</font> <font >&#8704;</font>x Q ( x )</b> is 
+                          <b>T</b>.
+                          <br>It follows that <b><font >&#8704;</font>x P ( x )</b> is <b>T</b> and
+                          <b><font >&#8704;</font>x Q ( x )</b> is <b>T</b>.
+                          <br>Hence, if <b>a <font >&#8712;</font> D</b>, then <b>P ( a )</b> is <b>T</b> and <b>Q ( a )</b>
+                          is <b>T</b>.
+                          <br>It follows that for all <b>a</b>, <b>P ( a ) <font >&#8743;</font> Q ( a )</b> is <b>T</b>.
+                          <br>It follows that <b><font >&#8704;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) )</b> is <b>T</b>
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          <font >&#92;</font> <b><font >&#8704;</font>x ( P ( x ) <font >&#8743;</font> Q ( x ) ) 
+                          <font >&#8801;</font> <font >&#8704;</font>x P ( x ) <font >&#8743;</font> 
+                          <font >&#8704;</font>x Q ( x )</b>.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+          <p>
+            When the domain of discourse if finite, that is, the domain consists of a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>, then a universally quantified proposition, <font >&#8704;</font>x P( x ), is equivalent to: P( a<sub>1</sub> ) <font >&#8743;</font> P( a<sub>2</sub> ) <font >&#8743;</font> ... <font >&#8743;</font> P( a<sub>n</sub> ).
+            When the domain of discourse if finite, that is, the domain consists of a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>, then an existentially quantified propositions, <font >&#8707;</font>x P( x ), is equivalent to: P( a<sub>1</sub> ) <font >&#8744;</font> P( a<sub>2</sub> ) <font >&#8744;</font> ... <font >&#8744;</font> P( a<sub>n</sub> ).
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>        
+          <legend><font color="maroon">Negating Quantified Expressions</font></legend>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th>
+                    <a name="leq"><font color="blue">LOGICAL EQUIVALENCES<br>involving<br>QUANTIFIERS</font></a><br>(LEQ)
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    &#172; <font >&#8704;</font>x P ( x ) <font >&#8801;</font> 
+                        <font >&#8707;</font>x &#172; P ( x )
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    &#172; <font >&#8704;</font>x P ( x ) <font >&#8801;</font> 
+                        <font >&#8707;</font>x &#172; P ( x )
+                  </th>
+                </tr>
+          </table>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr><th colspan="4"><a name="demorgans-q"><font color="blue">DeMorgan's Laws for QUANTIFIERS</font></a></th></tr>
+                <tr>
+                  <th>Negation</th>
+                  <th>Equivalent Statement</th>
+                  <th>When <b>T</b>?</th>
+                  <th>When <b>F</b>?</th>
+                </tr>
+                <tr>
+                  <th>&#172; <font >&#8704;</font>x P ( x )</th>
+                  <th><font >&#8707;</font>x &#172; P ( x )</th>
+                  <td>There is an <b>x</b> for which <b>P ( x )</b> is <b>F</b></td>
+                  <td><b>P ( x )</b> is <b>T</b> for every <b>x</b></td>
+                </tr>
+                <tr>
+                  <th>&#172; <font >&#8707;</font>x P ( x )</th>
+                  <th><font >&#8704;</font>x &#172; P ( x )</th>
+                  <td>For every <b>x</b>, <b>P ( x )</b> is <b>F</b></td>
+                  <td>There is an <b>x</b> for which <b>P ( x )</b> is <b>T</b></td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Translating from English into Logical Expressions</font></legend>
+          <br>
+          <table cellpadding="5">
+                <tr valign="top">
+                     <th rowspan="6"><font color="red">EXAMPLE17:</font></th>                                
+                     <td>
+                        <font color="red">
+                       Given the following statements:
+              <b>
+                              <br>"Students study."
+                                <br>"Some who study stay up late."
+                                <br>"Some students do not stay up late."
+                        </b> 
+                     </font> 
+              </td>
+            </tr>
+                   <tr valign="top">
+                  <td>
+                <font color="red">
+                          The first two statements are premises.
+                          <br>The third statement is a conclusion.
+                          <br>The entire set of statements is an argument.
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+              <td>
+                    <font color="red">
+                       Let <b>P ( x )</b> denote <b>x is a student</b>
+                          <br>Let <b>Q ( x )</b> denote <b>x studies</b>
+                          <br>Let <b>R ( x )</b> denote <b>x stays up late</b>
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td>
+                    <font color="red">
+                          These statements may be expressed as follows:
+              <b>
+                            <br><font >&#8704;</font>x ( P ( x ) <font >&#8594;</font> Q ( x ) )
+                                <br><font >&#8707;</font>x ( Q ( x ) &#8743 R ( x ) )
+                                <br><font >&#8707;</font>x ( P ( x ) &#8743 &#172; R ( x ) )
+              </b>
+                     </font>
+          </td>
+                   </tr>
+                   <tr valign="top">
+          <td>
+            <font color="red">
+                          Note: The second statement <b>cannot</b> be written as an existential implication, i.e as
+                          <b><font >&#8707;</font>x ( Q ( x ) <font >&#8594;</font> R ( x ) )</b>.
+                          <br>Since <b>Q ( x ) <font >&#8594;</font> R ( x )</b> is <b>T</b> as long as <b>R ( x )</b> is 
+                          <b>T</b> when <b>Q ( x )</b> is <b>T</b> or as long as <b>Q ( x )</b> is <b>F</b>.
+                          <br>This means that if <b>x</b> studies then <b>x</b> stays up late, or <b>x</b> does not study.
+                          <br><font >&#92;</font> <b><font >&#8707;</font>x ( Q ( x ) 
+                          <font >&#8594;</font> R ( x ) )</b> is <b>T</b> when there is at least one who studies, then that
+                          person stays up late,
+                          <br>or if there is at least one who does not study. 
+                     </font> 
+          </td>
+                   </tr>
+                <tr valign="top">
+          <td>
+                <font color="red">
+                          Similarly, note: the third statement <b>cannot</b> be written as a existential implication, i.e. as
+                          <b><font >&#8707;</font>x ( P ( x ) <font >&#8594;</font> &#172; R ( x ) )</b>.
+                          <br>Since <b>P ( x ) <font >&#8594;</font> &#172; R ( x )</b> is <b>T</b> as long as <b>&#172; 
+                          R ( x )</b> is <b>T</b> when <b>P ( x )</b> is <b>T</b> or as long as <b>P ( x )</b> is <b>F</b>.
+                          <br>This means that if <b>x</b> is a student, then <b>x</b> doesn't stay up late, or <b>x</b> is not a 
+                          student.
+                          <br><font >&#92;</font> <b><font >&#8707;</font>x ( P ( x ) 
+                          <font >&#8594;</font> &#172; R ( x ) )</b> is <b>T</b> when there is at least one who is a 
+                          student, then that person doesn't stay up late,
+                          <br>or if there is at least one who is not a student.
+                     </font>
+              </td>
+                   </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Using Quantifiers in System Specifications</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="5"><font color="red">EXAMPLE18:</font></th>
+                  <td>
+                    <font color="red">
+                          Use predicates and quantifiers to express the system specifications 
+                          <br>"<b>Every mail message larger than one megabyte will be compressed</b>" and
+                          <br>"<b>If a user is active, at least one network link will be available</b>".
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Let <b>M ( m, y )</b> denote "Mail message <b>m</b> is larger than <b>y</b> megabytes", 
+                          <br>where <b>m</b> has the domain of all mail messages
+                          <br>and <b>y</b> is a positive real number, and 
+                          <br>let <b>C ( m )</b> denote "Mail message m will be compressed".
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Then the specification "Every mail message larger than one megabyte will be compressed"
+                          <br>can be represented as
+                          <b><font >&#8704;</font>x ( M ( m, 1 ) <font >&#8594;</font> C ( m ) )</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Let <b>A ( u )</b> denote "User <b>a</b> is active",
+                          <br>where <b>u</b> has the domain of all users,
+                          <br>let <b>S ( n, x )</b> denote "Network link <b>n</b> is in state <b>x</b>", 
+                          <br>where <b>n</b> has the domain of all network links 
+                          <br>and <b>x</b> has the domain of all possible states for a network link.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Then the specification "If a user if active, at least one network link will be available"
+                          <br>can be represented as 
+                          <b><font >&#8707;</font>u A ( u ) <font >&#8594;</font> 
+                          <font >&#8707;</font>n S ( n, available )</b>.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">Examples from Lewis Carroll</font></legend>
+        </fieldset!-->
+        <!--br>
+        <fieldset>
+          <legend><font color="maroon">Logic Programming</font></legend>
+        </fieldset!-->
+        <h4>NESTED QUANTIFIERS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <p>
+            In working with quantifications of more than one variable, it is sometimes helpful to think in terms of nested 
+                loops.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">The Order of Quantifiers</font></legend>
+          <br>
+          <table align="center" border cellpadding="9">
+            <tr>
+                  <th colspan="3">
+                    <a name="quantification-of-2variables"><font color="blue">QUANTIFICATION of TWO VARIABLES</font></a>
+                  </th>
+                </tr>
+                <tr>
+                  <th>STATEMENT</th>
+                  <th>When <b>T</b>?</th>
+                  <th>When <b>F</b>?</th>
+                </tr>
+                <tr>
+                  <th>
+                    <font >&#8704;</font>x <font >&#8704;</font>y P ( x, y )
+                    <br><font >&#8704;</font>y <font >&#8704;</font>x P ( x, y )
+                  </th>
+                  <td><b>P(x, y)</b> is <b>T</b> for every pair <b>x, y</b></td>
+                  <td>There is a pair <b>x, y</b> for which <b>P ( x, y )</b> is <b>F</b></td>
+                </tr>
+                <tr>
+                  <th><font >&#8704;</font>x <font >&#8707;</font>y P ( x, y )</th>
+                  <td>For every <b>x</b>, there is a <b>y</b> for which <b>P ( x, y )</b> is <b>T</b></td>
+                  <td>There is an <b>x</b> such that <b>P ( x, y )</b> is <b>F</b> for every <b>x</b></td>
+                </tr>
+                <tr>
+                  <th><font >&#8707;</font>x <font >&#8704;</font>y P ( x, y )</th>
+                  <td>There is an <b>x</b> such that <b>P ( x, y )</b> is <b>T</b> for every <b>y</b></td>
+                  <td>For every <b>x</b>, there is a <b>y</b> for which <b>P ( x, y )</b> is <b>F</b></td>
+                </tr>
+                <tr>
+                  <th>
+                    <font >&#8707;</font>x <font >&#8707;</font>y P ( x, y )
+                    <br><font >&#8707;</font>y <font >&#8707;</font>x P ( x, y )
+                  </th>
+                  <td>There is a pair <b>x, y</b> for which <b>P ( x, y )</b> is <b>T</b></td>
+                  <td><b>P ( x, y )</b> is <b>F</b> for every pair <b>x, y</b></td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="16"><font color="red">EXAMPLE19:</font></th>
+                  <td>
+                    <font color="red">
+                          Let <b>P ( x, y ): x + y = y + x</b>, where the domain of the variables is the set of real numbers.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          What are the truth values of 
+                          <b><font >&#8704;</font>x <font >&#8704;</font>y P ( x, y )</b> and
+                          <b><font >&#8704;</font>y <font >&#8704;</font>x P ( x, y )</b>?
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8704;</font>x <font >&#8704;</font>y P ( x, y )</b>
+                          denotes "<b>for all real numbers x, for all real numbers y, x + y = y + x</b>".
+                          <br>By the commutative law for addition, <b>x + y = y + x</b>
+                          <br>Therefore, <b><font >&#8704;</font>x <font >&#8704;</font>y P ( x, y )</b> is 
+                          <b>T</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8704;</font>y <font >&#8704;</font>x P ( x, y )</b> denotes
+                          "<b>for all real numbers y, for all real numbers x, x + y = y + x</b>".
+                          <br>And again, <b><font >&#8704;</font>y <font >&#8704;</font>x P ( x, y )</b> is
+                          <b>T</b>.
+                        </font>
+              </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          This example confirms that the order of nested universal quantifiers only are interchangeable.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><hr></td></tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Let <b>Q ( x, y ): x + y = 0</b>, where the domain of the variables is the set of real numbers.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          What are the truth values of 
+                          <b><font >&#8707;</font>x <font >&#8704;</font>y Q ( x, y )</b> and
+                          <b><font >&#8704;</font>y <font >&#8707;</font>x Q ( x, y )</b>?
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8707;</font>x <font >&#8704;</font>y Q ( x, y )</b>
+                          denotes "<b>there is a real number x such that for every real number y, x + y = 0</b>".
+                          <br>No matter what value of <b>x</b> is chosen, there is only one value of <b>y</b> for which 
+                          <b>x + y = 0</b>.
+                          <br>There is no real number <b>x</b> such that <b>x + y = 0</b> for all real numbers <b>y</b>.
+                          <br>Hence, <b><font >&#8707;</font>x <font >&#8704;</font>y Q ( x, y )</b> is <b>F</b>.
+                        </font>
+              </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8704;</font>y <font >&#8707;</font>x Q ( x, y )</b>
+                          denotes "<b>for all real numbers y, there is a real number x, such that x + y = 0</b>".
+                          <br>For a given real value <b>y</b>, there is a real number <b>x</b> such that <b>x + y = 0</b>, i.e. 
+                          <b>y = &#150; x</b>.
+                          <br>Hence, <b><font >&#8704;</font>x <font >&#8707;</font>y Q ( x, y )</b> is <b>T</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          This example illustrates that the order in which quantifiers appear makes a difference.
+                          <br>Observe that if <b><font >&#8707;</font>x <font >&#8704;</font>y Q ( x, y )</b> is
+                          <b>T</b>, then <b><font >&#8704;</font>y <font >&#8707;</font>x Q ( x, y )</b> is also
+                          <b>T</b>.
+                          <br>However, if <b><font >&#8704;</font>y <font >&#8707;</font>x Q ( x, y )</b> is
+                          <b>T</b>, it is does not necessarily follow that 
+                          <b><font >&#8707;</font>x <font >&#8704;</font>y Q ( x, y )</b> is <b>T</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><hr></td></tr>
+                <tr valign="top">
+                  <td>
+                    <font color="red">
+                          Let <b>R ( x, y, z ): x + y = z</b>, where the domain of all the variables is the set of real numbers.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          What are the truth values of 
+                          <b><font >&#8704;</font>x <font >&#8704;</font>y <font >&#8707;</font>z 
+                          R ( x, y, z )</b> and 
+                          <b><font >&#8707;</font>z <font >&#8704;</font>x <font >&#8704;</font>y 
+                          R ( x, y, z )</b>?
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8704;</font>x <font >&#8704;</font>y 
+                          <font >&#8707;</font>z R ( x, y, z )</b> denotes "<b>for all real numbers x and all real numbers y 
+                          there is a real number z such that x + y = z</b>".
+                          <br>For a given real number <b>x</b> and a given real number <b>y</b>, there is indeed a real number <b>z</b>
+                          for which <b>x + y = z</b>.
+                          <br>Hence, <b><font >&#8704;</font>x <font >&#8704;</font>y 
+                          <font >&#8707;</font>z R ( x, y, z )</b> is <b>T</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          <b><font >&#8707;</font>z <font >&#8704;</font>x 
+                          <font >&#8704;</font>y R ( x, y, z )</b> denotes "<b>there is a real number z such that for all 
+                          real numbers x and all real numbers y, x + y = z</b>".
+                          <br>There is no real number <b>z</b> for which <b>x + y = z</b> for all real numbers <b>x</b> and all real
+                          numbers <b>y</b>.
+                          <br>Hence, <b><font >&#8707;</font>z <font >&#8704;</font>x 
+                          <font >&#8704;</font>y R ( x, y, z )</b> is <b>F</b>.
+                        </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>
+            <font color="maroon">Translating Mathematical Statements into Statements Involving Nested Quantifiers</font>
+          </legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="5"><font color="red">EXAMPLE20:</font></th>
+                  <td>
+                    <font color="red">
+                          Translate the statement "<b>The sum of two positive integers is always positive</b>".
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Rewrite the statement: 
+                          "<b>For every two integers, if these integers are both positive, then the sum of
+                          these integers is positive</b>".
+                          <br>Let the domain be all integers.
+                          <br>"<b>For all x and y, if x &gt; 0 and y &gt; 0, then x + y &gt; 0</b>".
+                          <br><b><font >&#8704;</font>x <font >&#8704;</font>y
+                          (x &gt; 0 &#8743; y &gt; 0) <font >&#8594;M/font> x + y &gt; 0</b>
+                        </font>
+                  </td>
+                </tr>
+                <tr><td><hr></td></tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                      Translate the statement "<b>Every real number except zero has a multiplicative inverse</b>".
+                        </font>
+              </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Rewrite the statement "<b>for every real number x except 0, x has a multiplicative inverse</b>".
+                          <br>"<b>For every real number x, if x  <font >&#8800;</font> 0, 
+                          then there exists a real number y such that xy = 1</b>".
+                          <br>Let the domain be all real numbers.
+                          <br><b><font >&#8704;</font>x 
+                          ( ( x <font >&#8800;</font> 0 ) <font >&#8594;</font> 
+                          <font >&#8707;</font>y ( xy = 1 ) ) </b>
+                    </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Translating from Nested Quantifiers into English</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="4"><font color="red">EXAMPLE21:</font></th>
+                  <td>
+                    <font color="red">
+                          Translate the statement <b><font >&#8704;</font>x ( C ( x ) <font >&#8744;</font> <font >&#8707;</font>y
+                          ( C ( y ) <font >&#8743;</font> F ( x, y ) ) )</b> into English where
+                          <br><b>C ( x ): x has a computer</b>
+                          <br><b>F ( x, y ): x and y are friends</b>; note that F is a symmetric relation, that is <b>F ( x, y ) <font >&#8596;</font> F ( y, x )</b>,
+                          <br>and the domain is the students in a school.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          "<b>For every student x, x has a computer or there is a student y that
+                          that has a computer and is a friend of x</b>".
+                          <br>"<b>Every student has a computer or a friend with a computer</b>".
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                          Translate the statement <b><font >&#8707;</font>x <font >&#8704;</font>y
+                          <font >&#8704;</font>z ( ( F ( x, y ) <font >&#8743;</font> F ( x, z ) <font >&#8743;</font> y <font >&#8800;</font> z)
+                          <font >&#8594;</font> &#172; F(y, z) )</b> into English where
+                          <br><b>F ( a, b ): a and b are friends</b> 
+                          <br>and the domain is the students in a school.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font color="red">
+                           <b>( ( F ( x, y ) <font >&#8743;</font> F ( x, z ) <font >&#8743;</font> ( y 
+                          <font >&#8800;</font> z ) ) <font >&#8594;</font> &#172; F ( y, z ) )</b> states that
+                          "<b>there is a x such that for every y and z: if x and y are friends, and x and z are friends, and y is not z, then y and z are not friends</b>".
+                          <br> "<b>There is a student x such that for all students y and all students
+                          z other than y, if x and y are friends, and x and z are friends, then y and z are not friends</b>".
+                          <br> "<b>There is a student none of whose friends are also friends of each 
+                          other</b>".
+                        </font>
+                  </td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Translating English Sentences into Logical Expressions</font></legend>
+          <br>
+          <table cellpadding="5">
+                <tr valign="top">
+                     <th><font color="red">EXAMPLE22:</font></th>
+                  <td>
+                    <font color="red">
+                            Let <b>L ( x, y )</b> be the statement <b>"x loves y"</b>
+                          <br>where the universe of discourse for both <b>x</b> and <b>y</b>
+                          is the set of all people in the world. Sadly, L is not a symmetric relation, that is <b>L ( x, y)</b> does not imply <b>L ( y, x)</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>&#160;</td>
+                  <td valign="top">
+                      <font color="red">
+                        Express each of the following sentences in terms of <b>L ( x, y )</b>, quantifiers, and logical connectives.
+                          <br>Note that the first argument in the propositional function is the <b>lover</b> and
+                          the second argument is the <b>lovee</b>.
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+          <td>
+                    <font color="red">Everybody loves Jerry.<br><b><font >&#8704;</font>x L ( x, Jerry )</b></font>
+                  </td>
+            </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                    <font color="red">
+                       Everybody loves somebody.
+                          <br><b><font >&#8704;</font>x <font >&#8707;</font>y L ( x, y )</b>
+                     </font>
+                     <font color="green">
+                          <br>Observe that somebody being loved depends on the person doing the loving, so the univeral quantifier has 
+                          to come first.
+                     </font>
+              </td>
+                   </tr>
+                 <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                    <font color="red">
+                       There is somebody whom everybody loves.
+                          <br><b><font >&#8707;</font>y <font >&#8704;</font>x L ( x, y )</b>
+                     </font>
+                     <font color="green">
+                          <br>Observe that one lovee works for all lovers, so the existential quantifier has to come first.
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                <font color="red">
+                       Nobody loves everybody.
+                          <br><b>( &#172; <font >&#8707;</font>x <font >&#8704;</font>y L ( x, y ) ) 
+                          <font >&#8801;</font> 
+                          ( <font >&#8704;</font>x &#172; <font >&#8704;</font>y L ( x, y ) )
+                          <font >&#8801;</font> 
+                          ( <font >&#8704;</font>x        <font >&#8707;</font>y &#172; L ( x, y ) )</b>
+            </font> 
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                        <font color="red">
+                   There is somebody whom Lydia does not love.
+                          <br><b><font >&#8707;</font>y &#172; L ( Lydia, y )</b>
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                    <font color="red">
+                       There is somebody whom no one loves.
+                          <br><b><font >&#8707;</font>y <font >&#8704;</font>x &#172; L ( x, y )</b>
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                    <font color="red">
+                       There is exactly one person whom everybody loves.
+                          <br><b><font >&#8707;</font><a name="exclamation"><font color="blue">!</font></a>y 
+                          <font >&#8704;</font>x L(x, y)</b>
+                     </font>
+                     <font color="green">
+                          <br>Note that for the existence of a unique object satisfying a certain condition,
+                          the notation includes the use an <font color="blue"><b>exclamation point</b></font>.
+                          <br>This is also equivalent to the following:
+                     </font>
+                     <font color="red">
+                       <br><b><font >&#8707;</font>y <font >&#8704;</font>x ( L ( x, y ) <font >&#8743;</font>        
+                          <font >&#8704;</font>z ( L ( x, z )
+                        <font >&#8594;</font> z = y )</b>
+                     </font>
+              </td>
+                   </tr>
+                  <tr valign="top">
+                     <td align="right"><font color="red">&#149;</font></td>
+                     <td>
+                        <font color="red">
+                       There are exactly two people whom Lynn loves.
+                          <br><b><font >&#8707;</font>x <font >&#8707;</font>y ( x 
+                        <font >&#8800;</font> y <font face="symbpl">&#8743;</font> L ( Lynn, x ) <font face="symbpl">&#8743;</font> L ( Lynn, y ) <font face="symbpl">&#8743;</font> 
+                          <font >&#8704;</font>z ( L ( Lynn, z ) <font >&#8594;</font> ( z = x <font face="symbpl">&#8744;</font> z = y ) ) </b>
+                     </font>
+              </td>
+                   </tr>
+                   <tr valign="top">
+                  <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                        <font color="red">
+                          Everyone loves himself or herself.<br><b><font >&#8704;</font>x L ( x, x )</b>
+                        </font>
+              </td>
+                   </tr>
+                <tr valign="top">
+                     <td align="right"><font color="red">&#149;</font></td>
+              <td>
+                <font color="red">
+                          There is someone who loves no one besides himself or herself.
+                          <br><b><font >&#8707;</font>x ( L ( x, x ) <font >&#8743;</font> <font >&#8704;</font>y (  L ( x, y )
+                        <font >&#8594;</font> x = y ))</b>
+            </font>
+                     <font color="green">
+                          <br>This is asserting that everyone who is loved by the lover is in fact the lover himself or herself.
+                    </font>
+          </td>
+                   </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Negating Nested Quantifiers</font></legend>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="10"><font color="red">EXAMPLE23:</font></th>
+                  <td colspan="3">
+                    <font color="red">
+                          Use quantifiers to express the statement that 
+                          "<b>There does not exist a woman who has taken a flight on every airline in the world.</b>"
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3">
+                    <font color="red">
+                          Let <b>P ( w, f )</b> denote <b>w</b> had taken flight <b>f</b>.
+                          <br>Let <b>Q ( f, a )</b> denote <b>f</b> is a flight on airline <b>a</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3">
+                    <font color="red">
+                          <b>P ( w, f ) <font >&#8743;</font> Q ( f, a )</b> denotes <b>w</b> had taken flight <b>f</b> and <b>f</b> is a flight in 
+                          airline <b>a</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3">
+                    <font color="red">
+                          <b><font >&#8707;</font>w <font >&#8704;</font>a <font >&#8707;</font>f
+                          ( P ( w, f ) <font >&#8743;</font> Q ( f, a ) )</b> denotes "there exists a woman <b>w</b> who has taken a flight <b>f</b> on every 
+                          airline <b>a</b> in the world".
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3">
+                    <font color="red">
+                          <b>&#172; <font >&#8707;</font>w <font >&#8704;</font>a 
+                          <font >&#8707;</font>f ( P ( w, f ) <font >&#8743;</font> Q ( f, a ) )</b> denote "there does not exist a woman 
+                          <b>w</b> who had taken a flight <b>f</b> on every airline <b>a</b> in the world".
+                        </font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td colspan="3">
+                    <font color="red">Successively apply <a href="#demorgans-q">DeMorgan's Laws for Quantifiers</a>.</font>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <th align="right" rowspan="4">
+                    <font color="red">
+                          &#172; <font >&#8707;</font>w <font >&#8704;</font>a <font >&#8707;</font>f 
+                          ( P ( w, f ) <font >&#8743;</font> Q ( f, a ) )
+                        </font>
+                  </th>
+                  <th><font color="red"><font >&#8801;</font></font></th>
+                  <th align="left">
+                    <font color="red">
+                          <font >&#8704;</font>w &#172; <font >&#8704;</font>a 
+                          <font >&#8707;</font>f ( P ( w, f ) <font >&#8743;</font> Q ( f, a ) )
+                        </font>
+                  </th>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red"><font >&#8801;</font></font></th>
+                  <th align="left">
+                    <font color="red">
+                          <font >&#8704;</font>w <font >&#8707;</font>a 
+                          &#172; <font >&#8707;</font>f ( P ( w, f ) <font >&#8743;</font> Q ( f, a ) )
+                        </font>
+                  </th>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red"><font >&#8801;</font></font></th>
+                  <th align="left">
+                    <font color="red">
+                          <font >&#8704;</font>w <font >&#8707;</font>a 
+                          <font >&#8704;</font>f &#172; ( P ( w, f ) <font >&#8743;</font> Q ( f, a ) )
+                        </font>
+                  </th>
+                </tr>
+                <tr valign="top">
+                  <th><font color="red"><font >&#8801;</font></font></th>
+                  <th align="left">
+                    <font color="red">
+                          <font >&#8704;</font>w <font >&#8707;</font>a 
+                          <font >&#8704;</font>f ( &#172; P ( w, f ) <font >&#8744;</font> &#172; Q ( f, a ) )
+                        </font>
+                  </th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Equivalence Relations</font></legend>
+          <dl>
+            <dt><a name="reflexive-relation"><font color="blue">Reflexive Relation</font></a></dt>
+                <dd>
+                A reflexive relation is a relation R that is true of everything in a domain with respect to itself; that is: <b><font >&#8704;</font>x R ( x, x)</b>. In mathematics the "equals" relation is reflexive, because everthing equals itself, x = x. On the other hand, the "loves" relation in the people domain is not necessarily reflexive, because not everybody loves themselves.
+                </dd>
+            </dt><br>
+            <dt><a name="symmetric-relation"><font color="blue">Symmetric Relation</font></a></dt>
+                <dd>
+                A symmetric relation is a relation R for which R ( x, y) implies R ( y, x) for every x and y in a domain; that is: <b><font >&#8704;</font>x <font >&#8704;</font>y ( R ( x, y) <font >&#8594;</font> R ( y, x) )</b>. In mathematics the "equals" relation is symmetric, because if x = y then y = x.
+                </dd>
+            </dt><br>
+            <dt><a name="transitive-relation"><font color="blue">Transitive Relation</font></a></dt>
+                <dd>
+                A transitive relation is a relation R for which R ( x, y) and R ( y, z ) implies R ( x, z) for every x, y and z in a domain; that is: <b><font >&#8704;</font>x <font >&#8704;</font>y <font >&#8704;</font>z ( ( R ( x, y) <font >&#8743;</font> R ( y, z ) ) <font >&#8594;</font> R ( x, z) )</b>. In mathematics the "equals" relation is transitive, because if x = y and y = z then x = z.
+                </dd>
+            </dt><br>
+            <dt><a name="equivalence-relation"><font color="blue">Equivalence Relation</font></a></dt>
+                <dd>
+                An equivalence relation is a relation that is relexive, symmetric, and transitive (this is also covered again later on). In mathematics the "equals" relation is an equivalence relation; in geometry the "is congruent to" relation is an equivalence relation.
+                </dd>
+            </dt><br>
+          </dl>
+        </fieldset>
+        <br>
+        <table align="center">
+          <tr>
+            <td>
+                    <small><small>
+                    <br><a href="#absorption-laws">Absorption Laws</a>
+                    <br><a href="#antecedent">Antecedent</a>
+                    <br><a href="#Aristotelian-classification">Aristotelian Classification</a>
+                    <br><a href="#associative-laws">Associative Laws</a>
+                        <br>
+                    <br><a href="#biconditional">Biconditional Statement</a> p <font >&#8596;</font> q
+                    <br><a href="#biconditional-opr">Biconditional Operator</a> <font >&#8596;</font>
+                    <br><a href="#biimplication">Bi-implication</a> p <font >&#8596;</font> q
+                    <br><a href="#bit">Bit</a>
+                    <br><a href="#bit-opn">Bit Operation</a>
+                    <br><a href="#bit-string">Bit String</a>
+                    <br><a href="#boolean-variable">Boolean Variable</a>
+                    <br><a href="#bound-variable">Bound Variable</a>
+                        <br>
+                    <br><a href="#commutative-laws">Commutative Laws</a>
+                    <br><a href="#compound-proposition">Compound Proposition</a>
+                    <br><a href="#conclusion">Conclusion</a>
+                    <br><a href="#conditional">Conditional Statement</a> p <font >&#8594;</font> q
+                    <br><a href="#conditional-opr">Conditional Operator</a> <font >&#8594;</font>
+                    <br><a href="#conjunction">Conjunction</a> p <font >&#8743;</font> q
+                    <br><a href="#conjunction-opr">Conjunction Operator</a> <font >&#8743;</font>
+                    <br><a href="#contingency">Contingency</a>
+                    <br><a href="#consequence">Consequence</a>
+                    <br><a href="#contradiction">Contradiction</a>
+                    <br><a href="#contrapositive">Contrapositive</a>
+                    <br><a href="#converse">Converse</a>
+                        <br>
+                    <br><a href="#demorgans-laws">DeMorgan's Laws</a>
+                    <br><a href="#demorgans-q">DeMorgan's Laws for Quantifications</a>
+                    <br><a href="#disjunction">Disjunction</a> p <font >&#8744;</font> q
+                    <br><a href="#disjunction-opr">Disjunction Operator</a> <font >&#8744;</font>
+                    <br><a href="#distributive-laws">Distributive Laws</a>
+                    <br><a href="#domain">Domain</a>
+                    <br><a href="#domination-laws">Domination Laws</a>
+                    <br><a href="#double-negation-law">Double Negation Law</a>
+                        <br>
+                    <br><a href="#equivalence-relation">Equivalence Relation</a>
+                    <br><a href="#exclusive-or">Exclusive-Or</a> p <font >&#8853;</font> q
+                    <br><a href="#existential-quantification">Existential Quantification</a> <font >&#8707;</font>x P(x)
+                    <br><a href="#existential-quantifier">Existential Quantifier</a> <font >&#8707;</font>
+                        <br>
+                    <br><a href="#false">False</a> F
+                    <br><a href="#free-variable">Free Variable</a>
+                        <br>
+                    <br><a href="#hypothesis">Hypothesis</a>
+                        <br>
+                    <br><a href="#implication">Implication</a> p <font >&#8594;</font> q
+                    <br><a href="#idempotent-laws">Idempotent Laws</a>
+                    <br><a href="#identity-laws">Identity Laws</a>
+                    <br><a href="#inverse">Inverse</a>
+                        <br>
+                    <br><a href="#logical-connective">Logical Connective</a>
+                    <br><a href="#lebs">Logical Equivalences involving Biconditional Statements</a> (LEBS)
+                    <br><a href="#lecs">Logical Equivalences involving Conditional Statements</a> (LECS)
+                    <br><a href="#lecd">Logical Equivalences involving Conjunctions and Disjunctions</a> (LECD)
+                    <br><a href="#leq">Logical Equivalences involving Quantifiers</a> (LEQ)
+                    <br><a href="#logically-equivalent">Logically Equivalent</a> <font >&#8801;</font>
+                        <br>
+                    <br><a href="#negation">Negation</a> &#172; p
+                    <br><a href="#negation-laws">Negation Laws</a>
+                    <br><a href="#negation-opr">Negation Operator</a> &#172;
+                        <br>
+                    <br><a href="#oplo">Order of Precedence of Logical Operators</a> (OPLO)
+                    <br><a href="#oploq">Order of Precedence of Logical Operators and Quantifiers</a> (OPLOQ)
+                        <br>
+                    <br><a href="#postcondition">Postcondition</a>
+                    <br><a href="#precondition">Precondition</a>
+                    <br><a href="#predicate">Predicate</a>
+                    <br><a href="#predicate-calculus">Predicate Calculus</a>
+                    <br><a href="#premise">Premise</a>
+                    <br><a href="#proposition">Proposition</a>
+                    <br><a href="#propositional-calculus">Propositional Calculus</a>
+                    <br><a href="#propositional-fn">Propositional Function</a>
+                    <br><a href="#propositional-logic">Propositional Logic</a>
+                    <br><a href="#propositional-variable">Propositional Variable</a>
+                        <br>
+                    <br><a href="#quantification">Quantification</a>
+                    <br><a href="#quantification-of-1variable">Quantification of One Variable</a>
+                    <br><a href="#quantification-of-2variables">Quantification of Two Variables</a>
+                        <br>
+                    <br><a href="#reflexive-relation">Reflexive Relation</a>
+                        <br>
+                    <br><a href="#symmetric-relation">Symmetric Relation</a>
+                        <br>
+                    <br><a href="#tautology">Tautology</a>
+                    <br><a href="#transitive-relation">Transitive Relation</a>
+                    <br><a href="#true">True</a> T
+                    <br><a href="#truth-table">Truth Table</a>
+                        <br>
+                    <br><a href="#uniqueness-quantifier">Uniqueness Quantifier</a> <font >&#8707;</font>!
+                    <br><a href="#unique-quantification">Uniqueness Quantification</a> <font >&#8707;</font>!x P(x)
+                    <br><a href="#universal-quantification">Universal Quantification</a> <font >&#8704;</font>x P(x)
+                    <br><a href="#universal-quantifier">Universal Quantifier</a> <font >&#8704;</font>
+                        <hr>
+                        <a href="../homework/01logic-hw.html" target="_blank">Homework on Logic</a>
+                    </small></small>
+                </td>
+          </tr>
+        </table>
+        
+    <h6 align="center">
+      <hr>
+  &#169; 2002-04-08 cpsm; rcm ; last update 
+  <!-- #BeginDate format:IS1m -->2013-06-10  22:18<!-- #EndDate -->
+  <hr>
+    </h6>
+  </body>
+</html>

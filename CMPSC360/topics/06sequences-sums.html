@@ -1,0 +1,592 @@
+<html>
+  <head>
+    <title>PSLV Discrete Mathematics: Sequences, and Sums</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel=stylesheet type="text/css" href="../../course-style.css">
+        <style>dt {font-weight: bold}</style>
+  </head>
+
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><img src="images/lg_lv.gif" alt="PSU Logo"></p>
+    <h3 align="center">SEQUENCES and SUMS</h3>
+    <h5 align="center">
+      Please note that the material on this website is not intended to be exhaustive.
+      <br>This is intended as a summary and supplementary material.
+    </h5>
+    <h4>SEQUENCES and SUMMATIONS</h4>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Introduction</font></legend>
+          <p>
+            Sequences are ordered lists of elements. &#160;
+                They are used to represent solutions to certain counting problems. &#160;
+                They are also an important data structure in computer science. &#160;
+            When the elements of an infinite set can be listed, the set is said to be countable.
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Sequences</font></legend>
+          <dl>
+            <dt><a name="sequence"><font color="blue">Sequence</font></a></dt>
+                <dd>
+                  is a function from a subset of the set of integers (usually either the set <b>{ 0, 1, 2, . . . }</b> or the set
+                  <b>{ 1, 2, 3, . . . }</b>) to a set <b>S</b>. &#160;
+                  A <a name="term"><font color="blue"><b>term</b></font></a> of a sequence denoted by <b>a<sub>n</sub></b> is the
+                  image of the integer <b>n</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="8"><font color="red">EXAMPLE01:</font></th>
+                  <td>
+                    <font color="red">
+                          Determine the first six terms of a sequence <b>{ a<sub>n</sub> }</b> where 
+                          <b>a<sub>n</sub> = 2 ( -3 )<sup>n</sup> + 5<sup>n</sup></b>
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          a<sub>0</sub> = 2 (-3)<sup>0</sup> + 5<sup>0</sup> = 2 ( 1 ) + 1 = 2 + 1 = 3
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          a<sub>1</sub> = 2 (-3)<sup>1</sup> + 5<sup>1</sup> = 2 ( -3 ) + 5 = -6 + 5 = -1
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          a<sub>2</sub> = 2 (-3)<sup>2</sup> + 5<sup>2</sup> = 2 ( 9 ) + 25 = 18 + 25 = 43
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          a<sub>3</sub> = 2 (-3)<sup>3</sup> + 5<sup>3</sup> = 2 ( -27 ) + 125 = -54 + 125 = 71
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          a<sub>4</sub> = 2 (-3)<sup>4</sup> + 5<sup>4</sup> = 2 ( 81 ) + 125 = 162 + 625 = 787
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          a<sub>5</sub> = 2 (-3)<sup>5</sup> + 5<sup>5</sup> = 2 ( -243 ) + 3125 = -486 + 3125 = 2639
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <td><font color="red">The first six terms of the sequence are <b>3, -1, 43, 71, 787, 2639, . . .</b></font></td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="geometric-progression"><font color="blue">Geometric Progression</font></a></dt>
+                <dd>
+                  is a sequence of the form <b>a, ar, ar<sup>2</sup>, . . ., ar<sup>n</sup></b> where the
+                  <a name="initial-term"><font color="blue"><b>initial term</b></font></a> <b>a</b> and the
+                  <a name="common-ratio"><font color="blue"><b>common ratio</b></font></a> <b>r</b> are real numbers.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="8"><font color="red">EXAMPLE02:</font></th>
+                  <td>
+                    <font color="red">
+                          Determine the first six terms of a geometric progression with initial term <b>6</b> and common ratio 
+                          <b>&frac14;</b> and where <b>n</b> starts with <b>0</b>.
+                          <br>Recall that a geometric progression has the form <b>ar<sup>i</sup></b> where 
+                          <b>i = 0, 1, 2, . . ., n</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ar<sup>0</sup> = 6 ( &frac14; )<sup>0</sup> = 6 (1) = 6
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ar<sup>1</sup> = 6 ( &frac14; )<sup>1</sup> = 6 ( &frac14; ) = 3 / 2
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ar<sup>2</sup> = 6 ( &frac14; )<sup>2</sup> = 6 ( 1 / 16 ) = 3 / 8
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ar<sup>3</sup> = 6 ( &frac14; )<sup>3</sup> = 6 ( 1 / 64 ) = 3 / 32
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ar<sup>4</sup> = 6 ( &frac14; )<sup>4</sup> = 6 ( 1 / 256 ) = 3 / 128
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <font color="red">
+                          ar<sup>5</sup> = 6 ( &frac14; )<sup>5</sup> = 6 ( 1 / 1024 ) = 3 / 512
+                        </font>
+                  </th>
+                </tr>
+                <tr>
+                  <td valign="top">
+                    <font color="red">The first six terms of the geometric progression are:</font>
+                    <table cellpadding="3">
+                          <tr>
+                            <th><font color="red">6</font></th>
+                                <th valign="middle"><font color="red">,</font></th>
+                            <th><font color="red">3<hr>2</font></th>
+                                <th valign="middle"><font color="red">,</font></th>
+                            <th><font color="red">3<hr>8</font></th>
+                                <th valign="middle"><font color="red">,</font></th>
+                            <th><font color="red">3<hr>32</font></th>
+                                <th valign="middle"><font color="red">,</font></th>
+                            <th><font color="red">3<hr>128</font></th>
+                                <th valign="middle"><font color="red">,</font></th>
+                            <th><font color="red">3<hr>512</font></th>
+                                <th valign="middle"><font color="red">.</font></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="arithmetic-progression"><font color="blue">Arithmetic Progression</font></a></dt>
+                <dd>
+                  is a sequence of the form <b>a, a + d, a + 2d, a + 3d, . . ., a = nd</b> where the intial term <b>a</b> and the
+                  <a name="common-difference"><font color="blue"><b>common difference</b></font></a> <b>d</b> are real numbers.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="8"><font color="red">EXAMPLE03:</font></th>
+                  <td>
+                    <font color="red">
+                          Determine the first six terms of an arithmetic progression with initial term <b>7</b> and common difference
+                          <b>5</b>.
+                          <br>Recall that an arithmetic progression has the form <b>a + i d</b> where <b>i = 0, 1, 2, . . ., n</b>.
+                        </font>
+                  </td>
+                </tr>
+                <tr><th align="left"><font color="red">a + 0 * d = 7 + 0 * 5 = 7 + 0 = 7</font></th></tr>
+                <tr><th align="left"><font color="red">a + 1 * d = 7 + 1 * 5 = 7 + 5 = 12</font></th></tr>
+                <tr><th align="left"><font color="red">a + 2 * d = 7 + 2 * 5 = 7 + 10 = 17</font></th></tr>
+                <tr><th align="left"><font color="red">a + 3 * d = 7 + 3 * 5 = 7 + 15 = 22</font></th></tr>
+                <tr><th align="left"><font color="red">a + 4 * d = 7 + 4 * 5 = 7 + 20 = 27</font></th></tr>
+                <tr><th align="left"><font color="red">a + 5 * d = 7 + 5 * 5 = 7 + 25 = 32</font></th></tr>
+                <tr>
+                  <td>
+                    <font color="red">The first six terms of the arithmetic progression are <b>7, 12, 17, 22, 27, 32</b>.</font>
+                  </td>
+                </tr>
+          </table>
+          <dl>
+            <dt><a name="string"><font color="blue">String</font></a></dt>
+                <dd>
+                  is a sequence of the form <b>a<sub>1</sub>, a<sub>2</sub>, . . ., a<sub>n</sub></b> or 
+                  <b>a<sub>1</sub>a<sub>2</sub> . . . a<sub>n</sub></b> are often used in computer science.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="length"><font color="blue">Length</font></a></dt>
+                <dd>of the string <b>S</b> is the number of terms in the string.</dd>
+          </dl>
+          <dl>
+            <dt><a name="empty-string"><font color="blue">Empty String</font></a></dt>
+                <dd>
+                  denoted by <a name="lambda"><b><font color="blue" face="symbol">&#955;</font></b></a>, is the string that has no terms
+                  and has length <b>0</b>.
+                </dd>
+          </dl>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Special Integer Sequences</font></legend>
+          <br>
+          <table align="center" border cellpadding="5">
+            <tr>
+                  <th colspan="3"><font color="blue">SOME <a name="useful-sequences">USEFUL SEQUENCES</a></font><br>(US)</th>
+                </tr>
+                <tr>
+                  <th>#</th>
+                  <th>n<sup>th</sup> term</th>
+                  <th>First 10 terms</th>
+                </tr>
+                <tr>
+                  <td align="center">1</td>
+                  <th>n<sup>2</sup></th>
+                  <th align="left">1, 4, 9, 16, 25, 36, 49, 64, 81, 100, . . .</th>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <th>n<sup>3</sup></th>
+                  <th align="left">1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, . . .</th>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <th>n<sup>4</sup></th>
+                  <th align="left">1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000, . . .</th>
+                </tr>
+                <tr>
+                  <td align="center">4</td>
+                  <th>2<sup>n</sup></th>
+                  <th align="left">2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, . . .</th>
+                </tr>
+                <tr>
+                  <td align="center">5</td>
+                  <th>3<sup>n</sup></th>
+                  <th align="left">3, 9, 27, 81, 243, 729, 2187, 6561, 19683, 59049, . . .</th>
+                </tr>
+                <tr>
+                  <td align="center">6</td>
+                  <th>n!</th>
+                  <th align="left">1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, . . .</th>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Summation</font></legend>
+          <dl>
+            <dt><a name="summation-notation"><font color="blue">Summation Notation</font></a></dt>
+                <dd>
+                  <p align="center"><img src="images/summation.jpg" alt="Summation Notation" width="33%"></p>
+                  The uppercase <a name="sigma">Greek letter <font color="blue" face="symbol"><b>sigma &#931;</b></font> 
+                   denotes summation while the variable <b>j</b> is 
+                  the <a name="summation-index"><font color="blue"><b>index of summation</b></font></a> which runs through all 
+                  integers starting with the <a name="lower-limit"><font color="blue"><b>lower limit</b></font></a> <b>m</b> and 
+                  ending with the <a name="upper-limit"><font color="blue"><b>upper limit</b></font></a> <b>n</b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="2"><font color="magenta">THEOREM01:</font></th>
+                  <td>
+                    <b>Geometric series:</b>: if <b>a</b> and <b>r</b> are real numbers and <b>r <font face="symbol">&#8800;</font> 0</b>, then
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>n</small></small><br>
+                                  <big><big><font face="symbol">&#931;</font></big></big>  ar<sup>j</sup> =
+                                  <br><small><small>j = 0</small></small>
+                                </th>
+                                <th>
+                                  <big><big>
+                                    <font face="symbol">&#8968;</font>
+                                    <br>|
+                                    <br><font face="symbol">&#8970;</font>
+                                  </big></big>
+                                </th>
+                                <th>ar<sup>n+1</sup> &#150; a<hr>r &#150; 1<br><br>( n + 1 ) a</th>
+                                <td>
+                                  <br> &#160; if <b>r <font face="symbol">&#8800;</font> 1</b>
+                                  <br><br><br> &#160; if <b>r = 1</b>
+                                </td>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table align="center" border cellpadding="5">
+            <tr>
+                  <th colspan="3">
+                    <font color="blue">SOME <a name="useful-summation-formulae">USEFUL SUMMATION FORMULAE</a></font>
+                        <br>(USF)
+                  </th>
+                </tr>
+                <tr>
+                  <th>#</th>
+                  <th>SUM</th>
+                  <th>CLOSED FORM</th>
+                </tr>
+                <tr>
+                  <td align="center">1</td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>&#160; n<br></small></small>
+                                  <big><big><font face="symbol"><font face="symbol">&#931;</big></big></font> ar<sup>k</sup> ( r <font face="symbol">&#8800;</font> 0 )
+                                  <small><small><br>k = 0</small></small>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th>ar<sup>n + 1</sup> &#150; a<hr>r &#150; 1</th>
+                                <th>, r <font face="symbol">&#8800;</font> 1</th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>&#160; n<br></small></small>
+                                  <big><big><font face="symbol"><font face="symbol">&#931;</big></big></font> k
+                                  <small><small><br>k = 1</small></small>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                  <td><table><tr><th>n ( n + 1 )<hr>2</th></tr></table></td>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>&#160; n<br></small></small>
+                                  <big><big><font face="symbol"><font face="symbol">&#931;</big></big></font> k<sup>2</sup>
+                                  <small><small><br>k = 1</small></small>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                  <td><table><tr><th>n ( n + 1 ) ( 2n + 1 )<hr>6</th></tr></table></td>
+                </tr>
+                <tr>
+                  <td align="center">4</td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>&#160; n<br></small></small>
+                                  <big><big><font face="symbol"><font face="symbol">&#931;</big></big></font> k<sup>3</sup>
+                                  <small><small><br>k = 1</small></small>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                  <td><table><tr><th>n<sup>2</sup> ( n + 1 )<sup>2</sup><hr>4</th></tr></table></td>
+                </tr>
+                <tr>
+                  <td align="center">5</td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>&#160; <font face="symbol">&#8734;</font><br></small></small>
+                                  <big><big><font face="symbol"><font face="symbol">&#931;</big></big></font> x<sup>k</sup>, | x | < 1
+                                  <small><small><br>k = 0</small></small>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                  <td><table><tr><th>1<hr>1 &#150; x</th></tr></table></td>
+                </tr>
+                <tr>
+                  <td align="center">6</td>
+                  <td>
+                    <table>
+                          <tr>
+                            <th align="left">
+                                  <small><small>&#160; <font face="symbol">&#8734;</font><br></small></small>
+                                  <big><big><font face="symbol"><font face="symbol">&#931;</big></big></font> kx<sup>k&#150;1</sup>, | x | < 1
+                                  <small><small><br>k = 1</small></small>
+                                </th>
+                          </tr>
+                        </table>
+                  </td>
+                  <td><table><tr><th>1<hr>( 1 &#150; x )<sup>2</sup></th></tr></table></td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend><font color="maroon">Cardinality</font></legend>
+          <dl>
+            <dt><a name="cardinality-sets"><font color="blue">Cardinality of Sets</font></a></dt>
+                <dd>
+                  of set <b>A</b> and of set <b>B</b> are the same iff there is a 
+                  <a href="05-functions.html#bijection">one-to-one correspondence</a> from <b>A</b> to <b>B</b>.
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="countable"><font color="blue">Countable</font></a></dt>
+                <dd>
+                  set is a set, S, that is finite (size = |S|) or has the same <a href="03-sets.html#cardinality">cardinality</a> 
+                  as the set of positive integers (|S| = <b><font face="symbol">&#969;</font></b>).
+                </dd>
+          </dl>
+          <dl>
+            <dt><a name="uncountable"><font color="blue">Uncountable</font></a></dt>
+                <dd>set is a set that is not <a href="#countable">countable</a>.</dd>
+          </dl>
+          <dl>
+            <dt><a name="aleph-null"><font color="blue">Aleph Null</font></a></dt>
+                <dd>
+                 denoted by <font color="blue"><b><font face="symbol">&#8501;</font><sub>0</sub></b></font> is the cardinality of a
+                 <b>S</b> that is uncountable, i.e. <b>|S| = <font face="symbol">&#8501;</font><sub>0</sub></b>.
+                </dd>
+          </dl>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th rowspan="9"><font color="red">EXAMPLE04:</font></th>
+                  <td><font color="red">Illustrate that the set of odd integers is countable.</font></td>
+                </tr>
+                <tr>
+                  <td>
+                    <table cellpadding="5">
+                          <tr>
+                            <th align="right"><font color="red">1</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">1</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">&#150; 1</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">2</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">3</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">3</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">&#150; 3</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">4</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">5</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">5</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">&#150; 5</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">6</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">7</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">7</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">&#150; 7</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">8</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">9</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">9</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">&#150; 9</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">10</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">11</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">11</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"><font color="red">&#150; 11</font></th>
+                            <th><font color="red" face="symbol">&#171;</font></th>
+                            <th align="right"><font color="red">12</font></th>
+                          </tr>
+                          <tr>
+                            <th align="right"></th>
+                            <th><font color="red">.<br>.<br>.</font></th>
+                            <th align="right"></th>
+                          </tr>
+                        </table>
+                  </td>
+                </tr>
+          </table>
+          <br>
+          <table cellpadding="5">
+            <tr valign="top">
+                  <th><font color="green">PROBLEM:</font></th>
+                  <td><font color="green">Why is the set of real numbers uncountable?</font></td>
+                </tr>
+          </table>
+        </fieldset>
+        <br>
+    <table align="center">
+      <tr>
+          <td>
+                  <small><small>
+                    <br><a href="#arithmetic-progression">Arithmetic Progression</a>
+                        <br>
+                    <br><a href="#cardinality-sets">Cardinality of Sets</a>
+                    <br><a href="#common-difference">Common Difference</a>
+                    <br><a href="#common-ratio">Common Ratio</a>
+                    <br><a href="#countable">Countable</a>
+                        <br>
+                    <br><a href="#empty-string">Empty String</a> <font face="symbol">l</font>
+                        <br>
+                    <br><a href="#geometric-progression">Geometric Progression</a>
+                        <br>
+                    <br><a href="#summation-index">Index of Summation</a>
+                    <br><a href="#initial-term">Initial Term</a>
+                        <br>
+                    <br><a href="#lambda">Lambda</a> <font face="symbol">l</font>
+                    <br><a href="#length">Length</a>
+                    <br><a href="#lower-limit">Lower Limit</a>
+                        <br>
+                    <br><a href="#sequence">Sequence</a>
+                    <br><a href="#sigma">Sigma</a> <font face="symbol">S</font>
+                    <br><a href="#string">String</a>
+                    <br><a href="#summation-notation">Summation Notation</a> <font face="symbol">S</font>
+                        <br>
+                    <br><a href="#term">Term</a>
+                        <br>
+                    <br><a href="#uncountable">Uncountable</a>
+                    <br><a href="#upper-limit">Upper Limit</a>
+                    <br><a href="#useful-sequences">Useful Sequences</a> (US)
+                    <br><a href="#useful-summation-formulae">Useful Summation Formulae</a> (USF)
+                        <hr><a href="../homework/06sequences-sums-hw.html" target="_blank">Homework on Sequences and Sums</a>
+                  </small></small>
+          </td>
+      </tr>
+    </table>
+        
+    <h6 align="center">
+      <hr>
+  &#169; 2002-04-08 cpsm; rcm ; last update 
+  <!-- #BeginDate format:IS1m -->2019-06-10  0:12<!-- #EndDate -->
+      <hr>
+    </h6>
+  </body>
+</html>

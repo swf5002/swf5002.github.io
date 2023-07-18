@@ -1,0 +1,654 @@
+<html>
+
+<head>
+
+    <title>IST 230, CMPSC 360</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-885Nadir-1">
+
+        <link rel=stylesheet type="text/css" href="course-style.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+    <p><img src="images/lg_lv.gif"></p>
+
+        <h3 align="center">IST 230, CMPSC 360: Section 9.4</h3>
+
+    <ul>
+
+        <li>6.
+
+        <p>
+
+        <p><img src="images/S9_4_6.jpg" height="124" width="124"></p>
+
+        </p>
+
+        </li>
+
+        <li>8. For every arrow in the digraph, add its reversal.</li>
+
+        <li>16.
+
+            <ul>
+
+                <li>a. Yes</li>
+
+                <li>b. No (no e->c)</li>
+
+                <li>c. Yes<li>
+
+                <li>d. No (no d->a)</li>
+
+                <li>e. Yes<li>
+
+                <li>f. No (no b->b)</li>
+
+            </ul>
+
+        </li>
+
+        <li>28b. {(b,c),(b,e),(c,e),(d,a),(e,b),e,c)}
+
+            <p>
+
+            W<sub>R</sub> =<br>
+
+            <font face="symbol">&#8968;</font>&nbsp;0  0  0  0  0  <font face="symbol">&#8969;</font><br>
+
+            <font face="symbol">|</font>&nbsp;0  0  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+            <font face="symbol">|</font>&nbsp;0  0  0  0  1  <font face="symbol">&nbsp;|</font><br>
+
+            <font face="symbol">|</font>&nbsp;1  0  0  0  0  <font face="symbol">&nbsp;|</font><br>
+
+            <font face="symbol">&#8970;</font>&nbsp;0  1  1  0  0  <font face="symbol">&#8971;</font><br>
+
+            </p>
+
+            <ul>
+
+                <li>k = 1
+
+                    <ul>
+
+                        <li>i = 1
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>11</sub></b> = w<sub>11</sub> <font face="symbol">&#8744;</font> (w<sub>11</sub> <font face="symbol">&#8743;</font> w<sub>11</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>12</sub></b> = w<sub>13</sub> <font face="symbol">&#8744;</font> (w<sub>11</sub> <font face="symbol">&#8743;</font> w<sub>12</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>13</sub></b> = w<sub>13</sub> <font face="symbol">&#8744;</font> (w<sub>11</sub> <font face="symbol">&#8743;</font> w<sub>13</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>14</sub></b> = w<sub>14</sub> <font face="symbol">&#8744;</font> (w<sub>11</sub> <font face="symbol">&#8743;</font> w<sub>14</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>15</sub></b> = w<sub>15</sub> <font face="symbol">&#8744;</font> (w<sub>11</sub> <font face="symbol">&#8743;</font> w<sub>15</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 2 (k = 1)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>21</sub></b> = w<sub>21</sub> <font face="symbol">&#8744;</font> (w<sub>21</sub> <font face="symbol">&#8743;</font> w<sub>11</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>22</sub></b> = w<sub>22</sub> <font face="symbol">&#8744;</font> (w<sub>21</sub> <font face="symbol">&#8743;</font> w<sub>12</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>23</sub></b> = w<sub>23</sub> <font face="symbol">&#8744;</font> (w<sub>21</sub> <font face="symbol">&#8743;</font> w<sub>13</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>24</sub></b> = w<sub>24</sub> <font face="symbol">&#8744;</font> (w<sub>21</sub> <font face="symbol">&#8743;</font> w<sub>14</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>25</sub></b> = w<sub>25</sub> <font face="symbol">&#8744;</font> (w<sub>21</sub> <font face="symbol">&#8743;</font> w<sub>15</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 3 (k = 1)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>31</sub></b> = w<sub>31</sub> <font face="symbol">&#8744;</font> (w<sub>31</sub> <font face="symbol">&#8743;</font> w<sub>11</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>32</sub></b> = w<sub>32</sub> <font face="symbol">&#8744;</font> (w<sub>31</sub> <font face="symbol">&#8743;</font> w<sub>12</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>33</sub></b> = w<sub>33</sub> <font face="symbol">&#8744;</font> (w<sub>31</sub> <font face="symbol">&#8743;</font> w<sub>13</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>34</sub></b> = w<sub>34</sub> <font face="symbol">&#8744;</font> (w<sub>31</sub> <font face="symbol">&#8743;</font> w<sub>14</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>35</sub></b> = w<sub>35</sub> <font face="symbol">&#8744;</font> (w<sub>31</sub> <font face="symbol">&#8743;</font> w<sub>15</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 4 (k = 1)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>41</sub></b> = w<sub>41</sub> <font face="symbol">&#8744;</font> (w<sub>41</sub> <font face="symbol">&#8743;</font> w<sub>11</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 2: <b>w<sub>42</sub></b> = w<sub>42</sub> <font face="symbol">&#8744;</font> (w<sub>41</sub> <font face="symbol">&#8743;</font> w<sub>12</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>43</sub></b> = w<sub>43</sub> <font face="symbol">&#8744;</font> (w<sub>41</sub> <font face="symbol">&#8743;</font> w<sub>13</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>44</sub></b> = w<sub>44</sub> <font face="symbol">&#8744;</font> (w<sub>41</sub> <font face="symbol">&#8743;</font> w<sub>14</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>45</sub></b> = w<sub>45</sub> <font face="symbol">&#8744;</font> (w<sub>41</sub> <font face="symbol">&#8743;</font> w<sub>15</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 5 (k = 1)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>51</sub></b> = w<sub>51</sub> <font face="symbol">&#8744;</font> (w<sub>51</sub> <font face="symbol">&#8743;</font> w<sub>11</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>52</sub></b> = w<sub>52</sub> <font face="symbol">&#8744;</font> (w<sub>51</sub> <font face="symbol">&#8743;</font> w<sub>12</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>53</sub></b> = w<sub>53</sub> <font face="symbol">&#8744;</font> (w<sub>51</sub> <font face="symbol">&#8743;</font> w<sub>13</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>54</sub></b> = w<sub>54</sub> <font face="symbol">&#8744;</font> (w<sub>51</sub> <font face="symbol">&#8743;</font> w<sub>14</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>55</sub></b> = w<sub>55</sub> <font face="symbol">&#8744;</font> (w<sub>51</sub> <font face="symbol">&#8743;</font> w<sub>15</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                    <p>
+
+                    W<sub>1</sub> =<br>
+
+                    <font face="symbol">&#8968;</font>&nbsp;0  0  0  0  0  <font face="symbol">&#8969;</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  0  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;1  0  0  0  0  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">&#8970;</font>&nbsp;0  1  1  0  0  <font face="symbol">&#8971;</font><br>
+
+                    </p>
+
+                </li>
+
+                <li>k = 2
+
+                    <ul>
+
+                        <li>i = 1
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>11</sub></b> = w<sub>11</sub> <font face="symbol">&#8744;</font> (w<sub>12</sub> <font face="symbol">&#8743;</font> w<sub>21</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>12</sub></b> = w<sub>12</sub> <font face="symbol">&#8744;</font> (w<sub>12</sub> <font face="symbol">&#8743;</font> w<sub>22</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>13</sub></b> = w<sub>13</sub> <font face="symbol">&#8744;</font> (w<sub>12</sub> <font face="symbol">&#8743;</font> w<sub>23</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>14</sub></b> = w<sub>14</sub> <font face="symbol">&#8744;</font> (w<sub>12</sub> <font face="symbol">&#8743;</font> w<sub>24</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>15</sub></b> = w<sub>15</sub> <font face="symbol">&#8744;</font> (w<sub>12</sub> <font face="symbol">&#8743;</font> w<sub>25</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 2 (k = 2)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>21</sub></b> = w<sub>21</sub> <font face="symbol">&#8744;</font> (w<sub>22</sub> <font face="symbol">&#8743;</font> w<sub>21</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>22</sub></b> = w<sub>22</sub> <font face="symbol">&#8744;</font> (w<sub>22</sub> <font face="symbol">&#8743;</font> w<sub>22</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>23</sub></b> = w<sub>23</sub> <font face="symbol">&#8744;</font> (w<sub>22</sub> <font face="symbol">&#8743;</font> w<sub>23</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>24</sub></b> = w<sub>24</sub> <font face="symbol">&#8744;</font> (w<sub>22</sub> <font face="symbol">&#8743;</font> w<sub>24</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>25</sub></b> = w<sub>25</sub> <font face="symbol">&#8744;</font> (w<sub>22</sub> <font face="symbol">&#8743;</font> w<sub>25</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 3 (k = 2)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>31</sub></b> = w<sub>31</sub> <font face="symbol">&#8744;</font> (w<sub>32</sub> <font face="symbol">&#8743;</font> w<sub>21</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>32</sub></b> = w<sub>32</sub> <font face="symbol">&#8744;</font> (w<sub>32</sub> <font face="symbol">&#8743;</font> w<sub>22</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>33</sub></b> = w<sub>33</sub> <font face="symbol">&#8744;</font> (w<sub>32</sub> <font face="symbol">&#8743;</font> w<sub>23</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>34</sub></b> = w<sub>34</sub> <font face="symbol">&#8744;</font> (w<sub>32</sub> <font face="symbol">&#8743;</font> w<sub>24</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>35</sub></b> = w<sub>35</sub> <font face="symbol">&#8744;</font> (w<sub>32</sub> <font face="symbol">&#8743;</font> w<sub>25</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 4 (k = 2)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>41</sub></b> = w<sub>41</sub> <font face="symbol">&#8744;</font> (w<sub>42</sub> <font face="symbol">&#8743;</font> w<sub>21</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 2: <b>w<sub>42</sub></b> = w<sub>42</sub> <font face="symbol">&#8744;</font> (w<sub>42</sub> <font face="symbol">&#8743;</font> w<sub>22</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>43</sub></b> = w<sub>43</sub> <font face="symbol">&#8744;</font> (w<sub>42</sub> <font face="symbol">&#8743;</font> w<sub>23</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>44</sub></b> = w<sub>44</sub> <font face="symbol">&#8744;</font> (w<sub>42</sub> <font face="symbol">&#8743;</font> w<sub>24</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>45</sub></b> = w<sub>45</sub> <font face="symbol">&#8744;</font> (w<sub>42</sub> <font face="symbol">&#8743;</font> w<sub>25</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 5 (k = 2)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>51</sub></b> = w<sub>51</sub> <font face="symbol">&#8744;</font> (w<sub>52</sub> <font face="symbol">&#8743;</font> w<sub>21</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>52</sub></b> = w<sub>52</sub> <font face="symbol">&#8744;</font> (w<sub>52</sub> <font face="symbol">&#8743;</font> w<sub>22</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>53</sub></b> = w<sub>53</sub> <font face="symbol">&#8744;</font> (w<sub>52</sub> <font face="symbol">&#8743;</font> w<sub>23</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>54</sub></b> = w<sub>54</sub> <font face="symbol">&#8744;</font> (w<sub>52</sub> <font face="symbol">&#8743;</font> w<sub>24</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>55</sub></b> = w<sub>55</sub> <font face="symbol">&#8744;</font> (w<sub>52</sub> <font face="symbol">&#8743;</font> w<sub>25</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                    <p>
+
+                    W<sub>2</sub> =<br>
+
+                    <font face="symbol">&#8968;</font>&nbsp;0  0  0  0  0  <font face="symbol">&#8969;</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  0  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;1  0  0  0  0  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">&#8970;</font>&nbsp;0  1  1  0  1  <font face="symbol">&#8971;</font><br>
+
+                    </p>
+
+                    </ul>
+
+                </li>
+
+                <li>k = 3
+
+                    <ul>
+
+                        <li>i = 1
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>11</sub></b> = w<sub>11</sub> <font face="symbol">&#8744;</font> (w<sub>13</sub> <font face="symbol">&#8743;</font> w<sub>31</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>12</sub></b> = w<sub>12</sub> <font face="symbol">&#8744;</font> (w<sub>13</sub> <font face="symbol">&#8743;</font> w<sub>32</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>13</sub></b> = w<sub>13</sub> <font face="symbol">&#8744;</font> (w<sub>13</sub> <font face="symbol">&#8743;</font> w<sub>33</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>14</sub></b> = w<sub>14</sub> <font face="symbol">&#8744;</font> (w<sub>13</sub> <font face="symbol">&#8743;</font> w<sub>34</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>15</sub></b> = w<sub>15</sub> <font face="symbol">&#8744;</font> (w<sub>13</sub> <font face="symbol">&#8743;</font> w<sub>35</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 2 (k = 3)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>21</sub></b> = w<sub>21</sub> <font face="symbol">&#8744;</font> (w<sub>23</sub> <font face="symbol">&#8743;</font> w<sub>31</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>22</sub></b> = w<sub>22</sub> <font face="symbol">&#8744;</font> (w<sub>23</sub> <font face="symbol">&#8743;</font> w<sub>32</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>23</sub></b> = w<sub>23</sub> <font face="symbol">&#8744;</font> (w<sub>23</sub> <font face="symbol">&#8743;</font> w<sub>33</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>24</sub></b> = w<sub>24</sub> <font face="symbol">&#8744;</font> (w<sub>23</sub> <font face="symbol">&#8743;</font> w<sub>34</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>25</sub></b> = w<sub>25</sub> <font face="symbol">&#8744;</font> (w<sub>23</sub> <font face="symbol">&#8743;</font> w<sub>35</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 3 (k = 3)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>31</sub></b> = w<sub>31</sub> <font face="symbol">&#8744;</font> (w<sub>33</sub> <font face="symbol">&#8743;</font> w<sub>31</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>32</sub></b> = w<sub>32</sub> <font face="symbol">&#8744;</font> (w<sub>33</sub> <font face="symbol">&#8743;</font> w<sub>32</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>33</sub></b> = w<sub>33</sub> <font face="symbol">&#8744;</font> (w<sub>33</sub> <font face="symbol">&#8743;</font> w<sub>33</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>34</sub></b> = w<sub>34</sub> <font face="symbol">&#8744;</font> (w<sub>33</sub> <font face="symbol">&#8743;</font> w<sub>34</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>35</sub></b> = w<sub>35</sub> <font face="symbol">&#8744;</font> (w<sub>33</sub> <font face="symbol">&#8743;</font> w<sub>35</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 4 (k = 3)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>41</sub></b> = w<sub>41</sub> <font face="symbol">&#8744;</font> (w<sub>43</sub> <font face="symbol">&#8743;</font> w<sub>31</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 2: <b>w<sub>42</sub></b> = w<sub>42</sub> <font face="symbol">&#8744;</font> (w<sub>43</sub> <font face="symbol">&#8743;</font> w<sub>32</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>43</sub></b> = w<sub>43</sub> <font face="symbol">&#8744;</font> (w<sub>43</sub> <font face="symbol">&#8743;</font> w<sub>33</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>44</sub></b> = w<sub>44</sub> <font face="symbol">&#8744;</font> (w<sub>43</sub> <font face="symbol">&#8743;</font> w<sub>34</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>45</sub></b> = w<sub>45</sub> <font face="symbol">&#8744;</font> (w<sub>43</sub> <font face="symbol">&#8743;</font> w<sub>35</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 5 (k = 3)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>51</sub></b> = w<sub>51</sub> <font face="symbol">&#8744;</font> (w<sub>53</sub> <font face="symbol">&#8743;</font> w<sub>31</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>52</sub></b> = w<sub>52</sub> <font face="symbol">&#8744;</font> (w<sub>53</sub> <font face="symbol">&#8743;</font> w<sub>32</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>53</sub></b> = w<sub>53</sub> <font face="symbol">&#8744;</font> (w<sub>53</sub> <font face="symbol">&#8743;</font> w<sub>33</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>54</sub></b> = w<sub>54</sub> <font face="symbol">&#8744;</font> (w<sub>53</sub> <font face="symbol">&#8743;</font> w<sub>34</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>55</sub></b> = w<sub>55</sub> <font face="symbol">&#8744;</font> (w<sub>53</sub> <font face="symbol">&#8743;</font> w<sub>35</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                    <p>
+
+                    W<sub>3</sub> =<br>
+
+                    <font face="symbol">&#8968;</font>&nbsp;0  0  0  0  0  <font face="symbol">&#8969;</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  0  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;1  0  0  0  0  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">&#8970;</font>&nbsp;0  1  1  0  1  <font face="symbol">&#8971;</font><br>
+
+                    </p>
+
+                    </ul>
+
+                </li>
+
+                <li>k = 4
+
+                    <ul>
+
+                        <li>i = 1
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>11</sub></b> = w<sub>11</sub> <font face="symbol">&#8744;</font> (w<sub>14</sub> <font face="symbol">&#8743;</font> w<sub>41</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>12</sub></b> = w<sub>12</sub> <font face="symbol">&#8744;</font> (w<sub>14</sub> <font face="symbol">&#8743;</font> w<sub>42</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>13</sub></b> = w<sub>13</sub> <font face="symbol">&#8744;</font> (w<sub>14</sub> <font face="symbol">&#8743;</font> w<sub>43</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>14</sub></b> = w<sub>14</sub> <font face="symbol">&#8744;</font> (w<sub>14</sub> <font face="symbol">&#8743;</font> w<sub>44</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>15</sub></b> = w<sub>15</sub> <font face="symbol">&#8744;</font> (w<sub>14</sub> <font face="symbol">&#8743;</font> w<sub>45</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 2 (k = 4)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>21</sub></b> = w<sub>21</sub> <font face="symbol">&#8744;</font> (w<sub>24</sub> <font face="symbol">&#8743;</font> w<sub>41</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>22</sub></b> = w<sub>22</sub> <font face="symbol">&#8744;</font> (w<sub>24</sub> <font face="symbol">&#8743;</font> w<sub>42</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>23</sub></b> = w<sub>23</sub> <font face="symbol">&#8744;</font> (w<sub>24</sub> <font face="symbol">&#8743;</font> w<sub>43</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>24</sub></b> = w<sub>24</sub> <font face="symbol">&#8744;</font> (w<sub>24</sub> <font face="symbol">&#8743;</font> w<sub>44</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>25</sub></b> = w<sub>25</sub> <font face="symbol">&#8744;</font> (w<sub>24</sub> <font face="symbol">&#8743;</font> w<sub>45</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 3 (k = 4)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>31</sub></b> = w<sub>31</sub> <font face="symbol">&#8744;</font> (w<sub>34</sub> <font face="symbol">&#8743;</font> w<sub>41</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>32</sub></b> = w<sub>32</sub> <font face="symbol">&#8744;</font> (w<sub>34</sub> <font face="symbol">&#8743;</font> w<sub>42</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>33</sub></b> = w<sub>33</sub> <font face="symbol">&#8744;</font> (w<sub>34</sub> <font face="symbol">&#8743;</font> w<sub>43</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>34</sub></b> = w<sub>34</sub> <font face="symbol">&#8744;</font> (w<sub>34</sub> <font face="symbol">&#8743;</font> w<sub>44</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>35</sub></b> = w<sub>35</sub> <font face="symbol">&#8744;</font> (w<sub>34</sub> <font face="symbol">&#8743;</font> w<sub>45</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 4 (k = 4)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>41</sub></b> = w<sub>41</sub> <font face="symbol">&#8744;</font> (w<sub>44</sub> <font face="symbol">&#8743;</font> w<sub>41</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 2: <b>w<sub>42</sub></b> = w<sub>42</sub> <font face="symbol">&#8744;</font> (w<sub>44</sub> <font face="symbol">&#8743;</font> w<sub>42</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>43</sub></b> = w<sub>43</sub> <font face="symbol">&#8744;</font> (w<sub>44</sub> <font face="symbol">&#8743;</font> w<sub>43</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>44</sub></b> = w<sub>44</sub> <font face="symbol">&#8744;</font> (w<sub>44</sub> <font face="symbol">&#8743;</font> w<sub>44</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>45</sub></b> = w<sub>45</sub> <font face="symbol">&#8744;</font> (w<sub>44</sub> <font face="symbol">&#8743;</font> w<sub>45</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 5 (k = 4)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>51</sub></b> = w<sub>51</sub> <font face="symbol">&#8744;</font> (w<sub>54</sub> <font face="symbol">&#8743;</font> w<sub>41</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>52</sub></b> = w<sub>52</sub> <font face="symbol">&#8744;</font> (w<sub>54</sub> <font face="symbol">&#8743;</font> w<sub>42</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>53</sub></b> = w<sub>53</sub> <font face="symbol">&#8744;</font> (w<sub>54</sub> <font face="symbol">&#8743;</font> w<sub>43</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>54</sub></b> = w<sub>54</sub> <font face="symbol">&#8744;</font> (w<sub>54</sub> <font face="symbol">&#8743;</font> w<sub>44</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>55</sub></b> = w<sub>55</sub> <font face="symbol">&#8744;</font> (w<sub>54</sub> <font face="symbol">&#8743;</font> w<sub>45</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                    <p>
+
+                    W<sub>4</sub> =<br>
+
+                    <font face="symbol">&#8968;</font>&nbsp;0  0  0  0  0  <font face="symbol">&#8969;</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  0  0  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;1  0  0  0  0  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">&#8970;</font>&nbsp;0  1  1  0  1  <font face="symbol">&#8971;</font><br>
+
+                    </p>
+
+                    </ul>
+
+                </li>
+
+                <li>k = 5
+
+                    <ul>
+
+                        <li>i = 1
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>11</sub></b> = w<sub>11</sub> <font face="symbol">&#8744;</font> (w<sub>15</sub> <font face="symbol">&#8743;</font> w<sub>51</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>12</sub></b> = w<sub>12</sub> <font face="symbol">&#8744;</font> (w<sub>15</sub> <font face="symbol">&#8743;</font> w<sub>52</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>13</sub></b> = w<sub>13</sub> <font face="symbol">&#8744;</font> (w<sub>15</sub> <font face="symbol">&#8743;</font> w<sub>53</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>14</sub></b> = w<sub>14</sub> <font face="symbol">&#8744;</font> (w<sub>15</sub> <font face="symbol">&#8743;</font> w<sub>54</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>15</sub></b> = w<sub>15</sub> <font face="symbol">&#8744;</font> (w<sub>15</sub> <font face="symbol">&#8743;</font> w<sub>55</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 2 (k = 5)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>21</sub></b> = w<sub>21</sub> <font face="symbol">&#8744;</font> (w<sub>25</sub> <font face="symbol">&#8743;</font> w<sub>51</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>22</sub></b> = w<sub>22</sub> <font face="symbol">&#8744;</font> (w<sub>25</sub> <font face="symbol">&#8743;</font> w<sub>52</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>23</sub></b> = w<sub>23</sub> <font face="symbol">&#8744;</font> (w<sub>25</sub> <font face="symbol">&#8743;</font> w<sub>53</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>24</sub></b> = w<sub>24</sub> <font face="symbol">&#8744;</font> (w<sub>25</sub> <font face="symbol">&#8743;</font> w<sub>54</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>25</sub></b> = w<sub>25</sub> <font face="symbol">&#8744;</font> (w<sub>25</sub> <font face="symbol">&#8743;</font> w<sub>55</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 3 (k = 5)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>31</sub></b> = w<sub>31</sub> <font face="symbol">&#8744;</font> (w<sub>35</sub> <font face="symbol">&#8743;</font> w<sub>51</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>32</sub></b> = w<sub>32</sub> <font face="symbol">&#8744;</font> (w<sub>35</sub> <font face="symbol">&#8743;</font> w<sub>52</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>33</sub></b> = w<sub>33</sub> <font face="symbol">&#8744;</font> (w<sub>35</sub> <font face="symbol">&#8743;</font> w<sub>53</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>34</sub></b> = w<sub>34</sub> <font face="symbol">&#8744;</font> (w<sub>35</sub> <font face="symbol">&#8743;</font> w<sub>54</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>35</sub></b> = w<sub>35</sub> <font face="symbol">&#8744;</font> (w<sub>35</sub> <font face="symbol">&#8743;</font> w<sub>55</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 4 (k = 5)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>41</sub></b> = w<sub>41</sub> <font face="symbol">&#8744;</font> (w<sub>45</sub> <font face="symbol">&#8743;</font> w<sub>51</sub>) = 1 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>1</b></li>
+
+                                <li>j = 2: <b>w<sub>42</sub></b> = w<sub>42</sub> <font face="symbol">&#8744;</font> (w<sub>45</sub> <font face="symbol">&#8743;</font> w<sub>52</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 3: <b>w<sub>43</sub></b> = w<sub>43</sub> <font face="symbol">&#8744;</font> (w<sub>45</sub> <font face="symbol">&#8743;</font> w<sub>53</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                                <li>j = 4: <b>w<sub>44</sub></b> = w<sub>44</sub> <font face="symbol">&#8744;</font> (w<sub>45</sub> <font face="symbol">&#8743;</font> w<sub>54</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>45</sub></b> = w<sub>45</sub> <font face="symbol">&#8744;</font> (w<sub>45</sub> <font face="symbol">&#8743;</font> w<sub>55</sub>) = 0 <font face="symbol">&#8744;</font> (0 <font face="symbol">&#8743;</font> 1) = <b>0</b></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>i = 5 (k = 5)
+
+                            <ul>
+
+                                <li>j = 1: <b>w<sub>51</sub></b> = w<sub>51</sub> <font face="symbol">&#8744;</font> (w<sub>55</sub> <font face="symbol">&#8743;</font> w<sub>51</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 2: <b>w<sub>52</sub></b> = w<sub>52</sub> <font face="symbol">&#8744;</font> (w<sub>55</sub> <font face="symbol">&#8743;</font> w<sub>52</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 3: <b>w<sub>53</sub></b> = w<sub>53</sub> <font face="symbol">&#8744;</font> (w<sub>55</sub> <font face="symbol">&#8743;</font> w<sub>53</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                                <li>j = 4: <b>w<sub>54</sub></b> = w<sub>54</sub> <font face="symbol">&#8744;</font> (w<sub>55</sub> <font face="symbol">&#8743;</font> w<sub>54</sub>) = 0 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 0) = <b>0</b></li>
+
+                                <li>j = 5: <b>w<sub>55</sub></b> = w<sub>55</sub> <font face="symbol">&#8744;</font> (w<sub>55</sub> <font face="symbol">&#8743;</font> w<sub>55</sub>) = 1 <font face="symbol">&#8744;</font> (1 <font face="symbol">&#8743;</font> 1) = <b>1</b></li>
+
+                            </ul>
+
+                        </li>
+
+                    <p>
+
+                    W<sub>5</sub> =<br>
+
+                    <font face="symbol">&#8968;</font>&nbsp;0  0  0  0  0  <font face="symbol">&#8969;</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  1  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;0  1  1  0  1  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">|</font>&nbsp;1  0  0  0  0  <font face="symbol">&nbsp;|</font><br>
+
+                    <font face="symbol">&#8970;</font>&nbsp;0  1  1  0  1  <font face="symbol">&#8971;</font><br>
+
+                    </p>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+</body>
+
+</html>
+
