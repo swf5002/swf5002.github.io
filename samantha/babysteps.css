@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: lightgray;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+
+.app {
+	display: flex;
+	flex-flow: column;
+	width: 100vw;
+	height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+	color: #7100CA
+}
+
+
+header h3{
+	display: flex;
+	flex-flow: column;
+	flex: 1;
+	width: 100%;
+	min-width: 250px;
+	max-width: 350px;
+	background-color: black;
+	color: white;
+	margin: 0 15px;
+	width: 100%;
+	padding: 8px;
+	font-size: 20px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	text-align: center;
+}
+
+
+.lists {
+	display: flex;
+	flex: 1;
+	width: 100%;
+	overflow-x: scroll;
+	justify-content: center;
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	flex-flow: column;
+	flex: 1;
+	width: 100%;
+	min-width: 250px;
+	max-width: 350px;
+	height: 100%;
+	min-height: 150px;
+	background-color: rgba(0, 0, 0, 0.1);
+	margin: 0 15px;
+	padding: 8px;
+	transition: all 0.2s linear;
+}
+
+.list-item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	background-color: white;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	font-size: 16px;
+	box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+		rgba(15, 15, 15, 0.1) 0px 2px 4px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	margin-bottom: 5px;
+}
